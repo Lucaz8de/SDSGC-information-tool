@@ -7,6 +7,7 @@
 
 #include "Conditions.h"
 #include "Hero.h"
+#include "Utilitiesig.h"
 
 const std::vector<Menu::ConditionFunction> Menu::conditions{
   {"AvailableFromDraw", AvailableFromDraw},
@@ -20,16 +21,6 @@ const std::vector<Menu::Operation> Menu::operations{
   {"And", And, 2},
   {"Or", Or, 2},
   {"Not", Not, 1}
-};
-
-const std::vector<std::string> Menu::draws{
-  "Grand Cross 5th Anniversary Eve Commemoration Draw",
-  "Special Pick Up Draw",
-  "[The Seven Deadly Sins] Draw",
-  "Guaranteed SSR Draw",
-  "Race Draw I Human/Giant/Unknown",
-  "Race Draw II Demon/Fairy/Goddess",
-  "Draw Grade R-SSR Human Heroes"
 };
 
 // A basic function to get an integer input in a range, and else crash.
@@ -52,16 +43,17 @@ std::vector<std::string> GetArguments(int int_input) {
 	switch (int_input) {
 	case 1:
 	{
+		std::vector<std::string> draws = HashKeys(ReadLists("../data/draws.txt"));
 		int argument_input{ -1 };
 		std::cout << "Please select the draw." << std::endl;
 		std::cout << "The program will give up if you enter an invalid input, so please don't." << std::endl;
-		for (size_t i{ 1 }; i <= Menu::draws.size(); i++) {
-			std::cout << i << ". " << Menu::draws[i - 1] << std::endl;
+		for (size_t i{ 1 }; i <= draws.size(); i++) {
+			std::cout << i << ". " << draws[i - 1] << std::endl;
 		}
 		argument_input = GetIntInput(1, 7);
 		std::cout << std::endl;
 
-		arguments.push_back(Menu::draws[argument_input - 1]);
+		arguments.push_back(draws[argument_input - 1]);
 		break;
 	}
 	// default: leaving the vector empty is fine

@@ -1,0 +1,304 @@
+[Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+[The Seven Deadly Sins] Captain Meliodas, Captain Meliodas, HP, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 4
+[Tomorrow's Champion] Captain Meliodas, Captain Meliodas, Speed, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+[Ragnarok] Lostvayne Meliodas, Lostvayne Meliodas, Speed, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+"Virtual Body Doubles" Lostvayne Meliodas, Lostvayne Meliodas, Strength, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 4
+The Dragon Sin of Wrath Demon Meliodas, Demon Meliodas, Strength, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+[Knight of Wrath] Demon Meliodas, Demon Meliodas, Speed, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+[Holy Warrior] Traitor Meliodas, Traitor Meliodas, Darkness, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 3
+[Cursed Shackles] Purgatory Meliodas, Purgatory Meliodas, Darkness, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 4
+[Era's End] Demon King Meliodas, Demon King Meliodas, Speed, UR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 1, 1
+"Assault Mode" Berserk Meliodas, Berserk Meliodas, HP, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+[Halloween] Captain Meliodas, Captain Meliodas, Strength, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+[New Legend] Demon Meliodas, Demon Meliodas, HP, SSR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+
+The Serpent Sin of Envy Holy Knight Diane, Holy Knight Diane, Speed, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 4
+[Heart of the Land] Mercenary Diane, Mercenary Diane, Strength, SR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+[The Seven Deadly Sins] Holy Knight Diane, Holy Knight Diane, HP, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+[Matrona] Fighter Diane, Fighter Diane, Speed, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+"Creation" Fighter Diane, Fighter Diane, HP, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+[Beach Guardian] Blessing of the Earth Diane, Blessing of the Earth Diane, Strength, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 4
+[Halloween] Protective Heart Diane, Protective Heart Diane, HP, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+Waves of the Earth Queen Diane, Queen Diane, Strength, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 3
+[Eternal Promise] Holy Knight Diane, Holy Knight Diane, Strength, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+[Kungfu Master] Fighter Diane, Fighter Diane, Strength, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+[Ragnarok] Blessing of the Earth Diane, Blessing of the Earth Diane, HP, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 5, 5
+[Messenger of Love] Queen Diane, Queen Diane, HP, SSR, Diane, Giant, The Seven Deadly Sins, 5, 5, 3, 1
+
+[Ale Collector] Adventurer Ban, Adventurer Ban, Speed, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+[Nunchaku] Adventurer Ban, Adventurer Ban, Strength, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+"Snatch" Brawler Ban, Brawler Ban, HP, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+[Outlaw] Brawler Ban, Brawler Ban, Speed, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+[Undead] Prisoner Ban, Prisoner Ban, Strength, SR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+[Ragnarok] Brawler Ban, Brawler Ban, Strength, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 4
+[The Seven Deadly Sins] Transcendent Ban, Transcendent Ban, Light, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 2, 3
+[Immortal's Return] Purgatory Ban, Purgatory Ban, Strength, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+
+The Fox Sin of Greed Adventurer Ban, Adventurer Ban, HP, SSR, Ban, Human, The Seven Deadly Sins, 5, 5, 5, 5
+
+The Grizzly Sin of Sloth King the Fairy King, King the Fairy King, Speed, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 5
+[Forest Guardian] King the Fairy King, King the Fairy King, HP, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 4
+[Harlequin] King the Fairy King, King the Fairy King, Strength, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 5
+[Protector of Dolls] Old Fart King, Old Fart King, HP, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 5
+[The Seven Deadly Sins] Old Fart King, Old Fart King, Speed, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 5
+"Disaster" Old Fart King, Old Fart King, Strength, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 5
+[Protector King] Fairy King Harlequin, Fairy King Harlequin, Speed, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 3
+[Symbol of Unity] Fairy King Harlequin, Fairy King Harlequin, HP, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 2, 5
+[Signs of Maturity] New Wings King, New Wings King, Speed, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 5
+[Sweet Jelly] New Wings King, New Wings King, HP, SSR, King, Fairy, The Seven Deadly Sins, 5, 5, 5, 4
+
+[Liones's Hero] Holy Knight Gowther, Holy Knight Gowther, Speed, SSR, Gowther, Unknown, The Seven Deadly Sins, 5, 5, 5, 5
+The Goat Sin of Lust Holy Knight Gowther, Holy Knight Gowther, Strength, SSR, Gowther, Unknown, The Seven Deadly Sins, 5, 5, 5, 3
+[Wanted Man] Young Villager Gowther, Young Villager Gowther, HP, SR, Gowther, Unknown, The Seven Deadly Sins, 5, 5, 5, 5
+[Halloween] Holy Knight Gowther, Holy Knight Gowther, HP, SSR, Gowther, Unknown, The Seven Deadly Sins, 5, 5, 5, 1
+[Restored Emotions] Hijack Gowther, Hijack Gowther, HP, SSR, Gowther, Unknown, The Seven Deadly Sins, 5, 5, 5, 3
+[Journey for Peace] Wandering Knight Gowther, Wandering Knight Gowther, Strength, UR, Gowther, Unknown, The Seven Deadly Sins, 5, 5, 1, 1
+
+[Collector] Great Mage Merlin, Great Mage Merlin, Strength, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 5, 5
+"Infinity" Great Mage Merlin, Great Mage Merlin, Speed, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 5, 5
+[Last Philosopher] Mage of Infinity Merlin, Mage of Infinity Merlin, HP, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 1, 4
+[Divine Protection] Merlin the Daughter of Belialuin, Merlin the Daughter of Belialuin, HP, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 5, 3
+[Beach Girl] Truth Seeker Merlin, Truth Seeker Merlin, Speed, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 5, 5
+[Ragnarok] Truth Seeker Merlin, Truth Seeker Merlin, HP, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 5, 3
+The Boar Sin of Gluttony Great Mage Merlin, Great Mage Merlin, HP, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 3, 3
+[Witch of the Snow] Truth Seeker Merlin, Truth Seeker Merlin, Strength, SSR, Merlin, Unknown, The Seven Deadly Sins, 5, 5, 5, 5
+
+The Lion Sin of Pride Holy Knight Escanor, Holy Knight Escanor, Strength, SSR, Escanor, Human, The Seven Deadly Sins, 5, 5, 5, 5
+"Sunshine" Holy Knight Escanor, Holy Knight Escanor, HP, SSR, Escanor, Human, The Seven Deadly Sins, 5, 5, 3, 1
+[Fire of Life] "Ultimate" Escanor, "Ultimate" Escanor, Light, SSR, Escanor, Human, The Seven Deadly Sins, 5, 5, 5, 1
+[Eternal Sun] Escanor the Indomitable, Escanor the Indomitable, Green, UR, Escanor, Human, The Seven Deadly Sins, 5, 5, 1, 1
+[Invincible Avatar] "The One" Escanor, "The One" Escanor, Speed, SSR, Escanor, Human, The Seven Deadly Sins, 5, 5, 5, 4
+
+[The Four Archangels] Ludociel of Flash, Ludociel of Flash, Speed, SSR, Ludociel, Goddess, The Four Archangels, 5, 5, 5, 5
+[Advent of Flash] Covenant of Light Ludociel, Covenant of Light Ludociel, Speed, SSR, Ludociel, Goddess, The Four Archangels, 5, 5, 3, 1
+[Divine Proxy] Ludociel of Flash, Ludociel of Flash, HP, SSR, Ludociel, Goddess, The Four Archangels, 5, 5, 5, 5
+[Summer Mirage] Covenant of Light Ludociel, Covenant of Light Ludociel, Strength, SSR, Ludociel, Goddess, The Four Archangels, 5, 5, 5, 1
+[Advent of Ocean] Covenant of Light Tarmiel, Covenant of Light Tarmiel, Strength, SSR, Tarmiel, Goddess, The Four Archangels, 5, 5, 5, 3
+[The Four Archangels] Tarmiel of Ocean, Tarmiel of Ocean, Speed, SSR, Tarmiel, Goddess, The Four Archangels, 5, 5, 5, 5
+[Advent of Tornado] Covenant of Light Sariel, Covenant of Light Sariel, HP, SSR, Sariel, Goddess, The Four Archangels, 5, 5, 5, 3
+[The Four Archangels] Sariel of Tornado, Sariel of Tornado, Strength, SSR, Sariel, Goddess, The Four Archangels, 5, 5, 5, 3
+[The Four Archangels] Mael of Sunshine, Mael of Sunshine, Light, SSR, Mael, Goddess, The Four Archangels, 5, 5, 3, 1
+
+[The Ten Commandments] Galland of Truth, Galland of Truth, Speed, SSR, Galland, Demon, The Ten Commandments, 5, 5, 5, 3
+[Elite Demon] Galland of Truth, Galland of Truth, Strength, SSR, Galland, Demon, The Ten Commandments, 5, 5, 5, 5
+[The Ten Commandments] Melascula of Faith, Melascula of Faith, Speed, SSR, Melascula, Demon, The Ten Commandments, 5, 5, 5, 5
+[Sweet & Scary] Melascula of Faith, Melascula of Faith, HP, SSR, Melascula, Demon, The Ten Commandments, 5, 5, 5, 3
+[Elite Demon] Melascula of Faith, Melascula of Faith, Strength, SSR, Melascula, Demon, The Ten Commandments, 5, 5, 3, 4
+[The Ten Commandments] Monspeet of Reticence, Monspeet of Reticence, Strength, SSR, Monspeet, Demon, The Ten Commandments, 5, 5, 5, 5
+[Elite Demon] Monspeet of Reticence, Monspeet of Reticence, HP, SSR, Monspeet, Demon, The Ten Commandments, 5, 5, 5, 5
+[The Ten Commandments] Gloxinia of Repose, Gloxinia of Repose, HP, SSR, Gloxinia, Fairy, The Ten Commandments, 5, 5, 5, 1
+[Elite Demon] Gloxinia of Repose, Gloxinia of Repose, Strength, SSR, Gloxinia, Fairy, The Ten Commandments, 5, 5, 5, 4
+[The Ten Commandments] Drole of Patience, Drole of Patience, HP, SSR, Drole, Giant, The Ten Commandments, 5, 5, 5, 5
+[Elite Demon] Drole of Patience, Drole of Patience, Speed, SSR, Drole, Giant, The Ten Commandments, 5, 5, 5, 5
+[The Ten Commandments] Fraudrin of Selflessness, Fraudrin of Selflessness, HP, SSR, Fraudrin, Demon, The Ten Commandments, 5, 5, 5, 5
+[Elite Demon] Fraudrin of Selflessness, Fraudrin of Selflessness, Speed, SSR, Fraudrin, Demon, The Ten Commandments, 5, 5, 1, 5
+[The Ten Commandments] Derieri of Purity, Derieri of Purity, Strength, SSR, Derieri, Demon, The Ten Commandments, 5, 5, 5, 5
+[Elite Demon] Derieri of Purity, Derieri of Purity, HP, SSR, Derieri, Demon, The Ten Commandments, 5, 5, 5, 5
+[Sweet Temptation] Derieri of Purity, Derieri of Purity, Speed, SSR, Derieri, Demon, The Ten Commandments, 5, 5, 5, 5
+[Twisted Darkness] Berserk Estarossa, Berserk Estarossa, Speed, SSR, Estarossa, Demon, The Ten Commandments, 5, 5, 2, 3
+[The Ten Commandments] Estarossa of Love, Estarossa of Love, Strength, SSR, Estarossa, Demon, The Ten Commandments, 5, 5, 5, 5
+[Elite Demon] Estarossa of Love, Estarossa of Love, HP, SSR, Estarossa, Demon, The Ten Commandments, 5, 5, 5, 5
+"Ominous Nebula" Prince of Darkness Zeldris, Prince of Darkness Zeldris, Speed, SSR, Zeldris, Demon, The Ten Commandments, 5, 5, 5, 5
+[The Ten Commandments] Zeldris of Piety, Zeldris of Piety, Speed, SSR, Zeldris, Demon, The Ten Commandments, 5, 5, 3, 1
+[Elite Demon] Zeldris of Piety, Zeldris of Piety, Strength, SSR, Zeldris, Demon, The Ten Commandments, 5, 5, 5, 3
+[Demon King's Deputy] Executioner Zeldris, Executioner Zeldris, HP, SSR, Zeldris, Demon, The Ten Commandments, 5, 5, 5, 5
+
+[Wielder of Gram] Prince Sigurd, Prince Sigurd, Strength, SSR, Sigurd, Human, Ragnarok, 5, 5, 5, 3
+[Warrior of Justice] Wanderer Thonar, Wanderer Thonar, HP, SSR, Thonar, Human, Ragnarok, 5, 5, 5, 4
+[Clandestine Savior] Wanderer Thonar, Wanderer Thonar, Strength, SSR, Thonar, Human, Ragnarok, 5, 5, 5, 4
+[Battlefield Guardian] Princess Brunhild, Princess Brunhild, HP, SSR, Brunhild, Human, Ragnarok, 5, 5, 5, 3
+[Bride of the Snow Country] Princess Brunhild, Princess Brunhild, Strength, SSR, Brunhild, Human, Ragnarok, 5, 5, 5, 4
+[Guide to Valhalla] Valkyrie Megellda, Valkyrie Megellda, Speed, SSR, Megellda, Unknown, Ragnarok, 5, 5, 5, 3
+[Pride of Valhalla] Valkyrie Megellda, Valkyrie Megellda, Strength, SSR, Megellda, Unknown, Ragnarok, 5, 5, 5, 3
+[Serpent Queller] World Serpent Jormungand, World Serpent Jormungand, HP, SSR, Jormungand, Unknown, Ragnarok, 5, 5, 5, 4
+[Master of Light] Sun God Freyr, Sun God Freyr, Strength, SSR, Freyr, Unknown, Ragnarok, 5, 5, 5, 3
+[Spellbinding Queen] Goddess of Beauty Freyja, Goddess of Beauty Freyja, Strength, SSR, Freyja, Unknown, Ragnarok, 5, 5, 5, 1
+[Summer Mirage] Goddess of Beauty Freyja, Goddess of Beauty Freyja, HP, SSR, Freyja, Unknown, Ragnarok, 5, 5, 5, 1
+[Indomitable Will] God of War Tyr, God of War Tyr, Strength, SSR, Tyr, Unknown, Ragnarok, 5, 5, 3, 3
+[Shepherd of Souls] Queen Hel, Queen Hel, Darkness, SSR, Hel, Unknown, Ragnarok, 5, 5, 2, 5
+[Tundra Hunter] Giant Skadi, Giant Skadi, Strength, SSR, Skadi, Giant, Ragnarok, 5, 5, 5, 3
+[The Hunter] Giant Skadi, Giant Skadi, Speed, SSR, Skadi, Giant, Ragnarok, 5, 5, 5, 3
+
+[Doombringer] Mage Lillia, Mage Lillia, HP, SSR, Lillia, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Mastermind] Mage Lillia, Mage Lillia, Speed, SSR, Lillia, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Advent of Destruction] Lillia of Desire, Lillia of Desire, Strength, SSR, Lillia, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Starry Night's Illusion] Lillia of Desire, Lillia of Desire, Speed, SSR, Lillia, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Magic Weapon MK-II] Valenti of Obsession, Valenti of Obsession, HP, SSR, Valenti, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Earthshaker] Weapon Researcher Valenti, Weapon Researcher Valenti, HP, SSR, Valenti, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Sunny Vacation] Weapon Researcher Valenti, Weapon Researcher Valenti, Speed, SSR, Valenti, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Gift of the White Snow] Valenti of Obsession, Valenti of Obsession, Strength, SSR, Valenti, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Fullmetal Engineer] Valenti of Obsession, Valenti of Obsession, Speed, SSR, Valenti, Human, The Seven Catastrophes, 5, 5, 5, 1
+[Ruler of Stormy Seas] Noblesse Eastin, Noblesse Eastin, Speed, SSR, Eastin, Human, The Seven Catastrophes, 5, 5, 5, 4
+[Empress of the Sea] Eastin of Authority, Eastin of Authority, Strength, SSR, Eastin, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Spooky Party] Eastin of Authority, Eastin of Authority, HP, SSR, Eastin, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Sunny Vacation] Noblesse Eastin, Noblesse Eastin, HP, SSR, Eastin, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Oceanic Harmonizer] Noblesse Eastin, Noblesse Eastin, Strength, SSR, Eastin, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Weapon Master] Mono of Blood and Iron, Mono of Blood and Iron, HP, SSR, Mono, Human, The Seven Catastrophes, 5, 5, 5, 4
+[Full Moon's Shadow] Mono of Blood and Iron, Mono of Blood and Iron, Speed, SSR, Mono, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Shepherd of Death] Human Weapon Mono, Human Weapon Mono, Strength, SSR, Mono, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Advent of Destruction] Human Weapon Mono, Human Weapon Mono, Speed, SSR, Mono, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Blade in the Dark] Human Weapon Mono, Human Weapon Mono, HP, SSR, Mono, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Halloween] Queen of Explosions Roxy, Queen of Explosions Roxy, HP, SSR, Roxy, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Vengeful Saw Blade] Roxy of Madness, Roxy of Madness, Speed, SSR, Roxy, Human, The Seven Catastrophes, 5, 5, 2, 1
+[Winter Whirlwind] Roxy of Madness, Roxy of Madness, Strength, SSR, Roxy, Human, The Seven Catastrophes, 5, 5, 2, 5
+[Mad Destroyer] Queen of Explosions Roxy, Queen of Explosions Roxy, Strength, SSR, Roxy, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Summer Sun] Queen of Explosions Roxy, Queen of Explosions Roxy, Speed, SSR, Roxy, Human, The Seven Catastrophes, 5, 5, 5, 5
+[Dungeon Raider] Gamer Shin, Gamer Shin, HP, SSR, Shin, Human, The Seven Catastrophes, 5, 5, 5, 4
+[Halloween] Gamer Shin, Gamer Shin, Strength, SSR, Shin, Human, The Seven Catastrophes, 5, 5, 5, 5
+[The Guild's Rising Star] Gamer Shin, Gamer Shin, Speed, SSR, Shin, Human, The Seven Catastrophes, 5, 5, 5, 4
+[Executor of Darkness] Guardian Deity Camila, Guardian Deity Camila, Strength, SSR, Camila, Unknown, The Seven Catastrophes, 5, 5, 5, 5
+[Heart of a Beast] Guardian Deity Camila, Guardian Deity Camila, Speed, SSR, Camila, Unknown, The Seven Catastrophes, 5, 5, 5, 3
+
+[Cadet Corps] Eren Jaeger, Eren Jaeger, Speed, SR, Eren, Human, Collab, 5, 5, 5, 5
+[Steadfast Resolve] Eren Jaeger, Eren Jaeger, Speed, SSR, Eren, Human, Collab, 5, 5, 5, 4
+[Titan Form] Eren Jaeger, Eren Jaeger, HP, SSR, Eren, Human, Collab, 5, 5, 5, 5
+[Indomitable Wings] Levi, Levi, HP, SSR, Levi, Human, Collab, 5, 5, 5, 5
+[Greatest Soldier] Levi, Levi, Strength, SSR, Levi, Human, Collab, 5, 5, 5, 5
+[Greatest Soldier] Mikasa Ackermann, Mikasa Ackermann, Speed, SSR, Mikasa, Human, Collab, 5, 5, 5, 3
+[MAVE:] Lead Vocalist Zena, Lead Vocalist Zena, Speed, SSR, Zena, Unknown, Collab, 5, 5, 5, 3
+[Slime] Rimuru Tempest, Rimuru Tempest, HP, SR, Rimuru, Unknown, Collab, 5, 5, 5, 5
+[Ruler of Monsters] Rimuru Tempest, Rimuru Tempest, Speed, SSR, Rimuru, Unknown, Collab, 5, 5, 5, 5
+[Octagram] Demon Lord Rimuru Tempest, Demon Lord Rimuru Tempest, HP, SSR, Rimuru, Unknown, Collab, 5, 5, 3, 3
+[Tyrant of Destruction] Milim Nava, Milim Nava, Speed, SSR, Milim, Unknown, Collab, 5, 5, 5, 5
+[Kijin] Benimaru, Benimaru, Strength, SSR, Benimaru, Unknown, Collab, 5, 5, 5, 5
+[KOF '98] Mai Shiranui, Mai Shiranui, Speed, SSR, Mai, Human, Collab, 5, 5, 5, 5
+[KOF '98] Athena Asamiya, Athena Asamiya, HP, SSR, Athena, Human, Collab, 5, 5, 5, 5
+[KOF '98] Omega Rugal, Omega Rugal, HP, SSR, Rugal, Human, Collab, 5, 5, 5, 5
+[KOF '98] Kyo Kusanagi, Kyo Kusanagi, Strength, SSR, Kyo, Human, Collab, 5, 5, 5, 4
+[Stranger Things] Eleven, Eleven, Speed, SSR, Eleven, Human, Collab, 5, 5, 5, 5
+[Stranger Things] Jim Hopper, Jim Hopper, Strength, SSR, Jim, Human, Collab, 5, 5, 5, 5
+[Stranger Things] Mike Wheeler, Mike Wheeler, Strength, SSR, Mike, Human, Collab, 5, 5, 5, 5
+[Stranger Things] Will Byers, Will Byers, HP, SSR, Will, Human, Collab, 5, 5, 5, 5
+[Re:ZERO] Royal Candidate Emilia, Royal Candidate Emilia, Speed, SSR, Emilia, Unknown, Collab, 5, 5, 5, 3
+[Re:ZERO] Twin Maid Rem, Twin Maid Rem, Strength, SSR, Rem, Unknown, Collab, 5, 5, 5, 4
+[Re:ZERO] Twin Maid Ram, Twin Maid Ram, HP, SSR, Ram, Unknown, Collab, 5, 5, 5, 3
+[Re:ZERO] The Caretaker of the Forbidden Library Beatrice, The Caretaker of the Forbidden Library Beatrice, Speed, SSR, Beatrice, Unknown, Collab, 5, 5, 5, 5
+[KOF '98] Terry Bogard, Terry Bogard, Strength, SSR, Terry, Human, Collab, 5, 5, 5, 5
+[KOF '98] Iori Yagami, Iori Yagami, HP, SSR, Iori, Human, Collab, 5, 5, 5, 5
+[Oni] Shuna, Shuna, HP, SSR, Shuna, Unknown, Collab, 5, 5, 5, 3
+[Re:ZERO] Witch of Greed Echidna, Witch of Greed Echidna, HP, SSR, Echidna, Unknown, Collab, 5, 5, 5, 3
+[Re:ZERO] The Master Swordsman Reinhard, The Master Swordsman Reinhard, Strength, SSR, Reinhard, Human, Collab, 5, 5, 5, 5
+[Shield Hero] Iwatani Naofumi, Iwatani Naofumi, Speed, SSR, Iwatani, Human, Collab, 5, 5, 1, 5
+[Naofumi's Sword] Raphtalia, Raphtalia, Speed, SSR, Raphtalia, Unknown, Collab, 5, 5, 3, 5
+[Queen's Successor] Filo, Filo, HP, SSR, Filo, Unknown, Collab, 5, 5, 2, 5
+[Hunting Hero] Kazayama Kizuna, Kazayama Kizuna, Strength, SSR, Kizuna, Human, Collab, 5, 5, 5, 1
+[Filolial Queen] Fitoria, Fitoria, Speed, SSR, Fitoria, Unknown, Collab, 5, 5, 2, 1
+[Vassal Wielder] Glass, Glass, HP, SSR, Glass, Unknown, Collab, 5, 5, 3, 3
+[Otherworldly Reincarnation] Rudeus Greyrat, Rudeus Greyrat, Strength, SSR, Rudeus, Human, Collab, 5, 5, 5, 3
+[Mad Dog] Eris Boreas Greyrat, Eris Boreas Greyrat, Strength, SSR, Eris, Human, Collab, 5, 5, 5, 4
+[King-Class Water Mage] Roxy Migurdia, Roxy Migurdia, HP, SSR, Roxy Migurdia, Unknown, Collab, 5, 5, 5, 4
+[Sword King] Ghislaine Dedoldia, Ghislaine Dedoldia, HP, SSR, Ghislaine, Unknown, Collab, 5, 5, 5, 5
+[Ruler of Nazarick] Ainz Ooal Gown, Ainz Ooal Gown, Speed, SSR, Ainz, Unknown, Collab, 5, 5, 5, 5
+[Pure-White Devil] Albedo, Albedo, Speed, SSR, Albedo, Unknown, Collab, 5, 5, 2, 1
+[Bloody Valkyrie] Shalltear Bloodfallen, Shalltear Bloodfallen, Strength, SSR, Shalltear, Unknown, Collab, 5, 5, 3, 5
+[Guardian of the Glacier] Cocytus, Cocytus, HP, SSR, Cocytus, Unknown, Collab, 5, 5, 5, 1
+[Slayer Candidate] Jue Viole Grace, Jue Viole Grace, Strength, SSR, Jue, Human, Collab, 5, 5, 5, 1
+[Princess of Zahard] Ha Yuri Zahard, Ha Yuri Zahard, Speed, SSR, Ha, Human, Collab, 5, 5, 1, 3
+[Secret Floor] Data Zahard, Data Zahard, HP, SSR, Data, Unknown, Collab, 5, 5, 3, 4
+
+[Ashen Desire] Demon Hendrickson, Demon Hendrickson, HP, SSR, Hendrickson, Demon, --, 5, 5, 5, 4
+[The Six Knights of Black] Captain Bellion, Caption Bellion, Speed, SSR, Bellion, Demon, --, 5, 5, 5, 5
+[Origin Fragment] Highest-ranking Demon Chandler, Highest-ranking Demon Chandler, HP, SSR, Chandler, Demon, --, 5, 5, 5, 3
+[Pacifier Fiend] Mage Chandler, Mage Chandler, Speed, SSR, Chandler, Demon, --, 5, 5, 5, 5
+[Origin Fragment] Highest-ranking Demon Cusack, Highest-ranking Demon Cusack, Speed, SSR, Cusack, Demon, --, 5, 5, 2, 4
+[Napping Reaper] Dual Swordsman Cusack, Dual Swordsman Cusack, Speed, SSR, Cusack, Demon, --, 5, 5, 5, 5
+"The Ruler" Tyrant Demon King, Tyrant Demon King, Darkness, SSR, Zeldris, Demon, --, 5, 5, 1, 1
+[Fang of the Land] Mercenary Matrona, Mercenary Matrona, Speed, SSR, Matrona, Giant, --, 5, 5, 5, 3
+[Halloween] Mercenary Matrona, Mercenary Matrona, Strength, SSR, Matrona, Giant, --, 5, 5, 5, 4
+[Honor of Giants] Mercenary Matrona, Mercenary Matrona, HP, SSR, Matrona, Giant, --, 5, 5, 5, 3
+[Forest Guardian] Fairy Helbram, Fairy Helbram, HP, SSR, Helbram, Fairy, --, 5, 5, 5, 3
+[Reincarnation of Revenge] Fairy Helbram, Fairy Helbram, Strength, SSR, Helbram, Fairy, --, 5, 5, 5, 5
+[Royalty] Fairy Helbram, Fairy Helbram, Speed, SSR, Helbram, Fairy, --, 5, 5, 5, 5
+[One-eyed Despot] Cardinal Helbram, Cardinal Helbram, Speed, SSR, Helbram, Fairy, --, 5, 5, 5, 5
+[Fairy King's Forest] Guardian Elaine, Guardian Elaine, HP, SSR, Elaine, Fairy, --, 5, 5, 5, 5
+[Scent of Spring] Golden Wings Elaine, Golden Wings Elaine, Speed, SSR, Elaine, Fairy, --, 5, 5, 5, 5
+[Sweet Temptation] Guardian Elaine, Guardian Elaine, Strength, SSR, Elaine, Fairy, --, 5, 5, 5, 5
+[Halloween] Guardian Elaine, Guardian Elaine, Speed, SSR, Elaine, Fairy, --, 5, 5, 5, 5
+[Fairy of Blessings] Golden Wings Elaine, Golden Wings Elaine, Strength, SSR, Elaine, Fairy, --, 5, 5, 5, 5
+[Fulfilled Promise] Golden Wings Elaine, Golden Wings Elaine, HP, SSR, Elaine, Fairy, --, 5, 5, 5, 3
+[Three Millennia of Memories] Aide Gerharde, Aide Gerharde, HP, SSR, Gerharde, Fairy, --, 5, 5, 5, 5
+[Liones] Princess Elizabeth, Princess Elizabeth, HP, SSR, Elizabeth, Goddess, --, 5, 5, 5, 4
+[A New Adventure] Princess Elizabeth, Princess Elizabeth, Speed, SSR, Elizabeth, Goddess, --, 5, 5, 3, 5
+[Boar Hat] Tavern Hostess Elizabeth, Tavern Hostess Elizabeth, Strength, SR, Elizabeth, Goddess, --, 5, 5, 5, 4
+[Mobile Tavern] Hawk & Elizabeth, Hawk & Elizabeth, Strength, SR, Elizabeth, Goddess, --, 5, 5, 5, 5
+[Mascot] Hawk & Elizabeth, Hawk & Elizabeth, HP, SR, Elizabeth, Goddess, --, 5, 5, 5, 5
+[Reverse] Guardian Hawk & Elizabeth, Guardian Hawk & Elizabeth, Speed, SSR, Elizabeth, Goddess, --, 5, 5, 5, 5
+[New Legend] Princess Elizabeth, Princess Elizabeth, Strength, SSR, Elizabeth, Goddess, --, 5, 5, 1, 1
+[Summer Vibes] Guardian Hawk & Elizabeth, Guardian Hawk & Elizabeth, Strength, SSR, Elizabeth, Goddess, --, 5, 5, 5, 5
+[Restored Memories] Elizabeth of Eternal Rebirth, Elizabeth of Eternal Rebirth, Light, SSR, Elizabeth, Goddess, --, 5, 5, 5, 4
+[Brilliant Protection] Queen Elizabeth, Queen Elizabeth, Light, SSR, Elizabeth, Goddess, --, 5, 5, 3, 3
+[Holy Warrior] Goddess Elizabeth, Goddess Elizabeth, Speed, SSR, Elizabeth, Goddess, --, 5, 5, 5, 5
+[Spring Fantasy] Goddess Elizabeth, Goddess Elizabeth, Strength, SSR, Elizabeth, Goddess, --, 5, 5, 5, 4
+[Wings of the Sky] Celestial Ellatte, Celestial Ellatte, Strength, SSR, Ellatte, Goddess, --, 5, 5, 5, 5
+[Sky Temple Protector] Celestial Ellatte, Celestial Ellatte, Speed, SSR, Ellatte, Goddess, --, 5, 5, 5, 4
+[Pure Justice] Celestial Ellatte, Celestial Ellatte, HP, SSR, Ellatte, Goddess, --, 5, 5, 3, 3
+[Memory Fragment] Knight of Danafor Liz, Knight of Danafor Liz, HP, SSR, Liz, Goddess, --, 5, 5, 5, 4
+[Starry Night's Illusion] Knight of Danafor Liz, Knight of Danafor Liz, Strength, SSR, Liz, Goddess, --, 5, 5, 5, 4
+[Gift of Happiness] Knight of Danafor Liz, Knight of Danafor Liz, Speed, SSR, Liz, Goddess, --, 5, 5, 5, 1
+[Knighthood of Scraps Disposal] Captain Hawk, Captain Hawk, HP, SSR, Hawk, Unknown, --, 5, 5, 5, 5
+[New Tavern] Captain Hawk, Captain Hawk, Strength, SSR, Hawk, Unknown, --, 5, 5, 5, 5
+[Knighthood of Scraps Disposal] Oslo & Hawk, Oslo & Hawk, Strength, SSR, Hawk, Unknown, --, 5, 5, 5, 5
+[Awesome Party] Oslo & Hawk, Oslo & Hawk, Speed, SSR, Hawk, Unknown, --, 5, 5, 5, 5
+[Maritime Troublemakers] Oslo & Hawk, Oslo & Hawk, HP, SSR, Hawk, Unknown, --, 5, 5, 3, 5
+[Swift Sword] Foreign Swordsman Nanashi, Foreign Swordsman Nanashi, Speed, SSR, Nanashi, Unknown, --, 5, 5, 2, 1
+[Future of Liones] Prince Tristan, Prince Tristan, Speed, SSR, Tristan, Unknown, --, 5, 5, 3, 5
+[Undying Love] Vampire Gelda, Vampire Gelda, Strength, SSR, Gelda, Unknown, --, 5, 5, 2, 3
+
+[Star of the Kingdom] Holy Knight Gilthunder, Holy Knight Gilthunder, Speed, SR, Gilthunder, Human, --, 5, 5, 5, 5
+"Thunderbolt" Guardian Gilthunder, Guardian Gilthunder, Strength, SSR, Gilthunder, Human, --, 5, 5, 5, 4
+[Chivalrous] Holy Knight Gilthunder, Holy Knight Gilthunder, HP, SR, Gilthunder, Human, --, 5, 5, 3, 4
+[Knight of the Holy War] Guardian Gilthunder, Guardian Gilthunder, Speed, SSR, Gilthunder, Human, --, 5, 5, 5, 5
+[Rapier] Holy Knight Guila, Holy Knight Guila, Speed, SR, Guila, Human, --, 5, 5, 5, 5
+"Explosion" Guardian Guila, Guardian Guila, Strength, SSR, Guila, Human, --, 5, 5, 5, 5
+[Halloween] Guardian Guila, Guardian Guila, HP, SSR, Guila, Human, --, 5, 5, 5, 5
+[Star of the Kingdom] Ranger Howzer, Ranger Howzer, Speed, SR, Howzer, Human, --, 5, 5, 5, 5
+[Liones Royalty] Ranger Howzer, Ranger Howzer, HP, SR, Howzer, Human, --, 5, 5, 5, 5
+[Knight of the Holy War] Holy Knight Howzer, Holy Knight Howzer, Speed, SSR, Howzer, Human, --, 5, 5, 5, 5
+"Tempest" Holy Knight Howzer, Holy Knight Howzer, Strength, SSR, Howzer, Human, --, 5, 5, 5, 5
+[Champion] Ranger Griamore, Ranger Griamore, Strength, SR, Griamore, Human, --, 5, 5, 5, 5
+[Iron-wall Knight] Guardian Griamore, Guardian Griamore, HP, SSR, Griamore, Human, --, 5, 5, 5, 5
+[Adventurer] Ranger Griamore, Ranger Griamore, Speed, SR, Griamore, Human, --, 5, 5, 5, 5
+[Knight of the Holy War] Guardian Griamore, Guardian Griamore, Speed, SSR, Griamore, Human, --, 5, 5, 5, 5
+[New Generation] Holy Knight Jericho, Holy Knight Jericho, Speed, SR, Jericho, Human, --, 5, 5, 5, 5
+[Adventurer] Holy Knight Jericho, Holy Knight Jericho, Strength, SR, Jericho, Human, --, 5, 5, 5, 5
+[Godspeed Knight] Guardian Jericho, Guardian Jericho, HP, SSR, Jericho, Human, --, 5, 5, 5, 5
+[Knight of Frost] Guardian Jericho, Guardian Jericho, Strength, SSR, Jericho, Human, --, 5, 5, 5, 5
+[New Legend] Guardian Jericho, Guardian Jericho, Speed, SSR, Jericho, Human, --, 5, 5, 5, 5
+[Beard of the Mountain Cat] Member Allioni, Member Allioni, HP, R, Allioni, Human, --, 5, 5, 5, 5
+[Confirmation] Apprentice Holy Knight Twigo, Apprentice Holy Knight Twigo, Strength, R, Twigo, Human, --, 5, 5, 5, 3
+[Weird Fangs] Holy Knight Golgius, Holy Knight Golgius, Speed, R, Golgius, Human, --, 5, 5, 5, 5
+[Weird Fangs] Holy Knight Ruin, Holy Knight Ruin, HP, R, Ruin, Human, --, 5, 5, 5, 5
+[Weird Fangs] Holy Knight Jude, Holy Knight Jude, Strength, R, Jude, Human, --, 5, 5, 5, 5
+[Weird Fangs] Holy Knight Freesia, Holy Knight Freesia, Speed, SR, Freesia, Human, --, 5, 5, 5, 5
+[Burning Ember] Knight of Danafor Cain, Knight of Danafor Cain, HP, SR, Cain, Human, --, 5, 5, 5, 5
+[Boom Boom Pow] Holy Knight Marmas, Holy Knight Marmas, Speed, R, Marmas, Human, --, 5, 5, 5, 5
+[Knight of Ice] Holy Knight Gustav, Holy Knight Gustav, HP, SR, Gustav, Human, --, 5, 5, 5, 5
+"Overpower" Hunter Slater, Hunter Slater, Speed, SSR, Slater, Human, --, 5, 5, 5, 5
+[Roars of Dawn] Captain Slater, Captain Slater, Strength, SR, Slater, Human, --, 5, 5, 5, 5
+[Halloween] Hunter Slater, Hunter Slater, Strength, SSR, Slater, Human, --, 5, 5, 5, 5
+[The Pleiades of the Azure Sky] Holy Knight Waillo, Holy Knight Waillo, Speed, SR, Waillo, Human, --, 5, 5, 5, 5
+[Roars of Dawn] Holy Knight Simon, Holy Knight Simon, Strength, R, Simon, Human, --, 5, 5, 5, 5
+[Roars of Dawn] Holy Knight Weinheidt, Holy Knight Weinheidt, Speed, SR, Weinheidt, Human, --, 5, 5, 5, 5
+[Roars of Dawn] Holy Knight Hugo, Holy Knight Hugo, HP, R, Hugo, Human, --, 5, 5, 5, 5
+[Roars of Dawn] Holy Knight Jillian, Holy Knight Jillian, HP, SR, Jillian, Human, --, 5, 5, 5, 3
+[Reincarnation of Obsession] Mage Vivian, Mage Vivian, Strength, SR, Vivian, Human, --, 5, 5, 5, 5
+"Melt" Grandmaster Hendrickson, Grandmaster Hendrickson, Speed, SSR, Hendrickson, Human, --, 5, 5, 5, 5
+[Omen of Chaos] Druid Hendrickson, Druid Hendrickson, HP, SR, Hendrickson, Human, --, 5, 5, 5, 5
+"Break" Grandmaster Dreyfus, Grandmaster Dreyfus, HP, SR, Dreyfus, Human, --, 5, 5, 5, 5
+[Omen of Chaos] Grandmaster Dreyfus, Grandmaster Dreyfus, Strength, SR, Dreyfus, Human, --, 5, 5, 5, 5
+[Vaizel Fight Festival] Champion Taizoo, Champion Taizoo, Strength, R, Taizoo, Human, --, 5, 5, 5, 5
+[Camelot's Sword] New King Arthur, New King Arthur, Strength, SSR, Arthur, Human, --, 5, 5, 5, 5
+[King of Prophecies] Adventurer Arthur, Adventurer Arthur, Speed, SR, Arthur, Human, --, 5, 5, 5, 5
+[Destined Heir] New King Arthur, New King Arthur, Speed, SSR, Arthur, Human, --, 5, 5, 5, 5
+[Light of Hope] New King Arthur, New King Arthur, HP, SSR, Arthur, Human, --, 5, 5, 5, 3
+[Broken Balance] Chaos Arthur, Chaos Arthur, HP, UR, Arthur, Human, --, 5, 5, 1, 3
+[Chosen King] Excalibur Arthur, Excalibur Arthur, Strength, SSR, Arthur, Human, --, 5, 5, 5, 5
+[Will of the Holy Sword] Excalibur Arthur, Excalibur Arthur, HP, SSR, Arthur, Human, --, 5, 5, 5, 3
+[The Pleiades of the Azure Sky] Holy Knight Deathpierce, Holy Knight Deathpierce, HP, SSR, Deathpierce, Human, --, 5, 5, 5, 5
+[The Pleiades of the Azure Sky] Holy Knight Dogedo, Holy Knight Dogedo, Strength, SR, Dogedo, Human, --, 5, 5, 5, 5
+[The Pleiades of the Azure Sky] Captain Denzel, Captain Denzel, Strength, SSR, Denzel, Human, --, 5, 5, 5, 5
+[The Pleiades of the Azure Sky] Holy Knight Deldry, Holy Knight Deldry, Strength, SSR, Deldry, Human, --, 5, 5, 5, 5
+[The Pleiades of the Azure Sky] Holy Knight Arden, Holy Knight Arden, Speed, SR, Arden, Human, --, 5, 5, 5, 5
+[Sweet Temptation] Druid Jenna, Druid Jenna, Speed, SSR, Jenna, Human, --, 5, 5, 5, 5
+[Sweet Temptation] Druid Zaneri, Druid Zaneri, HP, SSR, Zaneri, Human, --, 5, 5, 5, 3
+[Reincarnation of Conviction] Grandmaster Zaratras, Grandmaster Zaratras, HP, SSR, Zaratras, Human, --, 5, 5, 5, 5

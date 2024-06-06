@@ -8,11 +8,12 @@
 
 typedef std::function<bool(const Hero &)> Condition;
 
+// Operations
 Condition And(const std::vector<Condition> &conditions);
-
 Condition Or(const std::vector<Condition> &conditions);
-
 Condition Not(const std::vector<Condition> &conditions);
+
+// Conditions
 
 /// <param name="args">Contains a single string, the name of a draw</param>
 Condition AvailableFromDraw(const std::vector<std::string> &args);

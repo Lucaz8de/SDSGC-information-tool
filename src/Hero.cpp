@@ -16,14 +16,14 @@ const std::array<std::string, 7> Hero::lr_names = { "\"Virtual Body Doubles\" Lo
 std::vector<Hero> Hero::heroes = std::vector<Hero>{};
 
 void Hero::MakeHeroes() {
-	assert(heroes.empty());
+	assert(heroes.empty()); // If this function is called more than once, something's gone wrong!
 
-	// Note the working directory is Project/
-	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../../acquisition.txt");
-	acquisition.merge(ReadLists("../../draws.txt")); // makes a single hashmap
+	// Note the working directory is src/
+	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../data/acquisition.txt");
+	acquisition.merge(ReadLists("../data/draws.txt")); // makes a single hashmap
 
 	std::unordered_map<std::string, std::vector<std::string>> upgrades{};
-	std::ifstream file{ "../../owned.txt" };
+	std::ifstream file{ "../data/owned.txt" };
 	while (file.good()) {
 		std::string line{};
 		std::getline(file, line);
@@ -37,7 +37,7 @@ void Hero::MakeHeroes() {
 	}
 	file.close();
 
-	file.open("../../heroes.txt");
+	file.open("../data/heroes.txt");
 	while (file.good()) {
 		std::string line{};
 		std::getline(file, line);

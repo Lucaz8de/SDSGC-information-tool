@@ -8,10 +8,10 @@
 #include "Menu.h"
 #include "Utilitiesig.h"
 
-//typedef std::function<bool(const Hero &)> Condition;
+typedef std::function<bool(const Hero &)> Condition;
 
 int main() {
-	Hero::MakeHeroes(); // Set up the list of heros
+	Hero::MakeHeroes(); // Set up the list of heroes
 	std::vector<Hero> heroes = Hero::get_heroes();
 
 	bool sentinel_finished = false;
@@ -25,5 +25,8 @@ int main() {
 }
 
 static void todo() {
+	std::cout << "There is a bug ... Using 'AND' just returns every hero ..." << std::endl;
 	std::cout << "Print upgrades and upgrade costs" << std::endl;
+	std::cout << "Add a higher level of the menu asking what you want to do," << 
+		"e.g. filter, print all upgrade costs ..." << std::endl;
 }

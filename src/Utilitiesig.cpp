@@ -8,6 +8,7 @@
 #include <vector>
 
 #include "Hero.h"
+#include "Utilitiesig.h"
 
 std::vector<std::string> ParseCS(const std::string& str) {
 	std::vector<std::string> out{};
@@ -41,6 +42,16 @@ std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::s
 		out[heading] = ParseCS(line); // adds the list to the hashmap
 		// empty line
 		file.ignore();
+	}
+	return out;
+}
+
+std::vector<std::string> HashKeys(std::unordered_map<std::string, std::vector<std::string>> already_read_lists)
+{
+	std::vector<std::string> out{};
+	for (auto const &entry : already_read_lists) {
+		std::string key = entry.first;
+		out.push_back(key);
 	}
 	return out;
 }

@@ -13,6 +13,9 @@ std::vector<std::string> ParseCS(const std::string& str);
 and returns a hash map {heading => [data]}.*/
 std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename);
 
+/* Returns the list of headings only from ReadLists' output, i.e. the hash's keys. */
+std::vector<std::string> HashKeys(std::unordered_map<std::string, std::vector<std::string>> already_read_lists);
+
 /* Overload << for vectors using << operator for the elements, 
 separated by commas. Does nothing if vec is empty. */
 template<typename T> std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec);

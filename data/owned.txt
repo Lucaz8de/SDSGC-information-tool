@@ -1,0 +1,209 @@
+[Boar Hat] Tavern Master Meliodas, UR, 90, 7, true, 6
+[The Seven Deadly Sins] Captain Meliodas, UR, 60, 7, true, 3
+[Tomorrow's Champion] Captain Meliodas, UR, 60, 0, true, 2
+[Ragnarok] Lostvayne Meliodas, UR, 100, 7, true, 1
+"Virtual Body Doubles" Lostvayne Meliodas, LR, 61, 12, true, 1
+The Dragon Sin of Wrath Demon Meliodas, UR, 90, 6, true, 1
+[Knight of Wrath] Demon Meliodas, UR, 60, 0, true, 1
+[Holy Warrior] Traitor Meliodas, UR, 100, 12, true, 2
+[Cursed Shackles] Purgatory Meliodas, UR, 100, 12, true, 3
+[Era's End] Demon King Meliodas, UR, 100, 12, true, 3
+"Assault Mode" Berserk Meliodas, UR, 60, 7, true, 2
+
+The Serpent Sin of Envy Holy Knight Diane, UR, 60, 0, true, 2
+[Heart of the Land] Mercenary Diane, UR, 90, 7, true, 6
+[The Seven Deadly Sins] Holy Knight Diane, UR, 60, 0, true, 5
+[Matrona] Fighter Diane, UR, 60, 0, true, 5
+"Creation" Fighter Diane, UR, 60, 0, true, 1
+[Ragnarok] Blessing of the Earth Diane], UR, 90, 6, true, 1
+[Beach Guardian] Blessing of the Earth Diane, UR, 100, 12, true, 2
+[Halloween] Protective Heart Diane, UR, 60, 0, true, 2
+Waves of the Earth Queen Diane, UR, 60, 7, true, 2
+
+[Nunchaku] Adventurer Ban, UR, 60, 0, true, 3
+[Ale Collector] Adventurer Ban, UR, 60, 0, true, 1
+"Snatch" Brawler Ban, UR, 60, 0, true, 1
+[Outlaw] Brawler Ban, UR, 90, 7, true, 5
+[Undead] Prisoner Ban, UR, 60, 0, true, 6
+[Ragnarok] Brawler Ban, UR, 90, 7, true, 3
+[The Seven Deadly Sins] Transcendent Ban, UR, 90, 7, true, 3
+[Immortal's Return] Purgatory Ban, UR, 90, 7, true, 1
+
+The Grizzly Sin of Sloth King the Fairy King, UR, 60, 0, true, 1
+[Forest Guardian] King the Fairy King, UR, 90, 6, true, 2
+[Harlequin] King the Fairy King, UR, 60, 0, true, 2
+[Protector of Dolls] Old Fart King, UR, 60, 0, true, 5
+[The Seven Deadly Sins] Old Fart King, UR, 60, 0, true, 2
+"Disaster" Old Fart King, UR, 60, 0, true, 4
+[Protector King] Fairy King Harlequin, UR, 90, 12, true, 1
+[Signs of Maturity] New Wings King, UR, 90, 7, true, 1
+[Sweet Jelly] New Wings King, SSR, 1, 0, false, 1
+
+[Liones's Hero] Holy Knight Gowther, UR, 60, 0, true, 2
+The Goat Sin of Lust Holy Knight Gowther, UR, 90, 12, true, 6
+[Wanted Man] Young Villager Gowther, UR, 90, 7, true, 6
+[Halloween] Holy Knight Gowther, UR, 90, 6, true, 2
+[Journey for Peace] Wandering Knight Gowther, UR, 60, 6, true, 2
+
+[Collector] Great Mage Merlin, UR, 60, 0, true, 4
+"Infinity" Great Mage Merlin, UR, 60, 0, true, 2
+[Last Philosopher] Mage of Infinity Merlin, UR, 60, 6, true, 1
+[Divine Protection] Merlin the Daughter of Belialuin, UR, 60, 6, true, 2
+[Beach Girl] Truth Seeker Merlin, UR, 60, 0, true, 1
+[Ragnarok] Truth Seeker Merlin, UR, 90, 6, true, 1
+
+The Lion Sin of Pride Holy Knight Escanor, UR, 90, 6, true, 1
+"Sunshine" Holy Knight Escanor, LR, 97, 12, true, 4
+[Fire of Life] "Ultimate" Escanor, UR, 100, 12, true, 3
+[Eternal Sun] Escanor the Indomitable, UR, 1, 0, false, 1
+
+[The Four Archangels] Ludociel of Flash, UR, 60, 6, true, 6
+[Divine Proxy] Ludociel of Flash, UR, 60, 0, true, 1
+[Advent of Flash] Covenant of Light Ludociel, LR, 100, 12, true, 4
+[Advent of Ocean] Covenant of Light Tarmiel, UR, 90, 12, true, 2
+[The Four Archangels] Tarmiel of Ocean, UR, 90, 6, true, 6
+[Advent of Tornado] Covenant of Light Sariel, UR, 90, 12, true, 4
+[The Four Archangels] Sariel of Tornado, UR, 90, 7, true, 5
+[The Four Archangels] Mael of Sunshine, SSR, 1, 0, false, 2
+
+[The Ten Commandments] Galland of Truth, UR, 60, 0, true, 4
+[The Ten Commandments] Melascula of Faith, UR, 90, 7, true, 4
+[Sweet & Scary] Melascula of Faith, UR, 60, 0, true, 1
+[The Ten Commandments] Monspeet of Reticence, UR, 60, 0, true, 2
+[The Ten Commandments] Gloxinia of Repose, UR, 90, 7, true, 2
+[The Ten Commandments] Drole of Patience, UR, 90, 7, true, 3
+[The Ten Commandments] Fraudrin of Selflessness, UR, 60, 0, true, 2
+[The Ten Commandments] Derieri of Purity, UR, 90, 7, true, 4
+[Sweet Temptation] Derieri of Purity, UR, 60, 0, true, 1
+[Twisted Darkness] Berserk Estarossa, UR, 100, 12, true, 6
+"Ominous Nebula" Prince of Darkness Zeldris, UR, 100, 7, true, 2
+[The Ten Commandments] Zeldris of Piety, UR, 90, 7, true, 3
+[Demon King's Deputy] Executioner Zeldris, UR, 60, 7, true, 2
+
+[Wielder of Gram] Prince Sigurd, UR, 90, 7, true, 2
+[Warrior of Justice] Wanderer Thonar, UR, 90, 7, true, 6
+[Clandestine Savior] Wanderer Thonar, UR, 90, 12, true, 3
+[Battlefield Guardian] Princess Brunhild, UR, 100, 12, true, 5
+[Bride of the Snow Country] Princess Brunhild, UR, 90, 7, true, 4
+[Guide to Valhalla] Valkyrie Megellda, UR, 100, 7, true, 4
+[Pride of Valhalla] Valkyrie Megellda, UR, 90, 6, true, 3
+[Serpent Queller] World Serpent Jormungand, UR, 90, 7, true, 1
+[Master of Light] Sun God Freyr, UR, 100, 12, true, 4
+[Spellbinding Queen] Goddess of Beauty Freyja, UR, 90, 7, true, 3
+[Summer Mirage] Goddess of Beauty Freyja, UR, 90, 7, true, 1
+[Indomitable Will] God of War Tyr, UR, 90, 7, true, 5
+[Shepherd of Souls] Queen Hel, UR, 90, 7, true, 4
+
+[Doombringer] Mage Lillia, UR, 90, 7, true, 1
+[Mastermind] Mage Lillia, UR, 90, 6, true, 1
+[Advent of Destruction] Lillia of Desire, UR, 60, 7, true, 1
+[Magic Weapon MK-II] Valenti of Obsession, UR, 90, 7, true, 1
+[Ruler of Stormy Seas] Noblesse Eastin, UR, 90, 7, true, 1
+[Sunny Vacation] Noblesse Eastin, UR, 60, 0, true, 1
+[Oceanic Harmonizer] Noblesse Eastin, UR, 90, 7, true, 2
+[Weapon Master] Mono of Blood and Iron, UR, 60, 0, true, 1
+[Full Moon's Shadow] Mono of Blood and Iron, UR, 60, 6, true, 1
+[Shepherd of Death] Human Weapon Mono, UR, 90, 7, true, 1
+[Advent of Destruction] Human Weapon Mono, UR, 60, 6, true, 1
+[Vengeful Saw Blade] Roxy of Madness, SSR, 1, 0, false, 1
+[Winter Whirlwind] Roxy of Madness, SSR, 1, 0, false, 1
+[Mad Destroyer] Queen of Explosions Roxy, UR, 90, 6, true, 1
+[Halloween] Queen of Explosions Roxy, UR, 60, 0, true, 1
+
+[Dungeon Raider] Gamer Shin, UR, 90, 7, true, 1
+[Heart of a Beast] Guardian Deity Camila, UR, 100, 7, true, 2
+
+[Cadet Corps] Eren Jaeger, UR, 60, 0, true, 6
+[Greatest Soldier] Levi, UR, 60, 7, true, 1
+[Naofumi's Sword] Raphtalia, UR, 60, 0, true, 1
+[Hunting Hero] Kazayama Kizuna, UR, 90, 6, true, 1
+[MAVE:] Lead Vocalist Zena, UR, 60, 0, true, 1
+[Slayer Candidate] Jue Viole Grace, UR, 90, 12, true, 1
+[Princess of Zahard] Ha Yuri Zahard, UR, 60, 6, true, 1
+[Secret Floor] Data Zahard, UR, 60, 6, true, 1
+
+[Ashen Desire] Demon Hendrickson, UR, 60, 0, true, 1
+[Origin Fragment] Highest-ranking Demon Chandler, UR, 100, 12, true, 4
+[Pacifier Fiend] Mage Chandler, UR, 90, 7, true, 4
+[Origin Fragment] Highest-ranking Demon Cusack, UR, 100, 7, true, 3
+"The Ruler" Tyrant Demon King, UR, 100, 12, true, 6
+[Fang of the Land] Mercenary Matrona, UR, 60, 0, true, 3
+[Halloween] Mercenary Matrona, UR, 90, 7, true, 3
+[Honor of Giants] Mercenary Matrona, UR, 100, 7, true, 2
+[Forest Guardian] Fairy Helbram, UR, 60, 0, true, 3
+[Reincarnation of Revenge] Fairy Helbram, UR, 60, 0, true, 1
+[Fairy King's Forest] Guardian Elaine, UR, 60, 0, true, 2
+[Scent of Spring] Golden Wings Elaine, UR, 60, 6, true, 4
+[Fulfilled Promise] Golden Wings Elaine, UR, 60, 7, true, 2
+[Three Millennia of Memories] Aide Gerharde, UR, 60, 0, true, 3
+[Liones] Princess Elizabeth, UR, 90, 7, true, 3
+[A New Adventure] Princess Elizabeth, UR, 60, 0, true, 4
+[Boar Hat] Tavern Hostess Elizabeth, UR, 90, 7, true, 6
+[Mobile Tavern] Hawk & Elizabeth, UR, 60, 0, true, 6
+[Mascot] Hawk & Elizabeth, UR, 60, 0, true, 6
+[Reverse] Guardian Hawk & Elizabeth, UR, 60, 0, true, 1
+[Spring Fantasy] Goddess Elizabeth, UR, 90, 6, true, 3
+[Pure Justice] Celestial Ellatte, UR, 60, 0, true, 1
+[Memory Fragment] Knight of Danafor Liz, UR, 90, 7, true, 3
+[Starry Night's Illusion] Knight of Danafor Liz, UR, 90, 7, true, 1
+[Gift of Happiness] Knight of Danafor Liz, UR, 60, 6, true, 3
+[Knighthood of Scraps Disposal] Captain Hawk, UR, 90, 7, true, 1
+[New Tavern] Captain Hawk, UR, 90, 7, true, 3
+[Awesome Party] Oslo & Hawk, UR, 90, 7, true, 1
+[Maritime Troublemakers] Oslo & Hawk, UR, 60, 0, true, 1
+[Swift Sword] Foreign Swordsman Nanashi, UR, 90, 7, true, 1
+[Future of Liones] Prince Tristan, UR, 60, 7, true, 3
+
+[Star of the Kingdom] Holy Knight Gilthunder, UR, 60, 0, true, 6
+"Thunderbolt" Guardian Gilthunder, UR, 60, 0, true, 3
+[Chivalrous] Holy Knight Gilthunder, UR, 60, 0, true, 6
+"Explosion" Guardian Guila, UR, 60, 0, true, 2
+[Rapier] Holy Knight Guila, UR, 60, 0, true, 6
+[Liones Royalty] Ranger Howzer, UR, 60, 0, true, 6
+[Knight of the Holy War] Holy Knight Howzer, UR, 60, 0, true, 3
+[Star of the Kingdom] Ranger Howzer, UR, 60, 0, true, 6
+"Tempest" Holy Knight Howzer, UR, 60, 0, true, 2
+[Adventurer] Ranger Griamore, UR, 60, 0, true, 6
+[Champion] Ranger Griamore, UR, 60, 0, true, 6
+[Iron-wall Knight] Guardian Griamore, UR, 60, 0, true, 3
+[Knight of the Holy War] Guardian Griamore, UR, 90, 7, true, 4
+[New Generation] Holy Knight Jericho, UR, 60, 0, true, 6
+[Adventurer] Holy Knight Jericho, UR, 60, 0, true, 6
+[Godspeed Knight] Guardian Jericho, UR, 60, 0, true, 2
+[Knight of Frost] Guardian Jericho, UR, 90, 6, true, 2
+[Beard of the Mountain Cat] Member Allioni, UR, 80, 7, true, 6
+[Confirmation] Apprentice Holy Knight Twigo, UR, 60, 0, true, 6
+[Weird Fangs] Holy Knight Golgius, UR, 60, 0, true, 6
+[Weird Fangs] Holy Knight Ruin, UR, 60, 0, true, 6
+[Weird Fangs] Holy Knight Jude, UR, 60, 0, true, 6
+[Weird Fangs] Holy Knight Freesia, UR, 60, 0, true, 6
+[Burning Ember] Knight of Danafor Cain, UR, 60, 0, true, 6
+[Boom Boom Pow] Holy Knight Marmas, UR, 60, 0, true, 6
+[Knight of Ice] Holy Knight Gustav, UR, 60, 0, true, 6
+"Overpower" Hunter Slater, UR, 90, 6, true, 3
+[Roars of Dawn] Captain Slater, UR, 60, 0, true, 6
+[Roars of Dawn] Holy Knight Simon, UR, 60, 0, true, 6
+[Roars of Dawn] Holy Knight Weinheidt, UR, 60, 0, true, 6
+[Roars of Dawn] Holy Knight Hugo, UR, 60, 0, true, 6
+[Roars of Dawn] Holy Knight Jillian, UR, 60, 0, true, 6
+[Reincarnation of Obsession] Mage Vivian, UR, 60, 0, true, 6
+[Omen of Chaos] Druid Hendrickson, UR, 60, 0, true, 6
+"Melt" Grandmaster Hendrickson, UR, 60, 0, true, 3
+"Break" Grandmaster Dreyfus, UR, 60, 0, true, 6
+[Omen of Chaos] Grandmaster Dreyfus, UR, 60, 0, true, 6
+[Vaizel Fight Festival] Champion Taizoo, UR, 60, 0, true, 6
+[Camelot's Sword] New King Arthur, UR, 90, 7, true, 4
+[King of Prophecies] Adventurer Arthur, UR, 60, 0, true, 6
+[Destined Heir] New King Arthur, UR, 60, 0, true, 2
+[Light of Hope] New King Arthur, UR, 60, 0, true, 1
+[Broken Balance] Chaos Arthur, UR, 60, 6, true, 1
+[Chosen King] Excalibur Arthur, UR, 60, 0, true, 3
+[Will of the Holy Sword] Excalibur Arthur, UR, 90, 7, true, 3
+[The Pleiades of the Azure Sky] Holy Knight Deathpierce, UR, 90, 6, true, 3
+[The Pleiades of the Azure Sky] Holy Knight Dogedo, UR, 60, 0, true, 6
+[The Pleiades of the Azure Sky] Captain Denzel, UR, 60, 0, true, 5
+[The Pleiades of the Azure Sky] Holy Knight Deldry, UR, 60, 0, true, 2
+[The Pleiades of the Azure Sky] Holy Knight Arden, UR, 60, 0, true, 6
+[Sweet Temptation] Druid Jenna, UR, 60, 6, true, 3
+[Sweet Temptation] Druid Zaneri, UR, 60, 6, true, 2
+[Reincarnation of Conviction] Grandmaster Zaratras, UR, 90, 7, true, 4
