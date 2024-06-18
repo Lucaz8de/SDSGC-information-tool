@@ -31,7 +31,7 @@ private:
 
 public:
 	// constants
-	const enum upgradeable { GRADE, LEVEL, STARS, UNIQUE, ULTIMATE };
+	enum upgradeable { GRADE, LEVEL, STARS, UNIQUE, ULTIMATE };
 
 	// static methods
 
