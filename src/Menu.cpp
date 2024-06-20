@@ -50,7 +50,7 @@ std::vector<std::string> GetArguments(int int_input) {
 		for (size_t i{ 1 }; i <= draws.size(); i++) {
 			std::cout << i << ". " << draws[i - 1] << std::endl;
 		}
-		argument_input = GetIntInput(1, 7);
+		argument_input = GetIntInput(1, draws.size());
 		std::cout << std::endl;
 
 		arguments.push_back(draws[argument_input - 1]);
@@ -69,7 +69,7 @@ const Condition GetCondition() {
 	for (size_t i{ 1 }; i <= Menu::conditions.size(); i++) {
 		std::cout << i << ". " << Menu::conditions[i - 1].name << std::endl;
 	}
-	int_input = GetIntInput(1, 5);
+	int_input = GetIntInput(1, Menu::conditions.size());
 	std::cout << std::endl;
 
 	std::vector<std::string> arguments = GetArguments(int_input);
@@ -97,7 +97,7 @@ const Condition GetOperation(Condition &condition, bool &sentinel_finished) {
 	for (size_t i{ 1 }; i <= Menu::operations.size(); i++) {
 		std::cout << i << ". " << Menu::operations[i - 1].name << std::endl;
 	}
-	int int_input = GetIntInput(0, 3);
+	int int_input = GetIntInput(0, Menu::operations.size());
 	std::cout << std::endl;
 
 	if (int_input == 0) {
