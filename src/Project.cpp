@@ -23,10 +23,3 @@ int main() {
 
 	return 0;
 }
-
-static void todo() {
-	std::cout << "There is a bug ... Using 'AND' just returns every hero ..." << std::endl;
-	std::cout << "Print upgrades and upgrade costs" << std::endl;
-	std::cout << "Add a higher level of the menu asking what you want to do," << 
-		"e.g. filter, print all upgrade costs ..." << std::endl;
-}
