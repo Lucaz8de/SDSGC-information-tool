@@ -18,9 +18,9 @@ std::vector<Hero> Hero::heroes = std::vector<Hero>{};
 void Hero::MakeHeroes() {
 	assert(heroes.empty()); // If this function is called more than once, something's gone wrong!
 
-	// Note the working directory is src/
 	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../data/acquisition.txt");
-	acquisition.merge(ReadLists("../data/draws.txt")); // makes a single hashmap
+	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists("../data/draws.txt");
+	merge(acquisition, draws); // All the data in a single hashmap
 
 	std::unordered_map<std::string, std::vector<std::string>> upgrades{};
 	std::ifstream file{ "../data/owned.txt" };
@@ -59,10 +59,10 @@ Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::s
 	race{ data[5] }, characteristic{ data[6] }, pvp_tier1{ std::stoi(data[7]) }, pve_tier1{ std::stoi(data[8]) },
 	pvp_tier2{ std::stoi(data[9]) }, pve_tier2{ std::stoi(data[10]) }, owned{ false }, acquisition{}, upgrades{}
 {
-	for (const auto& [hero_name, upgrades_list] : upgrades) {
-		if (hero == hero_name) {
+	for (const auto& item : upgrades) { // item is {hero_name: upgrades_list}
+		if (hero == item.first) {
 			owned = true;
-			this->upgrades = upgrades_list;
+			this->upgrades = item.second;
 			break;
 		}
 	}
@@ -70,10 +70,10 @@ Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::s
 	if ((starting_grade == "R" || starting_grade == "SR") && characteristic != "Collab" && character != "Waillo") {
 		this->acquisition.push_back("all draws");
 	}
-	for (const auto& [acquisition_method, hero_list] : acquisition) {
-		for (const auto& hero_name : hero_list) {
+	for (const auto& item : acquisition) { // item is {acquisition_method: hero_list}
+		for (const auto& hero_name : item.second) {
 			if (hero == hero_name) {
-				this->acquisition.push_back(acquisition_method);
+				this->acquisition.push_back(item.first);
 				break;
 			}
 		}

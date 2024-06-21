@@ -27,3 +27,8 @@ template<typename T> void PrintList(const std::vector<T> &vec);
 /* Just uses copy_if to return a list. That is, given a vector and a condition,
 returns a vector containing the items satisfying the condition. */
 template<typename T> std::vector<T> select(const std::vector<T> &vec, const std::function<bool(const T &)> &condition);
+
+/* Merges the two maps by modifying m1, i.e., adds the keys of m2 into m1.
+ * Note if they have keys in common, m2's will overwrite m1's!
+ */
+template<typename T, typename S> void merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2);

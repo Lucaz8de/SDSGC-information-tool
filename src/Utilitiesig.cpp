@@ -39,6 +39,9 @@ std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::s
 		// comma-separated data
 		std::string line{};
 		std::getline(file, line, '\n'); // puts the whole line in line
+		if (out.find(heading) != out.end()) {
+			throw std::invalid_argument("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
+		}
 		out[heading] = ParseCS(line); // adds the list to the hashmap
 		// empty line
 		file.ignore();
@@ -91,3 +94,14 @@ template<typename T> std::vector<T> select(const std::vector<T> &vec, const std:
 	return selection;
 }
 template std::vector<Hero> select(const std::vector<Hero> &vec, const std::function<bool(const Hero &)> &condition);
+
+template<typename T, typename S> void merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2) {
+	for(auto& item: m2) { // item is {key: value}
+		if (m1.find(item.first) != m1.end()) {
+			throw std::invalid_argument("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
+		}
+
+		m1[item.first] = item.second;
+	}
+}
+template void merge(std::unordered_map<std::string, std::vector<std::string>> &acquisition, const std::unordered_map<std::string, std::vector<std::string>> &draws);
