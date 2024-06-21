@@ -241,6 +241,7 @@ The Lion Sin of Pride Holy Knight Escanor, Holy Knight Escanor, Strength, SSR, E
 [Awesome Party] Oslo & Hawk, Oslo & Hawk, Speed, SSR, Hawk, Unknown, --, 5, 5, 5, 5
 [Maritime Troublemakers] Oslo & Hawk, Oslo & Hawk, HP, SSR, Hawk, Unknown, --, 5, 5, 3, 5
 [Swift Sword] Foreign Swordsman Nanashi, Foreign Swordsman Nanashi, Speed, SSR, Nanashi, Unknown, --, 5, 5, 2, 1
+[Proud Spirit] Warrior of Purgatory Wild, Warrior of Purgatory Wild, HP, SSR, Wild, Unknown, --, 5, 5, 5, 5
 [Future of Liones] Prince Tristan, Prince Tristan, Speed, SSR, Tristan, Unknown, --, 5, 5, 3, 5
 [Undying Love] Vampire Gelda, Vampire Gelda, Strength, SSR, Gelda, Unknown, --, 5, 5, 2, 3
 
@@ -302,3 +303,4 @@ The Lion Sin of Pride Holy Knight Escanor, Holy Knight Escanor, Strength, SSR, E
 [Sweet Temptation] Druid Jenna, Druid Jenna, Speed, SSR, Jenna, Human, --, 5, 5, 5, 5
 [Sweet Temptation] Druid Zaneri, Druid Zaneri, HP, SSR, Zaneri, Human, --, 5, 5, 5, 3
 [Reincarnation of Conviction] Grandmaster Zaratras, Grandmaster Zaratras, HP, SSR, Zaratras, Human, --, 5, 5, 5, 5
+[A New Adventure] Boy of Hope Percival, Boy of Hope Percival, HP, SSR, Percival, Human, --, 5, 5, 5, 5

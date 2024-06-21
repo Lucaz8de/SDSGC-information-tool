@@ -31,10 +31,10 @@ int GetIntInput(int min, int max);
 std::vector<std::string> GetArguments(int int_input);
 
 // An interactive menu to choose one condition to filter.
-const Condition GetCondition();
+const Condition GetCondition(std::vector<std::string> &filter_stack);
 
 // An interactive menu to choose an operation (if any) to apply to the condition.
-const Condition GetOperation(Condition &condition, bool &sentinel_finished);
+const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack);
 
 // The function that asks for any other needed condition(s) and applies the operation to them.
-const Condition HandleOperation(Condition &condition, Menu::Operation operation);
+const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack);

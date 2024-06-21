@@ -28,9 +28,9 @@ int GetIntInput(int min, int max) {
 	std::cout << "$ ";
 	int int_input{ min - 1 };
 	std::cin >> int_input;
-	if (int_input < min || int_input > max) {
-		std::cout << "You must only enter a number between " << min << " and " << max << "." << std::endl;
-		exit(1);
+	if (!std::cin.good() || int_input < min || int_input > max) {
+		std::string error_message = "You must only enter a number between " + std::to_string(min) + " and " + std::to_string(max) + ".";
+		throw std::runtime_error(error_message);
 	}
 	else {
 		return int_input;
@@ -62,7 +62,7 @@ std::vector<std::string> GetArguments(int int_input) {
 }
 
 // An interactive menu to choose one condition to filter.
-const Condition GetCondition() {
+const Condition GetCondition(std::vector<std::string> &filter_stack) {
 	int int_input{ -1 };
 	std::cout << "You can filter the heroes by selecting conditions to search for from the menu." << std::endl;
 	std::cout << "The program will give up if you enter an invalid input, so please don't." << std::endl;
@@ -74,22 +74,24 @@ const Condition GetCondition() {
 
 	std::vector<std::string> arguments = GetArguments(int_input);
 
+	filter_stack.push_back(Menu::conditions[int_input - 1].name);
 	return Menu::conditions[int_input - 1].function(arguments);
 }
 
-const Condition HandleOperation(Condition &condition, Menu::Operation operation) {
+const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack) {
 	std::vector<Condition> conditions{ condition };
+	filter_stack.push_back(operation.name);
 	if (operation.arity > 1) {
 		std::cout << "You must choose " << operation.arity - 1 << " other condition(s)." << std::endl;
 		for (size_t i{ 0 }; i < operation.arity - 1; i++) {
 			std::cout << i + 1 << ":" << std::endl;
-			conditions.push_back(GetCondition());
+			conditions.push_back(GetCondition(filter_stack));
 		}
 	}
 	return operation.function(conditions);
 }
 
-const Condition GetOperation(Condition &condition, bool &sentinel_finished) {
+const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack) {
 	std::cout << "You can choose to use logical operations to combine conditions." << std::endl;
 	std::cout << "You must say them in the order you want them done, though." << std::endl;
 	std::cout << "The program will give up if you enter an invalid input, so please don't." << std::endl;
@@ -105,6 +107,6 @@ const Condition GetOperation(Condition &condition, bool &sentinel_finished) {
 		return condition;
 	}
 	else {
-		return HandleOperation(condition, Menu::operations[int_input - 1]);
+		return HandleOperation(condition, Menu::operations[int_input - 1], filter_stack);
 	}
 }
