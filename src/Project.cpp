@@ -10,14 +10,15 @@
 typedef std::function<bool(const Hero &)> Condition;
 
 int main() {
-	Hero::MakeHeroes(); // Set up the list of heroes
+	bool validating = true; // add this to a menu option
+	Hero::MakeHeroes(validating); // Set up the list of heroes
 	std::vector<Hero> heroes = Hero::get_heroes();
 
 	std::vector<std::string> filter_stack{};
 	bool sentinel_finished = false;
-	Condition condition = GetCondition(filter_stack);
+	Condition condition = GetCondition(filter_stack, validating);
 	while (!sentinel_finished) {
-		condition = GetOperation(condition, sentinel_finished, filter_stack);
+		condition = GetOperation(condition, sentinel_finished, filter_stack, validating);
 	}
 
 	std::string x{};
@@ -28,7 +29,9 @@ int main() {
 	for(std::string &word: filter_stack) {
 		std::cout << word << ") ";
 	}
-	std::cout << "\nType anything to view results." << std::endl;
+	auto found = Select(heroes, condition);
+	std::cout << "\nFound: " << found.size() << " out of " << heroes.size() <<
+		" heroes. Type anything to view results." << std::endl;
 	std::cin >> x;
 
 	PrintList(Select(heroes, condition));

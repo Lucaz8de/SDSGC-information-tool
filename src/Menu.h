@@ -28,13 +28,13 @@ public:
 int GetIntInput(int min, int max);
 
 // An interactive menu to choose the arguments for conditions that need them.
-std::vector<std::string> GetArguments(int int_input);
+std::vector<std::string> GetArguments(int int_input, bool validating);
 
 // An interactive menu to choose one condition to filter.
-const Condition GetCondition(std::vector<std::string> &filter_stack);
+const Condition GetCondition(std::vector<std::string> &filter_stack, bool validating);
 
 // An interactive menu to choose an operation (if any) to apply to the condition.
-const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack);
+const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack, bool validating);
 
 // The function that asks for any other needed condition(s) and applies the operation to them.
-const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack);
+const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack, bool validating);

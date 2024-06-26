@@ -38,12 +38,12 @@ int GetIntInput(int min, int max) {
 }
 
 // An interactive menu to choose the arguments for conditions that need them.
-std::vector<std::string> GetArguments(int int_input) {
+std::vector<std::string> GetArguments(int int_input, bool validating) {
 	std::vector<std::string> arguments;
 	switch (int_input) {
 	case 1:
 	{
-		std::vector<std::string> draws = HashKeys(ReadLists("../data/draws.txt"));
+		std::vector<std::string> draws = HashKeys(ReadLists("../data/draws.txt", validating));
 		int argument_input{ -1 };
 		std::cout << "Please select the draw." << std::endl;
 		std::cout << "The program will give up if you enter an invalid input, so please don't." << std::endl;
@@ -62,7 +62,7 @@ std::vector<std::string> GetArguments(int int_input) {
 }
 
 // An interactive menu to choose one condition to filter.
-const Condition GetCondition(std::vector<std::string> &filter_stack) {
+const Condition GetCondition(std::vector<std::string> &filter_stack, bool validating) {
 	int int_input{ -1 };
 	std::cout << "You can filter the heroes by selecting conditions to search for from the menu." << std::endl;
 	std::cout << "The program will give up if you enter an invalid input, so please don't." << std::endl;
@@ -72,26 +72,26 @@ const Condition GetCondition(std::vector<std::string> &filter_stack) {
 	int_input = GetIntInput(1, Menu::conditions.size());
 	std::cout << std::endl;
 
-	std::vector<std::string> arguments = GetArguments(int_input);
+	std::vector<std::string> arguments = GetArguments(int_input, validating);
 
 	filter_stack.push_back(Menu::conditions[int_input - 1].name);
 	return Menu::conditions[int_input - 1].function(arguments);
 }
 
-const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack) {
+const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack, bool validating) {
 	std::vector<Condition> conditions{ condition };
 	filter_stack.push_back(operation.name);
 	if (operation.arity > 1) {
 		std::cout << "You must choose " << operation.arity - 1 << " other condition(s)." << std::endl;
 		for (size_t i{ 0 }; i < operation.arity - 1; i++) {
 			std::cout << i + 1 << ":" << std::endl;
-			conditions.push_back(GetCondition(filter_stack));
+			conditions.push_back(GetCondition(filter_stack, validating));
 		}
 	}
 	return operation.function(conditions);
 }
 
-const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack) {
+const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack, bool validating) {
 	std::cout << "You can choose to use logical operations to combine conditions." << std::endl;
 	std::cout << "You must say them in the order you want them done, though." << std::endl;
 	std::cout << "The program will give up if you enter an invalid input, so please don't." << std::endl;
@@ -107,6 +107,6 @@ const Condition GetOperation(Condition &condition, bool &sentinel_finished, std:
 		return condition;
 	}
 	else {
-		return HandleOperation(condition, Menu::operations[int_input - 1], filter_stack);
+		return HandleOperation(condition, Menu::operations[int_input - 1], filter_stack, validating);
 	}
 }

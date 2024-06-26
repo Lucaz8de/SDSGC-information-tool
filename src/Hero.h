@@ -38,7 +38,12 @@ public:
 	/* This function reads all the text files and creates one hero object for all heroes.
 	It is the only way hero objects are created and it is called exactly once.
 	Note draws and acquisition MUST NOT have common headings. */
-	static void MakeHeroes();
+	static void MakeHeroes(bool validating);
+
+	/* Utility method for MakeHeroes. Validates acquisition data files.
+	 * Throws an exception if any acquisition data uses an unrecognised hero name.
+	 */
+	static void ValidateAcquisitionNames(const std::unordered_map<std::string, std::vector<std::string>>& acquisition);
 
 	// instance methods
 

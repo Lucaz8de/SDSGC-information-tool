@@ -10,42 +10,52 @@
 #include "Hero.h"
 #include "Utilitiesig.h"
 
-std::vector<std::string> ParseCS(const std::string& str) {
+std::vector<std::string> ParseCS(const std::string& str, bool validating) {
 	std::vector<std::string> out{};
 
 	std::stringstream ss{ str }; // Make a stream out of str
-	std::string s{}; // Receptable for string
-	std::getline(ss, s, ','); // Reads ss up to the first ',' and puts it in s
-	out.push_back(s); // Add s to list
 
 	while (ss.good()) { // Until end or fail
-		ss.ignore(1); // Skip 1 character, the space
-		std::getline(ss, s, ',');
-		out.push_back(s);
+		std::string s{}; // Receptable for string
+		std::getline(ss, s, ','); // Reads ss up to the first ',' and puts it in s
+		out.push_back(s); // Add s to list
+		s = ss.get(); // Reads the next character of ss and puts it in s
+		if(ss.eof()) { // End of line has been reached
+			break;
+		}
+		if(validating && s != " ") {
+			std::string error_message = "Invalid format of data file on line: " + ss.str() + ". Expected lists to be separated by commas and spaces.";
+			throw std::runtime_error(error_message);
+		}
 	}
 	return out;
 }
 
-std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename) {
+std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename, bool validating) {
 	std::unordered_map<std::string, std::vector<std::string>> out{};
 
 	std::ifstream file{ filename }; // Make a filestream out of filename
-	std::string heading{}; // Receptacle for heading
-	std::string data{}; // Receptacle for data
+	if(!file.good()) {
+		throw std::runtime_error("data/acquisition.txt and data/draws.txt files not found.");
+	}
 	while (file.good()) {
 		// heading
-		heading = "";
+		std::string heading{};
 		std::getline(file, heading, '\n'); // puts the whole line in heading
 		// comma-separated data
-		std::string line{};
-		std::getline(file, line, '\n'); // puts the whole line in line
-		if (out.find(heading) != out.end()) {
-			throw std::invalid_argument("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
+		std::string data{};
+		std::getline(file, data, '\n'); // puts the whole line in line
+		if (validating && out.find(heading) != out.end()) {
+			throw std::runtime_error("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
 		}
-		out[heading] = ParseCS(line); // adds the list to the hashmap
+		out[heading] = ParseCS(data, validating); // adds the list to the hashmap
 		// empty line
-		file.ignore();
+		std::getline(file, heading, '\n'); // puts the whole line in heading, just temporarily
+		if(validating && !heading.empty()) {
+			throw std::runtime_error("Invalid format of data/acquisition.txt and data/draws.txt -- expected HEADING, DATA, EMPTY LINE");
+		}
 	}
+	file.close();
 	return out;
 }
 
@@ -87,21 +97,65 @@ This line of code allows this function to be used in other files now. */
 template void PrintList<Hero>(const std::vector<Hero>& vec);
 template void PrintList<std::string>(const std::vector<std::string> &vec);
 
-template<typename T> std::vector<T> select(const std::vector<T> &vec, const std::function<bool(const T &)> &condition) {
+template<typename T> std::vector<T> Select(const std::vector<T> &vec, const std::function<bool(const T &)> &condition) {
 	std::vector<T> selection{ vec.size() };
 	const auto it = copy_if(vec.begin(), vec.end(), selection.begin(), condition);
 	selection.resize(std::distance(selection.begin(), it));
 	return selection;
 }
-template std::vector<Hero> select(const std::vector<Hero> &vec, const std::function<bool(const Hero &)> &condition);
+template std::vector<Hero> Select(const std::vector<Hero> &vec, const std::function<bool(const Hero &)> &condition);
 
-template<typename T, typename S> void merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2) {
+template<typename T, typename S> void Merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2, bool validating) {
 	for(auto& item: m2) { // item is {key: value}
-		if (m1.find(item.first) != m1.end()) {
-			throw std::invalid_argument("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
+		if (validating && m1.find(item.first) != m1.end()) {
+			throw std::runtime_error("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
 		}
 
 		m1[item.first] = item.second;
 	}
 }
-template void merge(std::unordered_map<std::string, std::vector<std::string>> &acquisition, const std::unordered_map<std::string, std::vector<std::string>> &draws);
+template void Merge(std::unordered_map<std::string, std::vector<std::string>> &acquisition, const std::unordered_map<std::string, std::vector<std::string>> &draws, bool validating);
+
+void ValidateList(const std::vector<std::string> &data, int data_size, std::vector<int> numerical_data, std::vector<int> boolean_data) {
+	std::string hero = data[0];
+	if (data.size() != data_size) {
+		std::string error_message = "Invalid format in data file. Hero " + hero + " has " + std::to_string(data.size()) + " items instead of " + std::to_string(data_size) + ".";
+		throw std::runtime_error(error_message);
+	}
+
+	for(int i = 0; i < data_size; i++) {
+		// check if it's a number
+		try {
+			std::stoi(data[i]); // is a number
+			if(std::find(numerical_data.begin(), numerical_data.end(), i) == numerical_data.end()) { // not numerical data
+				std::string error_message = "Invalid data in data/owned.txt. Item \"" + data[i] + "\" of hero " + hero + " should not be a number.";
+				throw std::runtime_error(error_message);
+			} else {
+				// fine 
+			}
+		} catch (std::invalid_argument) { // not a number
+			if(std::find(numerical_data.begin(), numerical_data.end(), i) != numerical_data.end()) { // is numerical data
+				std::string error_message = "Invalid data in data/owned.txt. Item \"" + data[i] + "\" of hero " + hero + " should be a number.";
+				throw std::runtime_error(error_message);
+			} else {
+				// fine 
+			}
+		}
+		// check if it's a boolean
+		if(data[i] == "true" || data[i] == "false") { // is a boolean
+			if(std::find(boolean_data.begin(), boolean_data.end(), i) == boolean_data.end()) { // not boolean data
+				std::string error_message = "Invalid data in data/owned.txt. Item \"" + data[i] + "\" of hero " + hero + " should not be a boolean.";
+				throw std::runtime_error(error_message);
+			} else {
+				// fine 
+			}
+		} else { // not a boolean
+			if(std::find(boolean_data.begin(), boolean_data.end(), i) != boolean_data.end()) { // is boolean data
+				std::string error_message = "Invalid data in data/owned.txt. Item \"" + data[i] + "\" of hero " + hero + " should be a boolean.";
+				throw std::runtime_error(error_message);
+			} else {
+				// fine 
+			}
+		}
+	}
+}

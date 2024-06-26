@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <array>
-#include <cassert>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -15,12 +14,14 @@ And for some reason, the type MUST be repeated. */
 const std::array<std::string, 7> Hero::lr_names = { "\"Virtual Body Doubles\" Lostvayne Meliodas", "\"Sunshine\" Holy Knight Escanor", "[New Legend] Princess Elizabeth", "[Advent of Flash] Covenant of Light Ludociel", "[The Ten Commandments] Gloxinia of Repose", "[The Ten Commandments] Zeldris of Piety", "[The Ten Commandments] Galland of Truth" };
 std::vector<Hero> Hero::heroes = std::vector<Hero>{};
 
-void Hero::MakeHeroes() {
-	assert(heroes.empty()); // If this function is called more than once, something's gone wrong!
+void Hero::MakeHeroes(bool validating) {
+	if(validating && !heroes.empty()) {
+		throw std::runtime_error("Unexpectedly called MakeHeroes twice.");
+	}
 
-	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../data/acquisition.txt");
-	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists("../data/draws.txt");
-	merge(acquisition, draws); // All the data in a single hashmap
+	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../data/acquisition.txt", validating);
+	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists("../data/draws.txt", validating);
+	Merge(acquisition, draws, validating); // All the data in a single hashmap
 
 	std::unordered_map<std::string, std::vector<std::string>> upgrades{};
 	std::ifstream file{ "../data/owned.txt" };
@@ -31,7 +32,11 @@ void Hero::MakeHeroes() {
 			continue;
 		}
 
-		const std::vector<std::string> data = ParseCS(line); // data like [Boar Hat] Tavern Master Meliodas, UR, 80, 7, true, 6
+		const std::vector<std::string> data = ParseCS(line, validating); // data like [Boar Hat] Tavern Master Meliodas, UR, 80, 7, true, 6
+		if (validating) {
+			ValidateList(data, 6, {2, 3, 5}, {4});
+		}
+
 		const std::string hero = data[0];
 		upgrades[hero] = { data.begin() + 1, data.end() }; // So upgrades is a hashmap { hero => [upgrades] }
 	}
@@ -45,8 +50,34 @@ void Hero::MakeHeroes() {
 			continue;
 		}
 
-		const std::vector<std::string> data = ParseCS(line); // data like [Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+		const std::vector<std::string> data = ParseCS(line, validating); // data like [Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+		if (validating) {
+			ValidateList(data, 11, {7, 8, 9, 10}, {});
+		}
+
 		const Hero hero{ data, upgrades, acquisition };
+	}
+	file.close();
+
+	if(validating) {
+		ValidateAcquisitionNames(acquisition);
+	}
+}
+
+void Hero::ValidateAcquisitionNames(const std::unordered_map<std::string, std::vector<std::string>>& acquisition) {
+	for(const auto& item: acquisition) {
+		for(std::string hero_name: item.second) {
+			bool hero_found = false;
+			for(const Hero& hero: Hero::get_heroes()) {
+				if(hero.get_hero() == hero_name) {
+					hero_found = true;
+				}
+			}
+			if(!hero_found) {
+				std::string error_message = "Hero name " + hero_name + " in data/acquisition.txt or data/draws.txt was not found in data/heroes.txt.";
+				throw std::runtime_error(error_message);
+			}
+		}
 	}
 }
 
