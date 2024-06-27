@@ -19,10 +19,15 @@ void Hero::MakeHeroes(bool validating) {
 		throw std::runtime_error("Unexpectedly called MakeHeroes twice.");
 	}
 
+	// Read hero acquisition data from acquisition.txt and draws.txt.
+	// Make a single hashmap acquisition = { Draw name => [Hero list] }
 	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../data/acquisition.txt", validating);
 	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists("../data/draws.txt", validating);
-	Merge(acquisition, draws, validating); // All the data in a single hashmap
+	Merge(acquisition, draws, validating);
 
+	// Read data from owned.txt. Lines are like [Boar Hat] Tavern Master Meliodas, UR, 80, 6, true, 6
+	// Make a hashmap upgrades = { [Boar Hat] Tavern Master Meliodas => [UR, 80, 6, true, 6], ... }
+	// (Hero::UPGRADEABLE names the elements of the list)
 	std::unordered_map<std::string, std::vector<std::string>> upgrades{};
 	std::ifstream file{ "../data/owned.txt" };
 	while (file.good()) {
@@ -31,17 +36,19 @@ void Hero::MakeHeroes(bool validating) {
 		if (line == "") { // empty lines for grouping, just skip
 			continue;
 		}
-
-		const std::vector<std::string> data = ParseCS(line, validating); // data like [Boar Hat] Tavern Master Meliodas, UR, 80, 7, true, 6
+		
+		// data = [[Boar Hat] Tavern Master Meliodas, UR, 80, 6, true, 6]
+		const std::vector<std::string> data = ParseCS(line, validating);
 		if (validating) {
 			ValidateList(data, 6, {2, 3, 5}, {4});
 		}
 
 		const std::string hero = data[0];
-		upgrades[hero] = { data.begin() + 1, data.end() }; // So upgrades is a hashmap { hero => [upgrades] }
+		upgrades[hero] = { data.begin() + 1, data.end() }; 
 	}
 	file.close();
 
+	// Read data from heroes.txt. Take all the information together and make the Hero objects.
 	file.open("../data/heroes.txt");
 	while (file.good()) {
 		std::string line{};
@@ -50,7 +57,9 @@ void Hero::MakeHeroes(bool validating) {
 			continue;
 		}
 
-		const std::vector<std::string> data = ParseCS(line, validating); // data like [Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5
+		// data = [[Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5]
+		// Hero's named fields name the elements of the list
+		const std::vector<std::string> data = ParseCS(line, validating); 
 		if (validating) {
 			ValidateList(data, 11, {7, 8, 9, 10}, {});
 		}
@@ -60,23 +69,28 @@ void Hero::MakeHeroes(bool validating) {
 	file.close();
 
 	if(validating) {
-		ValidateAcquisitionNames(acquisition);
+		// validate hero names in owned.txt
+		std::vector<std::string> hero_names = HashKeys(upgrades);
+		ValidateHeroNames(hero_names, "data/owned.txt");
+
+		// validate hero names in acquisition.txt and draws.txt
+		for(const auto& item: acquisition) {
+			ValidateHeroNames(item.second, "data/acquisition.txt or data/draws.txt");
+		}
 	}
 }
 
-void Hero::ValidateAcquisitionNames(const std::unordered_map<std::string, std::vector<std::string>>& acquisition) {
-	for(const auto& item: acquisition) {
-		for(std::string hero_name: item.second) {
-			bool hero_found = false;
-			for(const Hero& hero: Hero::get_heroes()) {
-				if(hero.get_hero() == hero_name) {
-					hero_found = true;
-				}
+void Hero::ValidateHeroNames(const std::vector<std::string>& hero_names, std::string check_name) {
+	for(std::string hero_name: hero_names) {
+		bool hero_found = false;
+		for(const Hero& hero: heroes) {
+			if(hero.hero == hero_name) {
+				hero_found = true;
 			}
-			if(!hero_found) {
-				std::string error_message = "Hero name " + hero_name + " in data/acquisition.txt or data/draws.txt was not found in data/heroes.txt.";
-				throw std::runtime_error(error_message);
-			}
+		}
+		if(!hero_found) {
+			std::string error_message = "Hero name " + hero_name + " in " + check_name + " was not found in data/heroes.txt.";
+			throw std::runtime_error(error_message);
 		}
 	}
 }
@@ -98,9 +112,11 @@ Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::s
 		}
 	}
 
+	// All R and SR characters are available in all draws, except a few exclusive ones
 	if ((starting_grade == "R" || starting_grade == "SR") && characteristic != "Collab" && character != "Waillo") {
 		this->acquisition.push_back("all draws");
 	}
+
 	for (const auto& item : acquisition) { // item is {acquisition_method: hero_list}
 		for (const auto& hero_name : item.second) {
 			if (hero == hero_name) {
@@ -111,6 +127,7 @@ Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::s
 	}
 	std::sort(this->acquisition.begin(), this->acquisition.end());
 
+	// Every hero gets added to heroes.
 	heroes.push_back(*this);
 }
 
@@ -122,7 +139,7 @@ std::ostream& operator<<(std::ostream& os, const Hero& hero) {
 		"Tier " << hero.pvp_tier2 << " on Nagato's PVP tier list and tier " << hero.pve_tier2 <<
 		" on his PVE tier list. ";
 	if (hero.owned) {
-		os << "I already own this hero.";
+		os << "I already own this hero at ultimate level " << hero.upgrades[Hero::ULTIMATE] << ".";
 	} 
 	else {
 		if (hero.acquisition.empty()) {

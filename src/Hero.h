@@ -31,7 +31,7 @@ private:
 
 public:
 	// constants
-	enum upgradeable { GRADE, LEVEL, STARS, UNIQUE, ULTIMATE };
+	enum upgradeable { GRADE, LEVEL, STARS, UNIQUE, ULTIMATE }; // Elements in upgrades list
 
 	// static methods
 
@@ -40,10 +40,10 @@ public:
 	Note draws and acquisition MUST NOT have common headings. */
 	static void MakeHeroes(bool validating);
 
-	/* Utility method for MakeHeroes. Validates acquisition data files.
-	 * Throws an exception if any acquisition data uses an unrecognised hero name.
+	/* Utility method for MakeHeroes. Validates hero names.
+	 * Throws an exception if any data file uses an unrecognised hero name.
 	 */
-	static void ValidateAcquisitionNames(const std::unordered_map<std::string, std::vector<std::string>>& acquisition);
+	static void ValidateHeroNames(const std::vector<std::string>& hero_names, std::string check_name);
 
 	// instance methods
 
