@@ -16,9 +16,9 @@ int main() {
 
 	std::vector<std::string> filter_stack{};
 	bool sentinel_finished = false;
-	Condition condition = GetCondition(filter_stack, validating);
+	Condition condition = Menu::GetCondition(filter_stack, validating);
 	while (!sentinel_finished) {
-		condition = GetOperation(condition, sentinel_finished, filter_stack, validating);
+		condition = Menu::GetOperation(condition, sentinel_finished, filter_stack, validating);
 	}
 
 	std::string x{};

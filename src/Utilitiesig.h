@@ -33,6 +33,7 @@ template<typename T> std::vector<T> Select(const std::vector<T> &vec, const std:
  */
 template<typename T, typename S> void Merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2, bool validating);
 
-/* Checks the size and data types of a list of data. Throws an error if they are different from what they should be.
+/* Checks the size and data types of a list of data. The parameters numerical_data and boolean_data are lists of indices. 
+Throws an error if the data is different from what it should be.
 */
 void ValidateList(const std::vector<std::string> &data, int data_size, std::vector<int> numerical_data, std::vector<int> boolean_data);

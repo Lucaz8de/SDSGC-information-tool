@@ -22,19 +22,22 @@ public:
   };
   static const std::vector<ConditionFunction> conditions; // List of functions are just hardcoded.
   static const std::vector<Operation> operations; // List of functions are just hardcoded.
+
+  // A basic function to get an integer input in a range, and else crash.
+  static int GetIntInput(int min, int max);
+
+  // This function displays a prompt and the options and calls GetIntInput.
+  static int AskForInput(std::string prompt, std::vector<std::string> options);
+
+  // An interactive menu to choose the arguments for conditions that need them.
+  static std::vector<std::string> GetArguments(int int_input, bool validating);
+
+  // An interactive menu to choose one condition to filter.
+  static const Condition GetCondition(std::vector<std::string> &filter_stack, bool validating);
+
+  // An interactive menu to choose an operation (if any) to apply to the condition.
+  static const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack, bool validating);
+
+  // The function that asks for any other needed condition(s) and applies the operation to them.
+  static const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack, bool validating);
 };
-
-// A basic function to get an integer input in a range, and else crash.
-int GetIntInput(int min, int max);
-
-// An interactive menu to choose the arguments for conditions that need them.
-std::vector<std::string> GetArguments(int int_input, bool validating);
-
-// An interactive menu to choose one condition to filter.
-const Condition GetCondition(std::vector<std::string> &filter_stack, bool validating);
-
-// An interactive menu to choose an operation (if any) to apply to the condition.
-const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack, bool validating);
-
-// The function that asks for any other needed condition(s) and applies the operation to them.
-const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack, bool validating);
