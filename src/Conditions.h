@@ -15,7 +15,7 @@ Condition Not(const std::vector<Condition> &conditions);
 
 // Conditions
 
-/// <param name="args">Contains a single string, the name of a draw</param>
+/// <param name="args">Contains a single string, the name of a draw.</param>
 Condition AvailableFromDraw(const std::vector<std::string> &args);
 
 /// <returns>Takes a hero as an input and returns whether it is owned.</returns>
@@ -29,3 +29,7 @@ Condition Upgraded(const std::vector<std::string> &args);
 
 /// <returns>Takes a hero as an input and returns whether it is currently acquirable.</returns>
 Condition Acquirable(const std::vector<std::string> &args);
+
+/// <param name="args">Contains a single string, the name of a certain race.</param>
+/// <returns>Takes a hero as an input and returns whether it is of that race.</returns>
+Condition Race(const std::vector<std::string> &args);

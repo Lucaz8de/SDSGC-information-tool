@@ -200,6 +200,7 @@ The Lion Sin of Pride Holy Knight Escanor, Holy Knight Escanor, Strength, SSR, E
 [The Six Knights of Black] Captain Bellion, Caption Bellion, Speed, SSR, Bellion, Demon, --, 5, 5, 5, 5
 [Origin Fragment] Highest-ranking Demon Chandler, Highest-ranking Demon Chandler, HP, SSR, Chandler, Demon, --, 5, 5, 5, 3
 [Pacifier Fiend] Mage Chandler, Mage Chandler, Speed, SSR, Chandler, Demon, --, 5, 5, 5, 5
+[Ancient Demon] Mage Chandler, Mage Chandler, Strength, SSR, Chandler, Demon, --, 5, 5, 5, 5
 [Origin Fragment] Highest-ranking Demon Cusack, Highest-ranking Demon Cusack, Speed, SSR, Cusack, Demon, --, 5, 5, 2, 4
 [Napping Reaper] Dual Swordsman Cusack, Dual Swordsman Cusack, Speed, SSR, Cusack, Demon, --, 5, 5, 5, 5
 "The Ruler" Tyrant Demon King, Tyrant Demon King, Darkness, SSR, Zeldris, Demon, --, 5, 5, 1, 1

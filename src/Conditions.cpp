@@ -34,7 +34,7 @@ Condition AvailableFromDraw(const std::vector<std::string> &args)
   return [draw](const Hero &hero) -> bool {
     std::vector<std::string> acquisition = hero.get_acquisition();
     return std::find(acquisition.begin(), acquisition.end(), draw) != acquisition.end();
-    };
+  };
 }
 
 Condition Owned(const std::vector<std::string> &args)
@@ -62,5 +62,12 @@ Condition Upgraded(const std::vector<std::string> &args)
 Condition Acquirable(const std::vector<std::string> &args) {
   return [](const Hero &hero) -> bool {
     return !(hero.get_acquisition().empty());
+  };
+}
+
+Condition Race(const std::vector<std::string> &args) {
+  std::string race = args.at(0);
+  return [race](const Hero &hero) -> bool {
+    return hero.get_race() == race;
   };
 }
