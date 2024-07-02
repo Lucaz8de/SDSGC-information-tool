@@ -8,6 +8,7 @@
   - [ ] Print upgrade costs
   - [ ] Change/add owned heroes
   - [ ] Validate data files
+- [ ] Possibly add images
 
 ## Bugs
 

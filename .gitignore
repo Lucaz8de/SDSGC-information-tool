@@ -1,3 +1,6 @@
 # Build and config folders
 build/
 src/.vscode/
+
+# My personal game data
+data/owned.txt

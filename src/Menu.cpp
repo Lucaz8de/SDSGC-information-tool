@@ -51,7 +51,8 @@ std::vector<std::string> Menu::GetArguments(int int_input, bool validating) {
 	switch (int_input) {
 	case 1:
 	{
-		std::vector<std::string> draws = HashKeys(ReadLists("../data/draws.txt", validating));
+		std::string DATA_DIR = "../data";
+		std::vector<std::string> draws = HashKeys(ReadLists(DATA_DIR + "/draws.txt", validating));
 		int argument_input{ -1 };
 		argument_input = AskForInput("Please select the draw.", draws);
 		std::cout << std::endl;

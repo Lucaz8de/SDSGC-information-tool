@@ -1,22 +1,24 @@
 # SDSGC Information Tool
-This program is a tool for searching for information about the mobile game, Seven Deadly Sins Grand Cross. For example, you can ask for a list of the characters that are good, the characters you don't have, the characters you have at a certain ultimate move level, the characters that are currently acquirable. Personally, I made the tool to help myself easily see how good a draw is, without going back 100 times to the heroes list! I find access to information in game pretty much impossible - so I hope that this tool can help you too. :)
+This program is a tool for searching for information about the mobile game, Seven Deadly Sins Grand Cross. For example, you can ask for a list of the characters that are good, the characters you don't have, the characters you have at a certain ultimate move level, the characters that are currently acquirable. Personally, I made the tool to help myself easily see how good a draw is, without going back 100 times to the heroes list! I find access to information in game pretty much impossible, so I hope that this tool can help you too. :)
 
 ## Table of Contents
-- [Installation](#installation)
-	- [Build from source](#build-from-source)
-	- [Packaged](#packaged)
 - [Features](#features)
-- [Contributing](#contributing)
-- [Support + Feedback](#support--feedback)
-- [Vulnerability Reporting](#vulnerability-reporting)
+- [Installation](#installation)
+	- [Releases](#releases)
+	- [Build from source](#build-from-source)
 - [License](#license)
 - [Thank You!](#thank-you)
 
+## Features
+
 ## Installation
-There are no requirements to use the program! It's a simple command line script.
+### Releases
+Releases for Windows coming soon. See the [Releases](https://github.com/Lucaz8de/SDSGC-information-tool/releases) section on the right of the page.
 
 ### Build from source
-I recommend doing this if you can - it should almost certainly work on all platforms. You need git, C++11 and cmake to build the program. Download and build it from the command line.
+I really recommend this. All you need is a compiler for C++, e.g. gcc.
+
+It is most convenient if you also have Git and CMake; then you can download and build the application by running these commands from the command line.
 ```bash
 git clone https://github.com/Lucaz8de/SDSGC-information-tool.git
 cd SDSGC-information-tool
@@ -24,32 +26,26 @@ cmake -S . -B build
 cmake --build build
 ```
 
-Run it from the command line in the build directory:
+If you're on Windows and want to get all of these tools in one place, you can use [MSYS2](https://www.msys2.org/). (On other platforms, they'll be on your default package manager.)
+
+If you don't have Git, you can click the "Code" button at the top of this page then download and extract the source. If you don't have CMake, you can compile directly using whatever compiler you have, for example by running a command very much like this one.
+
 ```bash
-cd build
-./SDSGC-information-tool
+g++ src/*.cpp -o build/sdsgc-information-tool
 ```
 
-### Packaged
-You're welcome to try downloading a copy of mine, but I'm really not as sure that that will work. 
-Built on my 64-bit PC running Linux Mint: [link]. 
-Built on my 64-bit PC running Windows 11: [link].
+Once installed, please make sure you run the application from the command line in the install directory.
+```bash
+cd build
+./sdsgc*
+```
 
-## Features
-
-## Contributing
-We appreciate feedback and contribution to this repo! Before you get started, please see the following:
-
-- [Auth0's general contribution guidelines](https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md)
-- [Auth0's code of conduct guidelines](https://github.com/auth0/open-source-template/blob/master/CODE-OF-CONDUCT.md)
-- [This repo's contribution guide](CONTRIBUTING.md)
-
-## Support + Feedback
-Include information on how to get support. Consider adding:
-
-- Use [Issues](https://github.com/auth0/open-source-template/issues) for code-level support
-- Use [Community](https://community.auth0.com/) for usage, questions, specific cases
-- Link to other support forums and FAQs
+If you want to delete the files you don't need when just running the application, feel free to run the following commands **in the source directory.** Deleting files is not reversible, do be careful!
+```bash
+cd sdsgc-information-tool
+rm .
+rm -r .git src build/CMake* build/cmake* build/Make*
+```
 
 ## License
 You can do whatever you want with this. [LICENSE](LICENSE) 

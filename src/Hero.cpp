@@ -21,15 +21,16 @@ void Hero::MakeHeroes(bool validating) {
 
 	// Read hero acquisition data from acquisition.txt and draws.txt.
 	// Make a single hashmap acquisition = { Draw name => [Hero list] }
-	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists("../data/acquisition.txt", validating);
-	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists("../data/draws.txt", validating);
+	std::string DATA_DIR = "../data";
+	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists(DATA_DIR + "/acquisition.txt", validating);
+	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists(DATA_DIR + "/draws.txt", validating);
 	Merge(acquisition, draws, validating);
 
 	// Read data from owned.txt. Lines are like [Boar Hat] Tavern Master Meliodas, UR, 80, 6, true, 6
 	// Make a hashmap upgrades = { [Boar Hat] Tavern Master Meliodas => [UR, 80, 6, true, 6], ... }
 	// (Hero::UPGRADEABLE names the elements of the list)
 	std::unordered_map<std::string, std::vector<std::string>> upgrades{};
-	std::ifstream file{ "../data/owned.txt" };
+	std::ifstream file{ DATA_DIR + "/owned.txt" };
 	while (file.good()) {
 		std::string line{};
 		std::getline(file, line);
@@ -49,7 +50,7 @@ void Hero::MakeHeroes(bool validating) {
 	file.close();
 
 	// Read data from heroes.txt. Take all the information together and make the Hero objects.
-	file.open("../data/heroes.txt");
+	file.open(DATA_DIR + "/heroes.txt");
 	while (file.good()) {
 		std::string line{};
 		std::getline(file, line);

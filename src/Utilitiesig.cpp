@@ -36,7 +36,7 @@ std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::s
 
 	std::ifstream file{ filename }; // Make a filestream out of filename
 	if(!file.good()) {
-		throw std::runtime_error("data/acquisition.txt and data/draws.txt files not found.");
+		throw std::runtime_error("data files not found. Please make sure you're running the program in the install directory.");
 	}
 	while (file.good()) {
 		// heading
