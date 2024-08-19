@@ -8,10 +8,8 @@
 class Hero {
 private:
 	// constants
-	static const std::array<std::string, 7> lr_names; // This list will contain the names of the LR heroes.
-	
-	// static variables
-	static std::vector<Hero> heroes; // This list will contain all hero objects created.
+	static const std::array<std::string, 8> lr_names; // This list will contain the names of the LR heroes.
+
 
 	// instance variables
 	std::string hero; // e.g. [Boar Hat] Tavern Master Meliodas
@@ -25,11 +23,16 @@ private:
 	int pve_tier1; // Amazing's most recent PVE tierlist
 	int pvp_tier2; // Nagato's most recent PVP tierlist
 	int pve_tier2; // Nagato's most recent PVE tierlist
-	bool owned; 
 	std::vector<std::string> acquisition;
-	std::vector<std::string> upgrades;
 
 public:
+	// instance variables
+	bool owned; 
+	std::vector<std::string> upgrades; // List of upgrades; empty for unowned heroes.
+
+	// static variables
+	static std::vector<Hero> heroes; // This list will contain all hero objects created.
+
 	// constants
 	enum upgradeable { GRADE, LEVEL, STARS, UNIQUE, ULTIMATE }; // Elements in upgrades list
 
@@ -38,7 +41,7 @@ public:
 	/* This function reads all the text files and creates one hero object for all heroes.
 	It is the only way hero objects are created and it is called exactly once.
 	Note draws and acquisition MUST NOT have common headings. */
-	static void MakeHeroes(bool validating);
+	static void MakeHeroes();
 
 	/* Utility method for MakeHeroes. Validates hero names.
 	 * Throws an exception if any data file uses an unrecognised hero name.
@@ -59,9 +62,6 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Hero& hero);
 
 	// getters
-	static const std::vector<Hero>& get_heroes() {
-		return heroes;
-	}
 	const std::string& get_hero() const {
 			return hero;
 		}
@@ -101,7 +101,5 @@ public:
 	const std::vector<std::string>& get_acquisition() const {
 		return acquisition;
 	}
-	const std::vector<std::string>& get_upgrades() const {
-		return upgrades;
-	}
+
 };

@@ -28,23 +28,23 @@ Condition Not(const std::vector<Condition> &conditions)
   };
 }
 
-Condition AvailableFromDraw(const std::vector<std::string> &args)
+Condition AvailableFromDraw(const std::vector<std::string> &arguments)
 {
-  std::string draw = args.at(0);
+  std::string draw = arguments.at(0);
   return [draw](const Hero &hero) -> bool {
     std::vector<std::string> acquisition = hero.get_acquisition();
     return std::find(acquisition.begin(), acquisition.end(), draw) != acquisition.end();
   };
 }
 
-Condition Owned(const std::vector<std::string> &args)
+Condition Owned(const std::vector<std::string> &arguments)
 {
   return [](const Hero &hero) -> bool {
     return hero.get_owned();
   };
 }
 
-Condition Good(const std::vector<std::string> &args)
+Condition Good(const std::vector<std::string> &arguments)
 {
   return [](const Hero &hero) -> bool {
     std::vector<int> tiers{ hero.get_pvp_tier1(), hero.get_pve_tier1(), hero.get_pvp_tier2(), hero.get_pve_tier2() };
@@ -52,21 +52,21 @@ Condition Good(const std::vector<std::string> &args)
   };
 }
 
-Condition Upgraded(const std::vector<std::string> &args)
+Condition Upgraded(const std::vector<std::string> &arguments)
 {
   return [](const Hero &hero) -> bool {
-    return hero.get_owned() && (hero.get_upgrades()[Hero::GRADE] == "LR" || std::stoi(hero.get_upgrades()[Hero::LEVEL]) > 80);
+    return hero.get_owned() && (hero.upgrades[Hero::GRADE] == "LR" || std::stoi(hero.upgrades[Hero::LEVEL]) > 80);
   };
 }
 
-Condition Acquirable(const std::vector<std::string> &args) {
+Condition Acquirable(const std::vector<std::string> &arguments) {
   return [](const Hero &hero) -> bool {
     return !(hero.get_acquisition().empty());
   };
 }
 
-Condition Race(const std::vector<std::string> &args) {
-  std::string race = args.at(0);
+Condition Race(const std::vector<std::string> &arguments) {
+  std::string race = arguments.at(0);
   return [race](const Hero &hero) -> bool {
     return hero.get_race() == race;
   };
