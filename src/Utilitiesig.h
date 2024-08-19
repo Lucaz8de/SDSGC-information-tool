@@ -6,8 +6,11 @@
 #include <unordered_map>
 #include <vector>
 
-/* Returns a list of strings from a comma (and space)-separated input string. */
-std::vector<std::string> ParseCS(const std::string& str, bool validating);
+/* Returns a list of strings from a CSV record. */
+std::vector<std::string> ParseCSV(const std::string& str, bool validating);
+
+/* Returns a CSV record from a list of strings. */
+const std::string MakeCSV(const std::vector<std::string> &vec);
 
 /* Reads a text file of the form n*"heading\n comma-separated data\n empty line\n"
 and returns a hash map {heading => [data]}.*/

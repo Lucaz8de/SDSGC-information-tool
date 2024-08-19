@@ -3,4 +3,4 @@ build/
 src/.vscode/
 
 # My personal game data
-data/owned.txt
+data/owned.csv
