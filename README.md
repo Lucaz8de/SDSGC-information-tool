@@ -13,10 +13,10 @@ This program is a tool for searching for information about the mobile game, Seve
 
 ## Installation
 ### Releases
-Releases for Windows coming soon. See the [Releases](https://github.com/Lucaz8de/SDSGC-information-tool/releases) section on the right of the page.
+First release for Windows is now available. See the [Releases](https://github.com/Lucaz8de/SDSGC-information-tool/releases) section on the right of the page.
 
 ### Build from source
-I really recommend this. All you need is a compiler for C++, e.g. gcc.
+I really recommend this. All you need is a compiler for C++, e.g. GCC.
 
 It is most convenient if you also have Git and CMake; then you can download and build the application by running these commands from the command line.
 ```bash
@@ -26,7 +26,7 @@ cmake -S . -B build
 cmake --build build
 ```
 
-If you're on Windows and want to get all of these tools in one place, you can use [MSYS2](https://www.msys2.org/). (On other platforms, they'll be on your default package manager.)
+If you're on Windows and want to get all of these tools in one place, you can use [MSYS2](https://www.msys2.org/). (On other platforms, they'll be available from your package manager.)
 
 If you don't have Git, you can click the "Code" button at the top of this page then download and extract the source. If you don't have CMake, you can compile directly using whatever compiler you have, for example by running a command very much like this one.
 
@@ -38,13 +38,6 @@ Once installed, please make sure you run the application from the command line i
 ```bash
 cd build
 ./sdsgc*
-```
-
-If you want to delete the files you don't need when just running the application, feel free to run the following commands **in the source directory.** Deleting files is not reversible, do be careful!
-```bash
-cd sdsgc-information-tool
-rm .
-rm -r .git src build/CMake* build/cmake* build/Make*
 ```
 
 ## License
