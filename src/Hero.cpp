@@ -44,7 +44,7 @@ void Hero::MakeHeroes() {
 		}
 		
 		// data = [[Boar Hat] Tavern Master Meliodas, UR, 80, 6, true, 6]
-		const std::vector<std::string> data = ParseCSV(line, Menu::validating);
+		const std::vector<std::string> data = ParseCSV(line);
 		if (Menu::validating) {
 			ValidateList(data, 6, {2, 3, 5}, {4});
 		}
@@ -65,7 +65,7 @@ void Hero::MakeHeroes() {
 
 		// data = [[Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5]
 		// Hero's named fields name the elements of the list
-		const std::vector<std::string> data = ParseCSV(line, Menu::validating); 
+		const std::vector<std::string> data = ParseCSV(line); 
 		if (Menu::validating) {
 			ValidateList(data, 11, {7, 8, 9, 10}, {});
 		}

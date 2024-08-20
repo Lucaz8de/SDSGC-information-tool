@@ -10,7 +10,7 @@
 #include "Hero.h"
 #include "Utilitiesig.h"
 
-std::vector<std::string> ParseCSV(const std::string& str, bool validating) {
+std::vector<std::string> ParseCSV(const std::string& str) {
 	std::vector<std::string> out{};
 
 	std::stringstream ss{ str }; // Make a stream out of str
@@ -30,9 +30,9 @@ std::vector<std::string> ParseCSV(const std::string& str, bool validating) {
 				out.push_back(s);
 				s = "";
 				quotes = 0;
-				if(validating && ss.get() != ' ') {
-					std::string error_message = "Invalid format of data file on line: " + ss.str() + ". Expected lists to be separated by commas and spaces.";
-					throw std::runtime_error(error_message);
+				// allow separated by spaces or not
+				if (ss.peek() == ' ') {
+					ss.ignore();
 				}
 			} 
 			else {
@@ -59,7 +59,7 @@ const std::string MakeCSV(const std::vector<std::string> &vec)
 {
     std::string out = ""; // output is one record
 	for (auto &str: vec) {
-		bool special = false; // whether this string has special characters " , \n 
+		bool special = (str[0] == ' '); // initial space " , \n are special characters
 		std::string f_str{}; // string formatted for CSV
 		for (auto &ch: str) {
 			if (ch == '"' || ch == ',' || ch == '\n') {
@@ -77,7 +77,7 @@ const std::string MakeCSV(const std::vector<std::string> &vec)
 		}
 		out += f_str + ", "; // comma and space separated
 	}
-	return out.substr(0, out.size()-2); // don't return the final comma and space
+	return out.substr(0, out.size()-2); // remove the final comma and space
 }
 
 std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename, bool validating) {
@@ -97,7 +97,7 @@ std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::s
 		if (validating && out.find(heading) != out.end()) {
 			throw std::runtime_error("The heading names in data/acquisition.csv and data/draws.csv must not contain duplicates.");
 		}
-		out[heading] = ParseCSV(data, validating); // adds the list to the hashmap
+		out[heading] = ParseCSV(data); // adds the list to the hashmap
 		// empty line
 		std::getline(file, heading, '\n'); // puts the whole line in heading, just temporarily
 		if(validating && !heading.empty()) {

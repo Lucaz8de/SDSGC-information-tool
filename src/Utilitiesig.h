@@ -6,10 +6,10 @@
 #include <unordered_map>
 #include <vector>
 
-/* Returns a list of strings from a CSV record. */
-std::vector<std::string> ParseCSV(const std::string& str, bool validating);
+/* Returns a list of strings from a CSV record (allows spaces or not). */
+std::vector<std::string> ParseCSV(const std::string& str);
 
-/* Returns a CSV record from a list of strings. */
+/* Returns a CSV record (with spaces) from a list of strings. */
 const std::string MakeCSV(const std::vector<std::string> &vec);
 
 /* Reads a text file of the form n*"heading\n comma-separated data\n empty line\n"
