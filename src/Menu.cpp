@@ -2,6 +2,7 @@
 
 #include <functional>
 #include <iostream>
+#include <stack>
 #include <string>
 #include <vector>
 
@@ -11,12 +12,19 @@
 #include "Project.h"
 
 const std::vector<Menu::ConditionFunction> Menu::conditions{
-  {"AvailableFromDraw", AvailableFromDraw},
-  {"Owned", Owned},
+  {"Attribute", Attribute},
+  {"StartingGrade", StartingGrade},
+  {"Character", Character},
+  {"LR", LR},
+  {"Race", Race},
+  {"Characteristic", Characteristic},
   {"Good", Good},
-  {"Upgraded", Upgraded},
+  {"VeryGood", VeryGood},
+  {"Best", Best},
+  {"Owned", Owned},
   {"Acquirable", Acquirable},
-  {"Race", Race}
+  {"AvailableFromDraw", AvailableFromDraw},
+  {"Upgraded", Upgraded},  
 };
 
 const std::vector<Menu::Operation> Menu::operations{
@@ -73,6 +81,14 @@ bool Menu::YesOrNoInput(std::string question) {
 	}
 }
 
+std::string Menu::GetFreeInput(std::string prompt) {
+    std::string input;
+	std::cout << prompt << ": ";
+	std::getline(std::cin, input);
+	std::cout << std::endl;
+	return input;
+}
+
 void Menu::TopLevelMenu() {
 	std::vector<std::string> function_names{};
 	for(MenuFunction function: functions) {
@@ -99,21 +115,42 @@ std::vector<std::string> Menu::GetArguments(int int_input) {
 	switch (int_input) {
 	case 1:
 	{
-		std::string DATA_DIR = "../data";
-		std::vector<std::string> draws = HashKeys(ReadLists(DATA_DIR + "/draws.csv", false));
-		return AskForArguments("draw", draws, 1);
+		std::vector<std::string> attributes{"Strength", "HP", "Speed", "Light", "Darkness"};
+		return AskForArguments("attribute", attributes, 1);
 	}
-	case 6:
+	case 2:
+	{
+		std::vector<std::string> starting_grades{"R", "SR", "SSR", "UR"};
+		return AskForArguments("starting grade", starting_grades, 1);
+	}
+	case 3:
+	{
+		return {GetFreeInput("Please enter a CORRECT character name, e.g. Meliodas")};
+	}
+	case 5:
 	{
 		std::vector<std::string> races{"Demon", "Giant", "Fairy", "Goddess", "Unknown", "Human"};
 		return AskForArguments("race", races, 1);
+	}
+	case 6:
+	{
+		std::vector<std::string> characteristics{
+			"The Seven Deadly Sins", "The Four Archangels", "The Ten Commandments", "Ragnarok", "The Seven Catastrophes", "Collab"
+		};
+		return AskForArguments("characteristic", characteristics, 1);
+	}
+	case 12:
+	{
+		std::string DATA_DIR = "../data";
+		std::vector<std::string> draws = HashKeys(ReadLists(DATA_DIR + "/draws.txt", false));
+		return AskForArguments("draw", draws, 1);
 	}
 	default:
 		return {};
 	}
 }
 
-const Condition Menu::GetCondition(std::vector<std::string> &filter_stack) {
+const Condition Menu::GetCondition(std::stack<std::string> &filters) {
 	int int_input{ -1 };
 	std::vector<std::string> condition_names{};
 	for(ConditionFunction condition: conditions) {
@@ -124,24 +161,24 @@ const Condition Menu::GetCondition(std::vector<std::string> &filter_stack) {
 
 	std::vector<std::string> arguments = GetArguments(int_input);
 
-	filter_stack.push_back(conditions[int_input - 1].name);
+	filters.push(conditions[int_input - 1].name);
 	return conditions[int_input - 1].function(arguments);
 }
 
-const Condition Menu::HandleOperation(Condition &condition, Operation operation, std::vector<std::string> &filter_stack) {
+const Condition Menu::HandleOperation(Condition &condition, Operation operation, std::stack<std::string> &filters) {
 	std::vector<Condition> conditions{ condition };
-	filter_stack.push_back(operation.name);
+	filters.push(operation.name);
 	if (operation.arity > 1) {
 		std::cout << "You must choose " << operation.arity - 1 << " other condition(s)." << std::endl;
 		for (size_t i{ 0 }; i < operation.arity - 1; i++) {
 			std::cout << i + 1 << ":" << std::endl;
-			conditions.push_back(GetCondition(filter_stack));
+			conditions.push_back(GetCondition(filters));
 		}
 	}
 	return operation.function(conditions);
 }
 
-const Condition Menu::GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack) {
+const Condition Menu::GetOperation(Condition &condition, bool &sentinel_finished, std::stack<std::string> &filters) {
 	// special input with 0 an option so don't use AskForInput
 	std::cout << "You can choose to use logical operations to combine conditions." << std::endl;
 	std::cout << "You must say them in the order you want them done." << std::endl;
@@ -157,6 +194,6 @@ const Condition Menu::GetOperation(Condition &condition, bool &sentinel_finished
 		return condition;
 	}
 	else {
-		return HandleOperation(condition, operations[int_input - 1], filter_stack);
+		return HandleOperation(condition, operations[int_input - 1], filters);
 	}
 }

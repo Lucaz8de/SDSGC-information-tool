@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "AddOwned.h"
+#include "Conditions.h"
 #include "Hero.h"
 #include "Menu.h"
 #include "Utilitiesig.h"
@@ -58,11 +59,7 @@ void UpdateHero(Hero &hero) {
 
 void UpdateHeroes(std::string character) {
     std::vector<Hero> list = Hero::heroes;
-    Condition is_character = [character](const Hero &hero) -> bool {
-        return hero.get_character() == character;
-    };
-
-    UpdateHeroes(3, Select(list, is_character));
+    UpdateHeroes(3, Select(list, Character({character})));
 }
 
 void UpdateHeroes(int option, std::vector<Hero> list) {

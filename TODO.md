@@ -3,6 +3,7 @@
 ## Features
 - [ ] Print upgrades
 - [ ] Print upgrade costs
+- [ ] Think about adding true awakening, equipment, costumes/holy relics to upgrades
 - [ ] Possibly add images
 - [ ] GUI??
 - [ ] Uh, try to update it more often. Missing the tier lists happens too easily...
@@ -43,3 +44,4 @@
 - [x] Use this definition/standard: https://www.ietf.org/rfc/rfc4180.txt (section 2) for CSV (urgent!)
 - [x] Thor's name having a comma means the code is broken until I change data files and the processing code.
 - [x] Change/add owned heroes (urgent!)
+- [x] Think about adding has LR to hero data

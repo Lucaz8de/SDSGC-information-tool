@@ -1,6 +1,7 @@
 #include <fstream>
 #include <functional>
 #include <iostream>
+#include <stack>
 #include <string>
 #include <vector>
 
@@ -35,24 +36,25 @@ int main() {
 void Filter() {
 	std::vector<Hero> heroes = Hero::heroes;
 
-	std::vector<std::string> filter_stack{};
+	std::stack<std::string> filters{};
 	bool sentinel_finished = false;
-	Condition condition = Menu::GetCondition(filter_stack);
+	Condition condition = Menu::GetCondition(filters);
 	while (!sentinel_finished) {
-		condition = Menu::GetOperation(condition, sentinel_finished, filter_stack);
+		condition = Menu::GetOperation(condition, sentinel_finished, filters);
 	}
 
 	std::string x{};
 	std::cout << "You have selected: ";
-	for(std::string &word: filter_stack) {
+	for(size_t i{ 0 }; i < filters.size(); i++) {
 		std::cout << "(";
 	}
-	for(std::string &word: filter_stack) {
-		std::cout << word << ") ";
+	while(!filters.empty()) {
+		std::cout << filters.top() << ") ";
+		filters.pop();
 	}
 	auto found = Select(heroes, condition);
 	std::cout << "\nFound: " << found.size() << " out of " << heroes.size() <<
-		" heroes. Type anything to view results." << std::endl;
+		" heroes. Press enter to view results." << std::endl;
 	std::getline(std::cin, x);
 
 	PrintList(Select(heroes, condition));
@@ -78,7 +80,7 @@ void AddOwned() {
 	}
 	else {
 		std::string character;
-		std::cout << "Please enter a CORRECT character name, e.g. \"Meliodas\": ";
+		std::cout << "Please enter a CORRECT character name, e.g. Meliodas: ";
 		std::getline(std::cin, character);
 		UpdateHeroes(character);
 	}

@@ -7,20 +7,17 @@
 
 class Hero {
 private:
-	// constants
-	static const std::array<std::string, 8> lr_names; // This list will contain the names of the LR heroes.
-
-
 	// instance variables
 	std::string hero; // e.g. [Boar Hat] Tavern Master Meliodas
 	std::string name; // e.g. Tavern Master Meliodas
 	std::string attribute; // e.g. Speed
 	std::string starting_grade; // e.g. SR
 	std::string character; // e.g. Meliodas
+	bool lr; // true or false
 	std::string race; // e.g. Demon
 	std::string characteristic; // e.g. The Seven Deadly Sins
-	int pvp_tier1; // Amazing's most recent PVP tierlist
-	int pve_tier1; // Amazing's most recent PVE tierlist
+	int pvp_tier1; // Rank (1, 2, 3, 4, 5) on Amazing's most recent PVP tierlist
+	int pve_tier1; // Rank (1, 2, 3, 4, 5) on Amazing's most recent PVE tierlist
 	int pvp_tier2; // Nagato's most recent PVP tierlist
 	int pve_tier2; // Nagato's most recent PVE tierlist
 	std::vector<std::string> acquisition;
@@ -62,44 +59,19 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Hero& hero);
 
 	// getters
-	const std::string& get_hero() const {
-			return hero;
-		}
-	const std::string& get_name() const {
-		return name;
-	}
-	const std::string& get_attribute() const {
-		return attribute;
-	}
-	const std::string& get_starting_grade() const {
-		return starting_grade;
-	}
-	const std::string& get_character() const {
-		return character;
-	}
-	const std::string& get_race() const {
-		return race;
-	}
-	const std::string& get_characteristic() const {
-		return characteristic;
-	}
-	int get_pvp_tier1() const {
-		return pvp_tier1;
-	}
-	int get_pve_tier1() const {
-		return pve_tier1;
-	}
-	int get_pvp_tier2() const {
-		return pvp_tier2;
-	}
-	int get_pve_tier2() const {
-		return pve_tier2;
-	}
-	bool get_owned() const {
-		return owned;
-	}
-	const std::vector<std::string>& get_acquisition() const {
-		return acquisition;
-	}
+	const std::string& get_hero() const { return hero; }
+	const std::string& get_name() const { return name; }
+	const std::string& get_attribute() const { return attribute; }
+	const std::string& get_starting_grade() const { return starting_grade; }
+	const std::string& get_character() const { return character; }
+	bool get_lr() const { return lr; }
+	const std::string& get_race() const { return race; }
+	const std::string& get_characteristic() const { return characteristic; }
+	int get_pvp_tier1() const { return pvp_tier1; }
+	int get_pve_tier1() const { return pve_tier1; }
+	int get_pvp_tier2() const { return pvp_tier2; }
+	int get_pve_tier2() const { return pve_tier2; }
+	bool get_owned() const { return owned; }
+	const std::vector<std::string>& get_acquisition() const { return acquisition; }
 
 };

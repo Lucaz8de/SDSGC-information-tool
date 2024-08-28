@@ -4,3 +4,6 @@ src/.vscode/
 
 # My personal game data
 data/owned.csv
+
+# Personal scripts for help with updates
+src/scripts/

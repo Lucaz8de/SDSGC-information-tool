@@ -12,7 +12,6 @@
 
 /* Note this MUST be defined in a global scope (an interesting exception to private access). 
 And for some reason, the type MUST be repeated. */
-const std::array<std::string, 8> Hero::lr_names = { "\"Virtual Body Doubles\" Lostvayne Meliodas", "\"Sunshine\" Holy Knight Escanor", "[New Legend] Princess Elizabeth", "[Advent of Flash] Covenant of Light Ludociel", "[The Ten Commandments] Gloxinia of Repose", "[The Ten Commandments] Zeldris of Piety", "[The Ten Commandments] Galland of Truth", "[Advent of Destruction] Lillia of Desire" };
 std::vector<Hero> Hero::heroes = std::vector<Hero>{};
 
 void Hero::MakeHeroes() {
@@ -20,11 +19,11 @@ void Hero::MakeHeroes() {
 		throw std::runtime_error("Unexpectedly called MakeHeroes twice.");
 	}
 
-	// Read hero acquisition data from acquisition.csv and draws.csv.
+	// Read hero acquisition data from acquisition.txt and draws.txt.
 	// Make a single hashmap acquisition = { Draw name => [Hero list] }
 	std::string DATA_DIR = "../data";
-	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists(DATA_DIR + "/acquisition.csv", Menu::validating);
-	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists(DATA_DIR + "/draws.csv", Menu::validating);
+	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists(DATA_DIR + "/acquisition.txt", Menu::validating);
+	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists(DATA_DIR + "/draws.txt", Menu::validating);
 	Merge(acquisition, draws, Menu::validating);
 
 	// Read data from owned.csv. Lines are like [Boar Hat] Tavern Master Meliodas, UR, 80, 6, true, 6
@@ -39,7 +38,7 @@ void Hero::MakeHeroes() {
 	while (file.good()) {
 		std::string line{};
 		std::getline(file, line);
-		if (line == "") { // empty lines for grouping, just skip
+		if (EmptyCSV(line)) { // empty lines for grouping, just skip
 			continue;
 		}
 		
@@ -59,15 +58,16 @@ void Hero::MakeHeroes() {
 	while (file.good()) {
 		std::string line{};
 		std::getline(file, line);
-		if (line == "") { // empty lines for grouping, just skip
+		if (EmptyCSV(line)) { // empty lines for grouping, just skip
 			continue;
 		}
 
-		// data = [[Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, Demon, The Seven Deadly Sins, 5, 5, 5, 5]
+		// data = [[Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, false, Demon, The Seven Deadly Sins, 5, 5, 5, 5]
 		// Hero's named fields name the elements of the list
+		// i.e.: hero, name, attribute, starting grade, character, LR, race, characteristic, tiers
 		const std::vector<std::string> data = ParseCSV(line); 
 		if (Menu::validating) {
-			ValidateList(data, 11, {7, 8, 9, 10}, {});
+			ValidateList(data, 12, {8, 9, 10, 11}, {5});
 		}
 
 		const Hero hero{ data, upgrades, acquisition };
@@ -78,9 +78,9 @@ void Hero::MakeHeroes() {
 		std::vector<std::string> hero_names = HashKeys(upgrades);
 		ValidateHeroNames(hero_names, "data/owned.csv");
 
-		// validate hero names in acquisition.csv and draws.csv
+		// validate hero names in acquisition.txt and draws.txt
 		for(const auto& item: acquisition) {
-			ValidateHeroNames(item.second, "data/acquisition.csv or data/draws.csv");
+			ValidateHeroNames(item.second, "data/acquisition.txt or data/draws.txt");
 		}
 	}
 }
@@ -106,8 +106,8 @@ pvp_tier1{ 0 }, pve_tier1{ 0 }, pvp_tier2{ 0 }, pve_tier2{ 0 }, owned{ false }, 
 
 Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::string, std::vector<std::string>>& upgrades, const std::unordered_map<std::string, std::vector<std::string>>& acquisition) :
 	hero{ data[0] }, name{ data[1] }, attribute{ data[2] }, starting_grade{ data[3] }, character{ data[4] },
-	race{ data[5] }, characteristic{ data[6] }, pvp_tier1{ std::stoi(data[7]) }, pve_tier1{ std::stoi(data[8]) },
-	pvp_tier2{ std::stoi(data[9]) }, pve_tier2{ std::stoi(data[10]) }, owned{ false }, acquisition{}, upgrades{}
+	lr{ data[5] == "true" }, race{ data[6] }, characteristic{ data[7] }, pvp_tier1{ std::stoi(data[8]) }, pve_tier1{ std::stoi(data[9]) },
+	pvp_tier2{ std::stoi(data[10]) }, pve_tier2{ std::stoi(data[11]) }, owned{ false }, acquisition{}, upgrades{}
 {
 	// upgrades is the hash map with an entry for each owned hero
 	for (const auto& item : upgrades) { // item is {hero_name: upgrades_list}

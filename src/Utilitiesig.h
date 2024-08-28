@@ -6,14 +6,31 @@
 #include <unordered_map>
 #include <vector>
 
-/* Returns a list of strings from a CSV record (allows spaces or not). */
+/**
+ * Returns a list of strings from a CSV record.
+ * Assumes valid CSV (with or without spaces).
+ * Notable for code: If different records have different number of fields,
+ * then this will read the empty fields as empty data
+ * and probably not work.
+*/
 std::vector<std::string> ParseCSV(const std::string& str);
 
-/* Returns a CSV record (with spaces) from a list of strings. */
+/** Returns a CSV record (with spaces) from a list of strings. */
 const std::string MakeCSV(const std::vector<std::string> &vec);
 
-/* Reads a text file of the form n*"heading\n comma-separated data\n empty line\n"
-and returns a hash map {heading => [data]}.*/
+/** Returns whether a CSV record is empty (any character is just a comma). */
+bool EmptyCSV(const std::string& str);
+
+/**
+ * Reads the lists from text files acquisition.txt and draws.txt.
+ * These files are just lists instead of CSV records with specific fields,
+ * though the lists are still comma-separated.
+ * The format should be:
+ * Heading (name of method/draw)\n
+ * Comma-separated list\n
+ * (Empty)\n
+ * Returns: Hash map {heading => data}.
+ */
 std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename, bool validating);
 
 /* Returns the list of headings only from ReadLists' output, i.e. the hash's keys. */

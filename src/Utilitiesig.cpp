@@ -55,8 +55,7 @@ std::vector<std::string> ParseCSV(const std::string& str) {
 	return out;
 }
 
-const std::string MakeCSV(const std::vector<std::string> &vec)
-{
+const std::string MakeCSV(const std::vector<std::string> &vec) {
     std::string out = ""; // output is one record
 	for (auto &str: vec) {
 		bool special = (str[0] == ' '); // initial space " , \n are special characters
@@ -80,6 +79,12 @@ const std::string MakeCSV(const std::vector<std::string> &vec)
 	return out.substr(0, out.size()-2); // remove the final comma and space
 }
 
+bool EmptyCSV(const std::string &str) {
+    return std::all_of(str.begin(), str.end(), [](char ch) {
+		return ch == ',';
+	});
+}
+
 std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename, bool validating) {
 	std::unordered_map<std::string, std::vector<std::string>> out{};
 
@@ -90,18 +95,18 @@ std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::s
 	while (file.good()) {
 		// heading
 		std::string heading{};
-		std::getline(file, heading, '\n'); // puts the whole line in heading
+		std::getline(file, heading); // puts the whole line in heading
 		// comma-separated data
 		std::string data{};
-		std::getline(file, data, '\n'); // puts the whole line in line
+		std::getline(file, data); // puts the whole line in line
 		if (validating && out.find(heading) != out.end()) {
-			throw std::runtime_error("The heading names in data/acquisition.csv and data/draws.csv must not contain duplicates.");
+			throw std::runtime_error("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
 		}
 		out[heading] = ParseCSV(data); // adds the list to the hashmap
 		// empty line
-		std::getline(file, heading, '\n'); // puts the whole line in heading, just temporarily
+		std::getline(file, heading); // puts the whole line in heading, just temporarily
 		if(validating && !heading.empty()) {
-			throw std::runtime_error("Invalid format of data/acquisition.csv and data/draws.csv -- expected HEADING, DATA, EMPTY LINE");
+			throw std::runtime_error("Invalid format of data/acquisition.txt and data/draws.txt -- expected HEADING, DATA, EMPTY LINE");
 		}
 	}
 	return out;
@@ -156,7 +161,7 @@ template std::vector<Hero> Select(const std::vector<Hero> &vec, const std::funct
 template<typename T, typename S> void Merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2, bool validating) {
 	for(auto& item: m2) { // item is {key: value}
 		if (validating && m1.find(item.first) != m1.end()) {
-			throw std::runtime_error("The heading names in data/acquisition.csv and data/draws.csv must not contain duplicates.");
+			throw std::runtime_error("The heading names in data/acquisition.txt and data/draws.txt must not contain duplicates.");
 		}
 
 		m1[item.first] = item.second;

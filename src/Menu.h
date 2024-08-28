@@ -1,5 +1,6 @@
 #pragma once
 #include <functional>
+#include <stack>
 #include <string>
 #include <vector>
 
@@ -40,6 +41,9 @@ public:
   // This function displays a prompt and reads a yes/no input. Throws an error if input is not yes/no.
   static bool YesOrNoInput(std::string question);
 
+  /** This function displays a prompt and reads user input. */
+  static std::string GetFreeInput(std::string prompt);
+
   // An interactive menu to choose from the program's capabilities.
   static void TopLevelMenu();
 
@@ -51,11 +55,11 @@ public:
   static std::vector<std::string> GetArguments(int int_input);
 
   // An interactive menu to choose one condition to filter.
-  static const Condition GetCondition(std::vector<std::string> &filter_stack);
+  static const Condition GetCondition(std::stack<std::string> &filters);
 
   // The function that asks for any other needed condition(s) and applies the operation to them.
-  static const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::vector<std::string> &filter_stack);
+  static const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::stack<std::string> &filters);
 
   // An interactive menu to choose an operation (if any) to apply to the condition.
-  static const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::vector<std::string> &filter_stack);
+  static const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::stack<std::string> &filters);
 };
