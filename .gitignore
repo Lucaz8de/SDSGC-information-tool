@@ -3,7 +3,7 @@ build/
 src/.vscode/
 
 # My personal game data
-data/owned.csv
+data/owned*
 
 # Personal scripts for help with updates
 src/scripts/
