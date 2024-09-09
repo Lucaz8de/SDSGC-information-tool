@@ -16,24 +16,23 @@ The Serpent Sin of Envy Holy Knight Diane,Holy Knight Diane,Speed,SSR,Diane,fals
 [Heart of the Land] Mercenary Diane,Mercenary Diane,Strength,SR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
 [The Seven Deadly Sins] Holy Knight Diane,Holy Knight Diane,HP,SSR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
 [Matrona] Fighter Diane,Fighter Diane,Speed,SSR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
+[Kungfu Master] Fighter Diane,Fighter Diane,Strength,SSR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
 """Creation"" Fighter Diane",Fighter Diane,HP,SSR,Diane,false,Giant,The Seven Deadly Sins,5,4,5,5
+[Ragnarok] Blessing of the Earth Diane,Blessing of the Earth Diane,HP,SSR,Diane,false,Giant,The Seven Deadly Sins,3,5,5,5
 [Beach Guardian] Blessing of the Earth Diane,Blessing of the Earth Diane,Strength,SSR,Diane,false,Giant,The Seven Deadly Sins,5,3,5,4
 [Halloween] Protective Heart Diane,Protective Heart Diane,HP,SSR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
 Waves of the Earth Queen Diane,Queen Diane,Strength,SSR,Diane,false,Giant,The Seven Deadly Sins,2,2,5,3
 [Eternal Promise] Holy Knight Diane,Holy Knight Diane,Strength,SSR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
-[Kungfu Master] Fighter Diane,Fighter Diane,Strength,SSR,Diane,false,Giant,The Seven Deadly Sins,5,5,5,5
-[Ragnarok] Blessing of the Earth Diane,Blessing of the Earth Diane,HP,SSR,Diane,false,Giant,The Seven Deadly Sins,3,5,5,5
 [Messenger of Love] Queen Diane,Queen Diane,HP,SSR,Diane,false,Giant,The Seven Deadly Sins,2,2,3,1
 ,,,,,,,,,,,
-[Ale Collector] Adventurer Ban,Adventurer Ban,Speed,SSR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
 [Nunchaku] Adventurer Ban,Adventurer Ban,Strength,SSR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
+[Ale Collector] Adventurer Ban,Adventurer Ban,Speed,SSR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
 """Snatch"" Brawler Ban",Brawler Ban,HP,SSR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
 [Outlaw] Brawler Ban,Brawler Ban,Speed,SSR,Ban,false,Human,The Seven Deadly Sins,5,3,5,5
 [Undead] Prisoner Ban,Prisoner Ban,Strength,SR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
 [Ragnarok] Brawler Ban,Brawler Ban,Strength,SSR,Ban,false,Human,The Seven Deadly Sins,4,3,5,4
 [The Seven Deadly Sins] Transcendent Ban,Transcendent Ban,Light,SSR,Ban,false,Human,The Seven Deadly Sins,2,4,2,3
 [Immortal's Return] Purgatory Ban,Purgatory Ban,Strength,SSR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
-,,,,,,,,,,,
 The Fox Sin of Greed Adventurer Ban,Adventurer Ban,HP,SSR,Ban,false,Human,The Seven Deadly Sins,5,5,5,5
 ,,,,,,,,,,,
 The Grizzly Sin of Sloth King the Fairy King,King the Fairy King,Speed,SSR,King,false,Fairy,The Seven Deadly Sins,5,5,5,5
@@ -71,9 +70,9 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 "[Invincible Avatar] ""The One"" Escanor","""The One"" Escanor",Speed,SSR,Escanor,false,Human,The Seven Deadly Sins,5,3,5,4
 ,,,,,,,,,,,
 [The Four Archangels] Ludociel of Flash,Ludociel of Flash,Speed,SSR,Ludociel,false,Goddess,The Four Archangels,4,5,5,5
-[Advent of Flash] Covenant of Light Ludociel,Covenant of Light Ludociel,Speed,SSR,Ludociel,true,Goddess,The Four Archangels,2,2,3,1
 [Divine Proxy] Ludociel of Flash,Ludociel of Flash,HP,SSR,Ludociel,false,Goddess,The Four Archangels,4,4,5,5
 [Summer Mirage] Covenant of Light Ludociel,Covenant of Light Ludociel,Strength,SSR,Ludociel,false,Goddess,The Four Archangels,5,2,5,1
+[Advent of Flash] Covenant of Light Ludociel,Covenant of Light Ludociel,Speed,SSR,Ludociel,true,Goddess,The Four Archangels,2,2,3,1
 [Advent of Ocean] Covenant of Light Tarmiel,Covenant of Light Tarmiel,Strength,SSR,Tarmiel,false,Goddess,The Four Archangels,3,2,5,3
 [The Four Archangels] Tarmiel of Ocean,Tarmiel of Ocean,Speed,SSR,Tarmiel,false,Goddess,The Four Archangels,4,4,5,5
 [Advent of Tornado] Covenant of Light Sariel,Covenant of Light Sariel,HP,SSR,Sariel,false,Goddess,The Four Archangels,4,4,5,3
@@ -100,8 +99,8 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [The Ten Commandments] Estarossa of Love,Estarossa of Love,Strength,SSR,Estarossa,false,Demon,The Ten Commandments,5,5,5,5
 [Elite Demon] Estarossa of Love,Estarossa of Love,HP,SSR,Estarossa,false,Demon,The Ten Commandments,4,5,5,5
 """Ominous Nebula"" Prince of Darkness Zeldris",Prince of Darkness Zeldris,Speed,SSR,Zeldris,false,Demon,The Ten Commandments,2,5,5,5
-[The Ten Commandments] Zeldris of Piety,Zeldris of Piety,Speed,SSR,Zeldris,true,Demon,The Ten Commandments,2,2,3,1
 [Elite Demon] Zeldris of Piety,Zeldris of Piety,Strength,SSR,Zeldris,false,Demon,The Ten Commandments,5,3,5,3
+[The Ten Commandments] Zeldris of Piety,Zeldris of Piety,Speed,SSR,Zeldris,true,Demon,The Ten Commandments,2,2,3,1
 [Demon King's Deputy] Executioner Zeldris,Executioner Zeldris,HP,SSR,Zeldris,false,Demon,The Ten Commandments,2,4,5,5
 ,,,,,,,,,,,
 [Wielder of Gram] Prince Sigurd,Prince Sigurd,Strength,SSR,Sigurd,false,Human,Ragnarok,4,3,5,3
@@ -131,9 +130,9 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [Sunny Vacation] Weapon Researcher Valenti,Weapon Researcher Valenti,Speed,SSR,Valenti,false,Human,The Seven Catastrophes,5,5,5,5
 [Gift of the White Snow] Valenti of Obsession,Valenti of Obsession,Strength,SSR,Valenti,false,Human,The Seven Catastrophes,4,5,5,5
 [Fullmetal Engineer] Valenti of Obsession,Valenti of Obsession,Speed,SSR,Valenti,false,Human,The Seven Catastrophes,4,2,5,1
-[Ruler of Stormy Seas] Noblesse Eastin,Noblesse Eastin,Speed,SSR,Eastin,false,Human,The Seven Catastrophes,5,4,5,4
 [Empress of the Sea] Eastin of Authority,Eastin of Authority,Strength,SSR,Eastin,false,Human,The Seven Catastrophes,5,5,5,5
 [Spooky Party] Eastin of Authority,Eastin of Authority,HP,SSR,Eastin,false,Human,The Seven Catastrophes,3,5,5,5
+[Ruler of Stormy Seas] Noblesse Eastin,Noblesse Eastin,Speed,SSR,Eastin,false,Human,The Seven Catastrophes,5,4,5,4
 [Sunny Vacation] Noblesse Eastin,Noblesse Eastin,HP,SSR,Eastin,false,Human,The Seven Catastrophes,5,5,5,5
 [Oceanic Harmonizer] Noblesse Eastin,Noblesse Eastin,Strength,SSR,Eastin,false,Human,The Seven Catastrophes,5,5,5,5
 [Weapon Master] Mono of Blood and Iron,Mono of Blood and Iron,HP,SSR,Mono,false,Human,The Seven Catastrophes,4,5,5,4
@@ -141,16 +140,16 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [Shepherd of Death] Human Weapon Mono,Human Weapon Mono,Strength,SSR,Mono,false,Human,The Seven Catastrophes,5,5,5,5
 [Advent of Destruction] Human Weapon Mono,Human Weapon Mono,Speed,SSR,Mono,false,Human,The Seven Catastrophes,5,4,5,5
 [Blade in the Dark] Human Weapon Mono,Human Weapon Mono,HP,SSR,Mono,false,Human,The Seven Catastrophes,5,5,5,5
-[Halloween] Queen of Explosions Roxy,Queen of Explosions Roxy,HP,SSR,Roxy,false,Human,The Seven Catastrophes,5,4,5,5
 [Vengeful Saw Blade] Roxy of Madness,Roxy of Madness,Speed,SSR,Roxy,false,Human,The Seven Catastrophes,2,2,2,1
 [Winter Whirlwind] Roxy of Madness,Roxy of Madness,Strength,SSR,Roxy,false,Human,The Seven Catastrophes,2,4,2,5
 [Mad Destroyer] Queen of Explosions Roxy,Queen of Explosions Roxy,Strength,SSR,Roxy,false,Human,The Seven Catastrophes,5,5,5,5
+[Halloween] Queen of Explosions Roxy,Queen of Explosions Roxy,HP,SSR,Roxy,false,Human,The Seven Catastrophes,5,4,5,5
 [Summer Sun] Queen of Explosions Roxy,Queen of Explosions Roxy,Speed,SSR,Roxy,false,Human,The Seven Catastrophes,5,5,5,5
 [Dungeon Raider] Gamer Shin,Gamer Shin,HP,SSR,Shin,false,Human,The Seven Catastrophes,5,4,5,4
 [Halloween] Gamer Shin,Gamer Shin,Strength,SSR,Shin,false,Human,The Seven Catastrophes,5,5,5,5
 [The Guild's Rising Star] Gamer Shin,Gamer Shin,Speed,SSR,Shin,false,Human,The Seven Catastrophes,4,3,5,4
-[Executor of Darkness] Guardian Deity Camila,Guardian Deity Camila,Strength,SSR,Camila,false,Unknown,The Seven Catastrophes,5,5,5,5
 [Heart of a Beast] Guardian Deity Camila,Guardian Deity Camila,Speed,SSR,Camila,false,Unknown,The Seven Catastrophes,5,4,5,3
+[Executor of Darkness] Guardian Deity Camila,Guardian Deity Camila,Strength,SSR,Camila,false,Unknown,The Seven Catastrophes,5,5,5,5
 ,,,,,,,,,,,
 [Cadet Corps] Eren Jaeger,Eren Jaeger,Speed,SR,Eren,false,Human,Collab,5,5,5,5
 [Steadfast Resolve] Eren Jaeger,Eren Jaeger,Speed,SSR,Eren,false,Human,Collab,4,4,5,4

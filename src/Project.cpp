@@ -65,17 +65,15 @@ void AddOwned() {
 		throw std::runtime_error("To edit data files, validation is required. Please re-run the program and type yes.");
 	}
 
-	int option = Menu::AskForInput(
-		"Please choose from the following menu how you'd like to add heroes.",
-		{
-			"Select from unowned heroes list to add new owned hero.",
-			"Select from owned heroes list to upgrade owned hero.",
-			"Select from full heroes list to update owned hero list.",
-			"Search by name."
-		}
-	);
+	std::vector<std::string> options = {
+		"Select from unowned heroes list to add new owned hero.",
+		"Select from owned heroes list to upgrade owned hero.",
+		"Select from full heroes list to update owned hero list.",
+		"Search by name."
+	};
+	int option = Menu::AskForInput("Please choose from the following menu how you'd like to add heroes.", options);
 
-	if (option < 3) {
+	if (option < options.size()) { // Only the last option asks for input.
 		UpdateHeroes(option);
 	}
 	else {
