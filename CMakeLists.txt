@@ -10,8 +10,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 file(GLOB SOURCES "src/*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-# Turn this on when cross-compiling
-option(BUILD_INSTALLER "Build the Windows installer" OFF)
+option(STATIC "Use static linking to include libraries in the executable file" ON)
+if(STATIC)
+    target_link_libraries(${PROJECT_NAME} -static)
+endif()
+
+option(BUILD_INSTALLER "Package files in the correct directory structure for Windows installer" OFF)
 if(BUILD_INSTALLER)
     include(build/Installer.cmake)
 endif()

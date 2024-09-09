@@ -1,5 +1,7 @@
+
+
 # SDSGC Information Tool
-This program is a tool for searching for information about the mobile game, Seven Deadly Sins Grand Cross. For example, you can ask for a list of the characters that are good, the characters you don't have, the characters you have at a certain ultimate move level, the characters that are currently acquirable. Personally, I made the tool to help myself easily see how good a draw is, without going back 100 times to the heroes list! I find access to information in game pretty much impossible, so I hope that this tool can help you too. :)
+This program is a tool for information about characters in the gacha game, Seven Deadly Sins Grand Cross. For example, you can ask for a list of the characters that are good, the characters you don't have, the characters you have at a certain ultimate move level, the characters that are currently acquirable. Personally, I made the tool to help myself easily see how good a draw is, without going back 100 times to the heroes list! I decided to share it in the hope it can help other people too. :)
 
 ## Table of Contents
 - [Features](#features)
@@ -13,31 +15,65 @@ This program is a tool for searching for information about the mobile game, Seve
 
 ## Installation
 ### Releases
-First release for Windows is now available. See the [Releases](https://github.com/Lucaz8de/SDSGC-information-tool/releases) section on the right of the page.
+Windows installers are available. See the [Releases](https://github.com/Lucaz8de/SDSGC-information-tool/releases) section on the right of the page.
 
 ### Build from source
-I really recommend this. All you need is a compiler for C++, e.g. GCC.
+If you prefer, you can build the program yourself from the source code. (By doing this, you can make changes if you want to, and share them if you want to!) If you're on 64-bit Windows and don't already have development tools, you can keep reading!
 
-It is most convenient if you also have Git and CMake; then you can download and build the application by running these commands from the command line.
+#### Downloading the source code
+If you have Git on your computer, clone the repository, either using your favourite graphical tool or by running the clone command from the command line.
 ```bash
 git clone https://github.com/Lucaz8de/SDSGC-information-tool.git
+```
+Alternatively, use the green "Code" button in the top right of this page, download and extract the source code.
+
+#### Building the program
+Navigate into the directory (folder) and compile the source code.
+
+```bash
 cd SDSGC-information-tool
-cmake -S . -B build
+mkdir build
+g++ --static -o build/sdsgc-information-tool src/*.cpp
+```
+If you want to build using CMake, you can use the included CMakeLists.
+```bash
+cd SDSGC-information-tool
+cmake -S . -B build -DSTATIC=ON
 cmake --build build
 ```
+(Note: The static option includes some needed resources in the program file. You can try without if you want to for a particular reason.)
 
-If you're on Windows and want to get all of these tools in one place, you can use [MSYS2](https://www.msys2.org/). (On other platforms, they'll be available from your package manager.)
+#### Running the program
+The program must be run in the correct location. It will look for the data files in the directory named data.
 
-If you don't have Git, you can click the "Code" button at the top of this page then download and extract the source. If you don't have CMake, you can compile directly using whatever compiler you have, for example by running a command very much like this one.
+On Windows, you can make a shortcut and run it wherever you want as usual.
 
+On Linux, you can use a desktop launcher that runs the following command:
 ```bash
-g++ src/*.cpp -o build/sdsgc-information-tool
+bash -c "cd .../SDSGC-information-tool/build; ./sdsgc-information-tool"
 ```
 
-Once installed, please make sure you run the application from the command line in the install directory.
+If you'd like to run it directly in the terminal, remember to navigate into the build directory first.
 ```bash
-cd build
-./sdsgc*
+cd .../SDSGC-information-tool/build
+./sdsgc-information-tool
+```
+
+#### On 64-bit Windows and don't already have development tools?
+You can download and install [MSYS2](https://www.msys2.org/) and use the development environment MSYS2 UCRT (the U stands for Universal). This development environment is a terminal window you can run commands in. It exists in your MSYS2 install location e.g. C:\msys64 -- i.e. this folder is the location of the files you can access in this terminal.
+
+It comes with a package manager called Pacman. Run the following command a few times to ensure it is up-to-date.
+```bash
+pacman -Syu
+```
+
+Package managers include and manage packages, which you can use to install software. Use Pacman to install the C++ compiler for 64-bit Windows, if you didn't do this already.
+```bash
+pacman -S mingw-w64-ucrt-x86_64-gcc
+```
+Optionally, you can install Git too if you want to use it.
+```bash
+pacman -S git
 ```
 
 ## License
@@ -45,5 +81,5 @@ You can do whatever you want with this. [LICENSE](LICENSE)
 
 ## Thank You!
 With thanks to:
-- Auth0 for the repository structure and README file.
+- Auth0 for the repository structure.
 
