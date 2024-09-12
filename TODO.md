@@ -3,7 +3,7 @@
 ## Features
 - [ ] Print upgrades
 - [ ] Print upgrade costs
-- [ ] Think about adding true awakening, equipment, costumes/holy relics to upgrades
+- [ ] Think about adding true awakening, costumes/holy relics to upgrades
 - [ ] Possibly add images
 - [ ] GUI??
 - [ ] Uh, try to update it more often. Missing the tier lists happens too easily...

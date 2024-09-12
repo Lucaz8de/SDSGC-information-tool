@@ -5,13 +5,12 @@
 #include <string>
 #include <vector>
 
+#include "AddOwned.h"
+#include "Conditions.h"
 #include "Hero.h"
 #include "Menu.h"
-#include "Utilitiesig.h"
 #include "Project.h"
-#include "AddOwned.h"
-
-typedef std::function<bool(const Hero &)> Condition;
+#include "Utilitiesig.h"
 
 int main() {
 	// Option to validate data files
@@ -25,6 +24,7 @@ int main() {
 	}
 	std::cout << std::endl;
 
+	// Run the program loop. This allows the user to use the program until they close it.
 	while (true) {
 		Menu::TopLevelMenu();
 		std::cout << std::endl << std::endl;
@@ -34,16 +34,17 @@ int main() {
 }
 
 void Filter() {
-	std::vector<Hero> heroes = Hero::heroes;
-
+	// initialise stack of filters and get initial condition from user
 	std::stack<std::string> filters{};
-	bool sentinel_finished = false;
 	Condition condition = Menu::GetCondition(filters);
+
+	// applies as many additional operations (e.g. AND) as they want
+	bool sentinel_finished = false;
 	while (!sentinel_finished) {
 		condition = Menu::GetOperation(condition, sentinel_finished, filters);
 	}
 
-	std::string x{};
+	// print the final condition (strictly left-to-right) for reference
 	std::cout << "You have selected: ";
 	for(size_t i{ 0 }; i < filters.size(); i++) {
 		std::cout << "(";
@@ -52,12 +53,14 @@ void Filter() {
 		std::cout << filters.top() << ") ";
 		filters.pop();
 	}
-	auto found = Select(heroes, condition);
-	std::cout << "\nFound: " << found.size() << " out of " << heroes.size() <<
-		" heroes. Press enter to view results." << std::endl;
-	std::getline(std::cin, x);
 
-	PrintList(Select(heroes, condition));
+	// filter and print the final filtered list
+	auto found = Select(Hero::heroes, condition);
+	std::cout << "\nFound: " << found.size() << " out of " << Hero::heroes.size() <<
+		" heroes. Press enter to view results." << std::endl;
+	std::string x{};
+	std::getline(std::cin, x);
+	PrintList(Select(Hero::heroes, condition));
 }
 
 void AddOwned() {

@@ -151,22 +151,24 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [Heart of a Beast] Guardian Deity Camila,Guardian Deity Camila,Speed,SSR,Camila,false,Unknown,The Seven Catastrophes,5,4,5,3
 [Executor of Darkness] Guardian Deity Camila,Guardian Deity Camila,Strength,SSR,Camila,false,Unknown,The Seven Catastrophes,5,5,5,5
 ,,,,,,,,,,,
+[Slime] Rimuru Tempest,Rimuru Tempest,HP,SR,Rimuru,false,Unknown,Collab,5,4,5,5
+[Ruler of Monsters] Rimuru Tempest,Rimuru Tempest,Speed,SSR,Rimuru,false,Unknown,Collab,5,5,5,5
+[Octagram] Demon Lord Rimuru Tempest,Demon Lord Rimuru Tempest,HP,SSR,Rimuru,false,Unknown,Collab,3,5,3,3
+[Tyrant of Destruction] Milim Nava,Milim Nava,Speed,SSR,Milim,false,Unknown,Collab,5,3,5,5
+[Kijin] Benimaru,Benimaru,Strength,SSR,Benimaru,false,Unknown,Collab,5,5,5,5
+[Oni] Shuna,Shuna,HP,SSR,Shuna,false,Unknown,Collab,5,5,5,3
 [Cadet Corps] Eren Jaeger,Eren Jaeger,Speed,SR,Eren,false,Human,Collab,5,5,5,5
 [Steadfast Resolve] Eren Jaeger,Eren Jaeger,Speed,SSR,Eren,false,Human,Collab,4,4,5,4
 [Titan Form] Eren Jaeger,Eren Jaeger,HP,SSR,Eren,false,Human,Collab,5,5,5,5
 [Indomitable Wings] Levi,Levi,HP,SSR,Levi,false,Human,Collab,2,5,5,5
 [Greatest Soldier] Levi,Levi,Strength,SSR,Levi,false,Human,Collab,5,3,5,5
 [Greatest Soldier] Mikasa Ackermann,Mikasa Ackermann,Speed,SSR,Mikasa,false,Human,Collab,5,3,5,3
-[MAVE:] Lead Vocalist Zena,Lead Vocalist Zena,Speed,SSR,Zena,false,Unknown,Collab,4,4,5,3
-[Slime] Rimuru Tempest,Rimuru Tempest,HP,SR,Rimuru,false,Unknown,Collab,5,4,5,5
-[Ruler of Monsters] Rimuru Tempest,Rimuru Tempest,Speed,SSR,Rimuru,false,Unknown,Collab,5,5,5,5
-[Octagram] Demon Lord Rimuru Tempest,Demon Lord Rimuru Tempest,HP,SSR,Rimuru,false,Unknown,Collab,3,5,3,3
-[Tyrant of Destruction] Milim Nava,Milim Nava,Speed,SSR,Milim,false,Unknown,Collab,5,3,5,5
-[Kijin] Benimaru,Benimaru,Strength,SSR,Benimaru,false,Unknown,Collab,5,5,5,5
 [KOF '98] Mai Shiranui,Mai Shiranui,Speed,SSR,Mai,false,Human,Collab,5,5,5,5
 [KOF '98] Athena Asamiya,Athena Asamiya,HP,SSR,Athena,false,Human,Collab,4,5,5,5
 [KOF '98] Omega Rugal,Omega Rugal,HP,SSR,Rugal,false,Human,Collab,5,5,5,5
 [KOF '98] Kyo Kusanagi,Kyo Kusanagi,Strength,SSR,Kyo,false,Human,Collab,4,4,5,4
+[KOF '98] Terry Bogard,Terry Bogard,Strength,SSR,Terry,false,Human,Collab,5,5,5,5
+[KOF '98] Iori Yagami,Iori Yagami,HP,SSR,Iori,false,Human,Collab,5,5,5,5
 [Stranger Things] Eleven,Eleven,Speed,SSR,Eleven,false,Human,Collab,5,5,5,5
 [Stranger Things] Jim Hopper,Jim Hopper,Strength,SSR,Jim,false,Human,Collab,4,5,5,5
 [Stranger Things] Mike Wheeler,Mike Wheeler,Strength,SSR,Mike,false,Human,Collab,5,5,5,5
@@ -175,9 +177,6 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [Re:ZERO] Twin Maid Rem,Twin Maid Rem,Strength,SSR,Rem,false,Unknown,Collab,3,3,5,4
 [Re:ZERO] Twin Maid Ram,Twin Maid Ram,HP,SSR,Ram,false,Unknown,Collab,4,4,5,3
 [Re:ZERO] The Caretaker of the Forbidden Library Beatrice,The Caretaker of the Forbidden Library Beatrice,Speed,SSR,Beatrice,false,Unknown,Collab,5,5,5,5
-[KOF '98] Terry Bogard,Terry Bogard,Strength,SSR,Terry,false,Human,Collab,5,5,5,5
-[KOF '98] Iori Yagami,Iori Yagami,HP,SSR,Iori,false,Human,Collab,5,5,5,5
-[Oni] Shuna,Shuna,HP,SSR,Shuna,false,Unknown,Collab,5,5,5,3
 [Re:ZERO] Witch of Greed Echidna,Witch of Greed Echidna,HP,SSR,Echidna,false,Unknown,Collab,2,4,5,3
 [Re:ZERO] The Master Swordsman Reinhard,The Master Swordsman Reinhard,Strength,SSR,Reinhard,false,Human,Collab,5,5,5,5
 [Shield Hero] Iwatani Naofumi,Iwatani Naofumi,Speed,SSR,Iwatani,false,Human,Collab,1,4,1,5
@@ -190,6 +189,7 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [Mad Dog] Eris Boreas Greyrat,Eris Boreas Greyrat,Strength,SSR,Eris,false,Human,Collab,5,4,5,4
 [King-Class Water Mage] Roxy Migurdia,Roxy Migurdia,HP,SSR,Roxy Migurdia,false,Unknown,Collab,3,4,5,4
 [Sword King] Ghislaine Dedoldia,Ghislaine Dedoldia,HP,SSR,Ghislaine,false,Unknown,Collab,2,4,5,5
+[MAVE:] Lead Vocalist Zena,Lead Vocalist Zena,Speed,SSR,Zena,false,Unknown,Collab,4,4,5,3
 [Ruler of Nazarick] Ainz Ooal Gown,Ainz Ooal Gown,Speed,SSR,Ainz,false,Unknown,Collab,2,4,5,5
 [Pure-White Devil] Albedo,Albedo,Speed,SSR,Albedo,false,Unknown,Collab,2,2,2,1
 [Bloody Valkyrie] Shalltear Bloodfallen,Shalltear Bloodfallen,Strength,SSR,Shalltear,false,Unknown,Collab,3,4,3,5
@@ -255,16 +255,16 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 """Thunderbolt"" Guardian Gilthunder",Guardian Gilthunder,Strength,SSR,Gilthunder,false,Human,--,5,4,5,4
 [Chivalrous] Holy Knight Gilthunder,Holy Knight Gilthunder,HP,SR,Gilthunder,false,Human,--,4,4,3,4
 [Knight of the Holy War] Guardian Gilthunder,Guardian Gilthunder,Speed,SSR,Gilthunder,false,Human,--,5,5,5,5
-[Rapier] Holy Knight Guila,Holy Knight Guila,Speed,SR,Guila,false,Human,--,5,5,5,5
 """Explosion"" Guardian Guila",Guardian Guila,Strength,SSR,Guila,false,Human,--,5,5,5,5
+[Rapier] Holy Knight Guila,Holy Knight Guila,Speed,SR,Guila,false,Human,--,5,5,5,5
 [Halloween] Guardian Guila,Guardian Guila,HP,SSR,Guila,false,Human,--,5,5,5,5
-[Star of the Kingdom] Ranger Howzer,Ranger Howzer,Speed,SR,Howzer,false,Human,--,5,5,5,5
 [Liones Royalty] Ranger Howzer,Ranger Howzer,HP,SR,Howzer,false,Human,--,5,5,5,5
 [Knight of the Holy War] Holy Knight Howzer,Holy Knight Howzer,Speed,SSR,Howzer,false,Human,--,5,5,5,5
+[Star of the Kingdom] Ranger Howzer,Ranger Howzer,Speed,SR,Howzer,false,Human,--,5,5,5,5
 """Tempest"" Holy Knight Howzer",Holy Knight Howzer,Strength,SSR,Howzer,false,Human,--,5,5,5,5
+[Adventurer] Ranger Griamore,Ranger Griamore,Speed,SR,Griamore,false,Human,--,5,5,5,5
 [Champion] Ranger Griamore,Ranger Griamore,Strength,SR,Griamore,false,Human,--,5,5,5,5
 [Iron-wall Knight] Guardian Griamore,Guardian Griamore,HP,SSR,Griamore,false,Human,--,5,4,5,5
-[Adventurer] Ranger Griamore,Ranger Griamore,Speed,SR,Griamore,false,Human,--,5,5,5,5
 [Knight of the Holy War] Guardian Griamore,Guardian Griamore,Speed,SSR,Griamore,false,Human,--,5,5,5,5
 [New Generation] Holy Knight Jericho,Holy Knight Jericho,Speed,SR,Jericho,false,Human,--,5,4,5,5
 [Adventurer] Holy Knight Jericho,Holy Knight Jericho,Strength,SR,Jericho,false,Human,--,5,4,5,5
@@ -289,8 +289,8 @@ The Lion Sin of Pride Holy Knight Escanor,Holy Knight Escanor,Strength,SSR,Escan
 [Roars of Dawn] Holy Knight Hugo,Holy Knight Hugo,HP,R,Hugo,false,Human,--,5,5,5,5
 [Roars of Dawn] Holy Knight Jillian,Holy Knight Jillian,HP,SR,Jillian,false,Human,--,2,4,5,3
 [Reincarnation of Obsession] Mage Vivian,Mage Vivian,Strength,SR,Vivian,false,Human,--,5,5,5,5
-"""Melt"" Grandmaster Hendrickson",Grandmaster Hendrickson,Speed,SSR,Hendrickson,false,Human,--,5,5,5,5
 [Omen of Chaos] Druid Hendrickson,Druid Hendrickson,HP,SR,Hendrickson,false,Human,--,5,5,5,5
+"""Melt"" Grandmaster Hendrickson",Grandmaster Hendrickson,Speed,SSR,Hendrickson,false,Human,--,5,5,5,5
 """Break"" Grandmaster Dreyfus",Grandmaster Dreyfus,HP,SR,Dreyfus,false,Human,--,5,5,5,5
 [Omen of Chaos] Grandmaster Dreyfus,Grandmaster Dreyfus,Strength,SR,Dreyfus,false,Human,--,5,5,5,5
 [Vaizel Fight Festival] Champion Taizoo,Champion Taizoo,Strength,R,Taizoo,false,Human,--,5,5,5,5
