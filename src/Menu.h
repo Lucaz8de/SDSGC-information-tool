@@ -1,65 +1,76 @@
 #pragma once
+
+/**
+ * @file Menu.h 
+ * @brief Implements menu and inputs. 
+ */
+
 #include <functional>
-#include <stack>
+#include <queue>
 #include <string>
 #include <vector>
 
+#include "Filter.h"
 #include "Hero.h"
+#include "Project.h"
 
-// Condition is the type of the input to select, so it is the return type of all my functions in Conditions.h.
-typedef std::function<bool(const Hero &)> Condition;
-
-class Menu {
-public:
-  // constants
-  struct ConditionFunction { // ConditionFunction lets me easily name and call my conditions at runtime.
-    std::string name;
-    std::function<Condition(const std::vector<std::string> &)> function;
-  };
-  struct Operation { // Operation lets me easily name and call my operations at runtime.
-    std::string name;
-    std::function<Condition(const std::vector<Condition> &)> function;
-    int arity;
-  };
-  struct MenuFunction { // MenuFunction lets me easily name and call my functions at runtime.
+namespace Menu {
+  /**
+   * @brief MenuFunction lets me easily name and call main menu functions at runtime.
+   */
+  struct MenuFunction {
     std::string name;
     std::function<void()> function;
   };
-  static const std::vector<ConditionFunction> conditions; // List of functions (Conditions.cpp) are just hardcoded.
-  static const std::vector<Operation> operations; // List of functions (Conditions.cpp) are just hardcoded.
-  static const std::vector<MenuFunction> functions; // List of functions (Project.cpp) are just hardcoded.
+
+  /**
+   * @brief Hardcoded list of all main menu functions
+   */
+  const std::vector<MenuFunction> menu_functions = {
+    {"Filter", Menu_Filter},
+    {"AddOwned", Menu_AddOwned}
+  };
   
-  // A static variable
-  static bool validating; // Keep track of whether choosing to validate data files
+  /** @brief Choosing to validate data files? */
+  extern bool validating; 
 
-  // A basic function to get an integer input in a range, and else crash.
-  static int GetIntInput(int min, int max);
+  /** 
+   * @brief An interactive menu to choose from the program's capabilities. 
+   */
+  void TopLevelMenu();
 
-  // This function displays a prompt and the options and calls GetIntInput.
-  static int AskForInput(std::string prompt, std::vector<std::string> options);
+  /** 
+   * @brief Accepts an integer input within a given range.
+   * @param min The lower end of the range
+   * @param max The upper end of the range
+   * @return the chosen integer
+   * @throw std::runtime_error if user input isn't an integer between min and max
+   */
+  int GetIntInput(int min, int max);
 
-  // This function displays a prompt and reads a yes/no input. Throws an error if input is not yes/no.
-  static bool YesOrNoInput(std::string question);
+  /**
+   * @brief Asks for a selection from a list of options.
+   * @param prompt The prompt to be displayed
+   * @param options The list of options
+   * @param min_is_zero Whether the list should be numbered starting from 0
+   * @return the integer selected
+   * @see GetIntInput
+   * @throw std::invalid_argument if options is empty
+   */
+  size_t AskForInput(std::string prompt, std::vector<std::string> options, bool min_is_zero = 0);
 
-  /** This function displays a prompt and reads user input. */
-  static std::string GetFreeInput(std::string prompt);
+  /**
+   * @brief Accepts a yes or no input.
+   * @param prompt The prompt to be displayed
+   * @return a boolean true or false
+   * @throw std::runtime_error if user input isn't yes/y/no/n
+   */
+  bool YesOrNoInput(std::string question);
 
-  // An interactive menu to choose from the program's capabilities.
-  static void TopLevelMenu();
-
-  // An interactive menu to choose the arguments for conditions that need them. 
-  // (Right now this chooses count options from a single list.)
-  static std::vector<std::string> AskForArguments(std::string name, std::vector<std::string> options, int count);
-
-  // The function that handles deciding which conditions need which arguments.
-  static std::vector<std::string> GetArguments(int int_input);
-
-  // An interactive menu to choose one condition to filter.
-  static const Condition GetCondition(std::stack<std::string> &filters);
-
-  // The function that asks for any other needed condition(s) and applies the operation to them.
-  static const Condition HandleOperation(Condition &condition, Menu::Operation operation, std::stack<std::string> &filters);
-
-  // An interactive menu to choose an operation (if any) to apply to the condition.
-  static const Condition GetOperation(Condition &condition, bool &sentinel_finished, std::stack<std::string> &filters);
+  /** 
+   * @brief Reads a user input. 
+   * @param prompt The prompt to be displayed
+   * @return a string taken from input 
+   */
+  std::string GetFreeInput(std::string prompt);
 };

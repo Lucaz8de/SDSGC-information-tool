@@ -74,9 +74,9 @@ const std::string MakeCSV(const std::vector<std::string> &vec) {
 		if (special) {
 			f_str = "\"" + f_str + "\""; // string with special characters has to be quoted
 		}
-		out += f_str + ", "; // comma and space separated
+		out += f_str + ","; // comma separated
 	}
-	return out.substr(0, out.size()-2); // remove the final comma and space
+	return out.substr(0, out.size()-1); // remove the final comma
 }
 
 bool EmptyCSV(const std::string &str) {
@@ -151,10 +151,13 @@ template void PrintList<Hero>(const std::vector<Hero>& vec);
 template void PrintList<std::string>(const std::vector<std::string> &vec);
 
 template<typename T> std::vector<T> Select(const std::vector<T> &vec, const std::function<bool(const T &)> &condition) {
-	std::vector<T> selection{ vec.size() };
-	const auto it = copy_if(vec.begin(), vec.end(), selection.begin(), condition);
-	selection.resize(std::distance(selection.begin(), it));
-	return selection;
+	std::vector<T> out{};
+	for (auto &item : vec) {
+		if (condition(item)) {
+			out.push_back(item);
+		}
+	}
+	return out;
 }
 template std::vector<Hero> Select(const std::vector<Hero> &vec, const std::function<bool(const Hero &)> &condition);
 
@@ -169,14 +172,14 @@ template<typename T, typename S> void Merge(std::unordered_map<T, S> &m1, const 
 }
 template void Merge(std::unordered_map<std::string, std::vector<std::string>> &acquisition, const std::unordered_map<std::string, std::vector<std::string>> &draws, bool validating);
 
-void ValidateList(const std::vector<std::string> &data, int data_size, std::vector<int> numerical_data, std::vector<int> boolean_data) {
+void ValidateList(const std::vector<std::string> &data, size_t data_size, std::vector<size_t> numerical_data, std::vector<size_t> boolean_data) {
 	std::string hero = data[0];
 	if (data.size() != data_size) {
 		std::string error_message = "Invalid format in data file. Hero " + hero + " has " + std::to_string(data.size()) + " items instead of " + std::to_string(data_size) + ".";
 		throw std::runtime_error(error_message);
 	}
 
-	for(int i = 0; i < data_size; i++) {
+	for(size_t i = 0; i < data_size; i++) {
 		// check if it's a number
 		try {
 			std::stoi(data[i]); // is a number
@@ -186,7 +189,7 @@ void ValidateList(const std::vector<std::string> &data, int data_size, std::vect
 			} else {
 				// fine 
 			}
-		} catch (std::invalid_argument) { // not a number
+		} catch (const std::invalid_argument &) { // not a number
 			if(std::find(numerical_data.begin(), numerical_data.end(), i) != numerical_data.end()) { // is numerical data
 				std::string error_message = "Invalid data in data/owned.csv. Item \"" + data[i] + "\" of hero " + hero + " should be a number.";
 				throw std::runtime_error(error_message);

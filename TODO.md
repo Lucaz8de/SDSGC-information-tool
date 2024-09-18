@@ -1,7 +1,8 @@
 # TODO
 
 ## Features
-- [ ] Print upgrades
+- [ ] Ability to print upgrades
+- [ ] Print upgrades when updating an already owned hero
 - [ ] Print upgrade costs
 - [ ] Think about adding true awakening, costumes/holy relics to upgrades
 - [ ] Possibly add images
@@ -18,6 +19,7 @@
   - [ ] Adding newly released heroes and changing/updating tier lists
 - [ ] Figure out handling run directory/data file paths better if possible
 - [ ] Add code documentation e.g. change comments to Doxygen style
+- [ ] The organisation of the hero constructor is reeeally ugly. It looks through the whole map every time, when they're literally in order? Do something about that...!
 
 ## Distribution/installer
 - [ ] Think about adding GitHub Actions for executable build?

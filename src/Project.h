@@ -1,9 +1,12 @@
-#pragma once
-
 /**
- * These functions are in the lists Menu::functions.
+ * @file Project.h
+ * @brief The main menu functions. They are in the list Menu::menu_functions.
  * The lists need to stay updated - they're what the program uses.
  */
+
+#pragma once
+
+enum menu_functions { FILTER, ADDOWNED };
 
 /**
  * This top-level menu option allows you to filter heroes by a selection of conditions.
@@ -12,9 +15,11 @@
  * it keeps track of the conditions selected so that it can be printed.
  * This is the order, left-to-right, that the conditions are evaluated.
  */
-void Filter();
+void Menu_Filter();
 
 /**
- * This top-level menu option allows you to update owned.csv in the program.
+ * This top-level menu option allows you to update your owned heros data in the program
+ * and data file, by going through a list of heroes.
+ * @throw std::runtime_error if Menu::validating isn't set on.
  */
-void AddOwned();
+void Menu_AddOwned();

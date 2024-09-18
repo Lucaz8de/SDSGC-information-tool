@@ -7,7 +7,7 @@
 #include <vector>
 
 /**
- * Returns a list of strings from a CSV record.
+ * @brief Returns a list of strings from a CSV record.
  * Assumes valid CSV (with or without spaces).
  * Notable for code: If different records have different number of fields,
  * then this will read the empty fields as empty data
@@ -15,10 +15,10 @@
 */
 std::vector<std::string> ParseCSV(const std::string& str);
 
-/** Returns a CSV record (with spaces) from a list of strings. */
+/** @brief Returns a CSV record (without spaces) from a list of strings. */
 const std::string MakeCSV(const std::vector<std::string> &vec);
 
-/** Returns whether a CSV record is empty (any character is just a comma). */
+/** @brief Returns whether a CSV record is empty (any character is just a comma). */
 bool EmptyCSV(const std::string& str);
 
 /**
@@ -33,27 +33,34 @@ bool EmptyCSV(const std::string& str);
  */
 std::unordered_map<std::string, std::vector<std::string>> ReadLists(const std::string& filename, bool validating);
 
-/* Returns the list of headings only from ReadLists' output, i.e. the hash's keys. */
+/** @brief Returns the list of headings only from ReadLists' output, i.e. the hash's keys. */
 std::vector<std::string> HashKeys(std::unordered_map<std::string, std::vector<std::string>> already_read_lists);
 
-/* Overload << for vectors using << operator for the elements, 
-separated by commas. Does nothing if vec is empty. */
+/** 
+ * @brief Overload << for vectors using << operator for the elements, 
+ * separated by commas. Does nothing if vec is empty. */
 template<typename T> std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec);
 
-/* This function takes a vector input and uses << operator for the elements,
-each on a separate line. */
+/**
+ * @brief This function takes a vector input and uses << operator for the elements,
+ * each on a separate line. 
+ */
 template<typename T> void PrintList(const std::vector<T> &vec);
 
-/* Just uses copy_if to return a list. That is, given a vector and a condition,
-returns a vector containing the items satisfying the condition. */
+/** 
+ * @brief Just uses copy_if to return a list. That is, given a vector and a condition,
+ * returns a vector containing the items satisfying the condition. 
+ */
 template<typename T> std::vector<T> Select(const std::vector<T> &vec, const std::function<bool(const T &)> &condition);
 
-/* Merges the two maps by modifying m1, i.e., adds the keys of m2 into m1.
+/**
+ * @brief Merges the two maps by modifying m1, i.e., adds the keys of m2 into m1.
  * Note if they have keys in common, m2's will overwrite m1's!
  */
 template<typename T, typename S> void Merge(std::unordered_map<T, S> &m1, const std::unordered_map<T, S> &m2, bool validating);
 
-/* Checks the size and data types of a list of data. The parameters numerical_data and boolean_data are lists of indices. 
-Throws an error if the data is different from what it should be.
-*/
-void ValidateList(const std::vector<std::string> &data, int data_size, std::vector<int> numerical_data, std::vector<int> boolean_data);
+/**
+ * @brief Checks the size and data types of a list of data. The parameters numerical_data and boolean_data are lists of indices. 
+ * Throws an error if the data is different from what it should be.
+ */
+void ValidateList(const std::vector<std::string> &data, size_t data_size, std::vector<size_t> numerical_data, std::vector<size_t> boolean_data);

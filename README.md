@@ -1,5 +1,3 @@
-
-
 # SDSGC Information Tool
 This program is a tool for information about characters in the gacha game, Seven Deadly Sins Grand Cross. For example, you can ask for a list of the characters that are good, the characters you don't have, the characters you have at a certain ultimate move level, the characters that are currently acquirable. Personally, I made the tool to help myself easily see how good a draw is, without going back 100 times to the heroes list! I decided to share it in the hope it can help other people too. :)
 
