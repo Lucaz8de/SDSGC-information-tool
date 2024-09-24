@@ -7,7 +7,9 @@
 
 #include "Hero.h"
 #include "Menu.h"
-#include "Utilitiesig.h"
+#include "Utilities.h"
+
+using Utilities::operator<<;
 
 /* Note this MUST be defined in a global scope (an interesting exception to private access). 
 And for some reason, the type MUST be repeated. */
@@ -23,24 +25,21 @@ void Hero::MakeHeroes() {
 	std::unordered_map<std::string, std::vector<std::string>> upgrades = ReadOwnedData();
 	ReadHeroesData(acquisition, upgrades);
 
-	if(Menu::validating) {
-		// upgrades source is owned.csv
-		std::vector<std::string> hero_names = HashKeys(upgrades);
-		ValidateHeroNames(hero_names, "owned.csv");
-
-		// acquisition sources are acquisition.txt and draws.txt
-		for(const auto& item: acquisition) {
-			std::vector<std::string> hero_names = item.second;
-			ValidateHeroNames(hero_names, "acquisition.txt or draws.txt");
-		}
+	// upgrades source is owned.csv
+	std::vector<std::string> hero_names = Utilities::HashKeys(upgrades);
+	ValidateHeroNames(hero_names, "owned.csv");
+	// acquisition sources are acquisition.txt and draws.txt
+	for(const auto& item: acquisition) {
+		std::vector<std::string> hero_names = item.second;
+		ValidateHeroNames(hero_names, "acquisition.txt or draws.txt");
 	}
 }
 
 std::unordered_map<std::string, std::vector<std::string>> Hero::ReadAcquisitionData() {
 	std::string DATA_DIR = "../data";
-	std::unordered_map<std::string, std::vector<std::string>> acquisition = ReadLists(DATA_DIR + "/acquisition.txt", Menu::validating);
-	std::unordered_map<std::string, std::vector<std::string>> draws = ReadLists(DATA_DIR + "/draws.txt", Menu::validating);
-	Merge(acquisition, draws, Menu::validating);
+	std::unordered_map<std::string, std::vector<std::string>> acquisition = Utilities::ReadLists(DATA_DIR + "/acquisition.txt");
+	std::unordered_map<std::string, std::vector<std::string>> draws = Utilities::ReadLists(DATA_DIR + "/draws.txt");
+	Utilities::Merge(acquisition, draws);
 	return acquisition;
 }
 
@@ -59,17 +58,15 @@ std::unordered_map<std::string, std::vector<std::string>> Hero::ReadOwnedData() 
 		// read line. skip empty lines for grouping
 		std::string line{};
 		std::getline(file, line);
-		if (EmptyCSV(line)) {
+		if (Utilities::EmptyCSV(line)) {
 			continue;
 		}
 		
 		// read and validate the data
 		/* each CSV record is a list like [[Boar Hat] Tavern Master Meliodas, UR, 80, 6, true, 6]
 		 * Hero::UPGRADEABLE name the elements of the list i.e. grade, level, awakening stars, unique unlocked, ultimate move level */
-		const std::vector<std::string> data = ParseCSV(line);
-		if (Menu::validating) {
-			ValidateList(data, 6, {2, 3, 5}, {4});
-		}
+		const std::vector<std::string> data = Utilities::ParseCSV(line);
+		Utilities::ValidateList(data, 6, {2, 3, 5}, {4});
 
 		// add data to upgrades hashmap
 		const std::string hero = data[0];
@@ -88,17 +85,15 @@ void Hero::ReadHeroesData(std::unordered_map<std::string, std::vector<std::strin
 		// read line. skip empty lines for grouping
 		std::string line{};
 		std::getline(file, line);
-		if (EmptyCSV(line)) {
+		if (Utilities::EmptyCSV(line)) {
 			continue;
 		}
 
 		// read and validate the data
 		/* each CSV record is a list like [[Boar Hat] Tavern Master Meliodas, Tavern Master Meliodas, Speed, SR, Meliodas, false, Demon, The Seven Deadly Sins, 5, 5, 5, 5]
 		 * Hero's member attributes name the elements of the list i.e.: hero, name, attribute, starting grade, character, LR, race, characteristic, tiers */
-		const std::vector<std::string> data = ParseCSV(line); 
-		if (Menu::validating) {
-			ValidateList(data, 12, {8, 9, 10, 11}, {5});
-		}
+		const std::vector<std::string> data = Utilities::ParseCSV(line); 
+		Utilities::ValidateList(data, 12, {8, 9, 10, 11}, {5});
 
 		// call the Hero object constructor.
 		const Hero hero{ data, acquisition, upgrades };

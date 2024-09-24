@@ -14,7 +14,7 @@
 #include "Hero.h"
 #include "Menu.h"
 
-namespace Filter{
+namespace Filter {
     /**
      * @brief An interactive menu to filter heroes, including combining as many conditions
      * as you want. Also prints the conditions selected in the order, left-to-right, 
@@ -99,7 +99,7 @@ namespace Filter{
     Condition HandleOperation(Condition &condition, Operation operation, std::queue<std::string> &filters);
 
     /**
-     * @defgroup Conditions Conditions
+     * @name Conditions
      * @brief All conditions take a list of arguments, and return a Condition.
      * The first few conditions are straightforwardly the hero data fields.
      * All the conditions are hardcoded in the list conditions. The list needs
@@ -187,7 +187,7 @@ namespace Filter{
     /**@}*/
 
     /**
-     * @defgroup Operations Operations
+     * @name Operations
      * @brief All operations take a list of Conditions, and return a Condition.
      * All the operations are hardcoded in the list operations. The list needs
      * to stay updated - it's what the program uses.

@@ -6,9 +6,9 @@
 #include "AddOwned.h"
 #include "Hero.h"
 #include "Menu.h"
-#include "Utilitiesig.h"
+#include "Utilities.h"
 
-namespace AddOwned{
+namespace AddOwned {
 	void UpdateFile() {
 		// open heroes.csv and owned.csv data files
 		std::string DATA_DIR = "../data";
@@ -19,7 +19,7 @@ namespace AddOwned{
 		for(auto &hero: Hero::heroes) {
 			std::getline(ifile, line);
 			// add empty lines in the places heroes.csv has empty lines
-			if(EmptyCSV(line)) {
+			if(Utilities::EmptyCSV(line)) {
 				ofile << ",,,,,\n";
 				std::getline(ifile, line);
 			}
@@ -30,7 +30,7 @@ namespace AddOwned{
 			}
 			std::vector<std::string> vec_data{hero.upgrades};
 			vec_data.insert(vec_data.begin(), hero.hero); // insert hero name at start of vec_data
-			std::string csv_data = MakeCSV(vec_data);
+			std::string csv_data = Utilities::MakeCSV(vec_data);
 			ofile << csv_data << "\n";
 		}
 	}

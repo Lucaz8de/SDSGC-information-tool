@@ -30,9 +30,6 @@ namespace Menu {
     {"Filter", Menu_Filter},
     {"AddOwned", Menu_AddOwned}
   };
-  
-  /** @brief Choosing to validate data files? */
-  extern bool validating; 
 
   /** 
    * @brief An interactive menu to choose from the program's capabilities. 

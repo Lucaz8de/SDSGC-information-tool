@@ -7,7 +7,7 @@
 #pragma once
 #include "Hero.h"
 
-namespace AddOwned{
+namespace AddOwned {
     /**
      * @brief (Over)writes file data/owned.csv using current Hero::heroes data.
      */

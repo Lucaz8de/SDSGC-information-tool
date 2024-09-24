@@ -6,12 +6,10 @@
 
 #include "Hero.h"
 #include "Menu.h"
-#include "Utilitiesig.h"
+#include "Utilities.h"
 #include "Project.h"
 
 namespace Menu {
-	bool validating = false;
-
 	void TopLevelMenu() {
 		std::vector<std::string> function_names{};
 		for(MenuFunction function: menu_functions) {

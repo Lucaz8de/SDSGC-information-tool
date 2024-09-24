@@ -20,6 +20,5 @@ void Menu_Filter();
 /**
  * This top-level menu option allows you to update your owned heros data in the program
  * and data file, by going through a list of heroes.
- * @throw std::runtime_error if Menu::validating isn't set on.
  */
 void Menu_AddOwned();

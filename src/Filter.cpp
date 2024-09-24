@@ -8,9 +8,9 @@
 #include "Filter.h"
 #include "Hero.h"
 #include "Menu.h"
-#include "Utilitiesig.h"
+#include "Utilities.h"
 
-namespace Filter{
+namespace Filter {
 	std::vector<Hero> Filter() {
 		// initialise queue of conditions and get initial condition from user
 		std::queue<std::string> filters{};
@@ -33,7 +33,7 @@ namespace Filter{
 		}
 
 		// return the final filtered list
-		auto filtered = Select(Hero::heroes, condition);
+		auto filtered = Utilities::Select(Hero::heroes, condition);
 		std::cout << "\nFound: " << filtered.size() << " out of " << Hero::heroes.size() <<
 			" heroes." << std::endl;
 		return filtered;
@@ -93,7 +93,7 @@ namespace Filter{
 		}
 		else if (condition.name == "AvailableFromDraw") {
 			std::string DATA_DIR = "../data";
-			std::vector<std::string> draws = HashKeys(ReadLists(DATA_DIR + "/draws.txt", false));
+			std::vector<std::string> draws = Utilities::HashKeys(Utilities::ReadLists(DATA_DIR + "/draws.txt"));
 			return AskForArguments("draw", draws, 1);
 		}
 		else if (condition.name == "Upgraded") {
