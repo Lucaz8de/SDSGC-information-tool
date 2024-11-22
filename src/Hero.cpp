@@ -120,7 +120,7 @@ void Hero::ValidateHeroNames(const std::vector<std::string>& hero_names, std::st
 
 Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::string, std::vector<std::string>>& acquisition, const std::unordered_map<std::string, std::vector<std::string>>& upgrades) :
 	hero{ data[0] }, name{ data[1] }, attribute{ data[2] }, starting_grade{ data[3] }, character{ data[4] },
-	lr{ data[5] == "true" }, race{ data[6] }, characteristic{ data[7] }, pvp_tier1{ std::stoi(data[8]) }, pve_tier1{ std::stoi(data[9]) },
+	lr{ data[5] == "true" }, races{ Utilities::ParseCSV(data[6]) }, characteristic{ data[7] }, pvp_tier1{ std::stoi(data[8]) }, pve_tier1{ std::stoi(data[9]) },
 	pvp_tier2{ std::stoi(data[10]) }, pve_tier2{ std::stoi(data[11]) }, owned{ false }, acquisition{}, upgrades{}
 {
 	// search for hero in upgrades map
@@ -155,7 +155,7 @@ Hero::Hero(const std::vector<std::string>& data, const std::unordered_map<std::s
 std::ostream& operator<<(std::ostream& os, const Hero& hero) {
 	os << "Hero: " << hero.hero << ". Name: " << hero.name << ". Attribute: " << hero.attribute <<
 		". Starting grade: " << hero.starting_grade << ". Character: " << hero.character <<
-		", race " << hero.race << ", of " << hero.characteristic << ". Tier " << hero.pvp_tier1 <<
+		", race(s) " << Utilities::MakeCSV(hero.races) << ", of " << hero.characteristic << ". Tier " << hero.pvp_tier1 <<
 		" on Amazing's PVP tier list and tier " << hero.pve_tier1 << " on his PVE tier list. " <<
 		"Tier " << hero.pvp_tier2 << " on Nagato's PVP tier list and tier " << hero.pve_tier2 <<
 		" on his PVE tier list. ";

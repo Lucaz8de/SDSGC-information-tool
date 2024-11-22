@@ -27,8 +27,8 @@ public:
 	std::string character;
 	/** @brief Whether the hero has an LR grade upgrade */
 	bool lr;
-	/** @brief The hero's race */
-	std::string race;
+	/** @brief The list of the hero's possibly multiple races */
+	std::vector<std::string> races;
 	/** @brief The hero's characteristic */
 	std::string characteristic;
 	/** @brief The hero's rank on Amazing's most recent PVP tierlist (a number between 1 and 5) */

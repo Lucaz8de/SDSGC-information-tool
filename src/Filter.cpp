@@ -81,7 +81,7 @@ namespace Filter {
 		}
 		else if (condition.name == "Characteristic") {
 			std::vector<std::string> characteristics{
-				"The Seven Deadly Sins", "The Four Archangels", "The Ten Commandments", "Ragnarok", "The Seven Catastrophes", "Collab"
+				"The Seven Deadly Sins", "Four Knights of the Apocalypse", "The Four Archangels", "The Ten Commandments", "Ragnarok", "The Seven Catastrophes", "Collab"
 			};
 			return AskForArguments("characteristic", characteristics, 1);
 		}
@@ -221,7 +221,7 @@ namespace Filter {
 		}
 		std::string race = arguments.at(0);
 		return [race](const Hero &hero) -> bool {
-			return hero.race == race;
+			return std::find(hero.races.begin(), hero.races.end(), race) != hero.races.end();
 		};
 	}
 
