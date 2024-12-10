@@ -14,6 +14,7 @@
 ## Organisation
 
 ## Bugs
+- [ ] Need to add error checking for heroes.csv and owned.csv order. They're required to be the same.
 
 ## Documentation
 - [ ] Continue improving Readme and other repository files!
