@@ -1,25 +1,27 @@
 # TODO
 
 ## Features
-- [ ] Ability to print upgrades
+- [ ] Ability to print upgrades (might as well review existing print too)
 - [ ] Print upgrades when updating an already owned hero
 - [ ] Print upgrade costs
 - [ ] Think about adding true awakening, costumes/holy relics to upgrades
 - [ ] Possibly add images
 - [ ] GUI??
 - [ ] Uh, try to update it more often. Missing the tier lists happens too easily...
+- [ ] Add quit to the menu; is there anything it would be good to take care of when/before closing?
+- [ ] Adding owned heroes needs to be improved somehow - it's totally unreasonable.
+
+## Organisation
 
 ## Bugs
 
-## Organisation/documentation
-
+## Documentation
 - [ ] Continue improving Readme and other repository files!
 - [ ] Add message about changing files if you want to
   - [ ] Troubleshooting exceptions
   - [ ] Adding newly released heroes and changing/updating tier lists
 - [ ] Figure out handling run directory/data file paths better if possible
 - [ ] Add code documentation e.g. change comments to Doxygen style
-- [ ] The organisation of the hero constructor is reeeally ugly. It looks through the whole map every time, when they're literally in order? Do something about that...!
 - [ ] Think about organisation decision that could fix the need to call HashKeys(ReadLists()) in Filter::GetArguments()
 
 ## Distribution/installer
@@ -48,3 +50,4 @@
 - [x] Thor's name having a comma means the code is broken until I change data files and the processing code.
 - [x] Change/add owned heroes (urgent!)
 - [x] Think about adding has LR to hero data
+- [x] The organisation of the hero constructor is reeeally ugly. It looks through the whole map every time, when they're literally in order? Do something about that...!
