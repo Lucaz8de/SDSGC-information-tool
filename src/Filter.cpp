@@ -7,11 +7,12 @@
 
 #include "Filter.h"
 #include "Hero.h"
+#include "Heroes.h"
 #include "Menu.h"
 #include "Utilities.h"
 
 namespace Filter {
-	std::vector<Hero> Filter() {
+	std::vector<std::array<Hero, Heroes::COUNT>::iterator> Filter() {
 		// initialise queue of conditions and get initial condition from user
 		std::queue<std::string> filters{};
 		Condition condition = GetCondition(filters);
@@ -33,17 +34,17 @@ namespace Filter {
 		}
 
 		// return the final filtered list
-		auto filtered = Utilities::Select(Hero::heroes, condition);
-		std::cout << "\nFound: " << filtered.size() << " out of " << Hero::heroes.size() <<
+		auto filtered = Utilities::Select(Heroes::list, condition);
+		std::cout << "\nFound: " << filtered.size() << " out of " << Heroes::list.size() <<
 			" heroes." << std::endl;
 		return filtered;
 	}
 
 	Condition GetCondition(std::queue<std::string> &filters) {
 		// Ask for a condition
-		size_t int_input;
+		size_t int_input{ 0 };
 		std::vector<std::string> condition_names{"All"};
-		for(ConditionFunction condition: conditions) {
+		for(const ConditionFunction& condition: conditions) {
 			condition_names.push_back(condition.name);
 		}
 		int_input = Menu::AskForInput("You can filter heroes by the following conditions.", condition_names, true);
@@ -51,8 +52,8 @@ namespace Filter {
 
 		// Return unconditional if asked for
 		if (int_input == 0) {
-			filters.push("ALL");
-			return [](const Hero &) { return true; };
+			filters.emplace("ALL");
+			return [](const Hero &hero) { return true; };
 		}
 		else {
 			// Ask for arguments if needed, push condition to queue and return it
@@ -63,7 +64,7 @@ namespace Filter {
 	}
 
 	std::vector<std::string> GetArguments(size_t int_input) {
-		ConditionFunction condition = conditions[int_input-1];
+		const ConditionFunction& condition = conditions[int_input-1];
 		if (condition.name == "Attribute") {
 			std::vector<std::string> attributes{"Strength", "HP", "Speed", "Light", "Darkness"};
 			return AskForArguments("attribute", attributes, 1);
@@ -126,7 +127,7 @@ namespace Filter {
 	Condition GetOperation(Condition &condition, bool &sentinel_finished, std::queue<std::string> &filters) {
 		// Make list of no + operation names
 		std::vector<std::string> options = {"No (get results)"};
-		for(auto &operation: operations) {
+		for(const auto &operation: operations) {
 			options.push_back(operation.name);
 		}
 
@@ -145,7 +146,7 @@ namespace Filter {
 			return condition;
 		}
 		else {
-			Operation chosen = operations[int_input - 1];
+			const Operation& chosen = operations[int_input - 1];
 			return HandleOperation(condition, chosen, filters);
 		}
 	}
@@ -180,7 +181,7 @@ namespace Filter {
 		if (arguments.size() != 1) {
 			throw std::invalid_argument("Input to Attribute should be 1 string");
 		}
-		std::string attribute = arguments.at(0);
+		const std::string& attribute = arguments.at(0);
 		return [attribute](const Hero &hero) -> bool {
 			return hero.attribute == attribute;
 		};
@@ -190,7 +191,7 @@ namespace Filter {
 		if (arguments.size() != 1) {
 			throw std::invalid_argument("Input to StartingGrade should be 1 string");
 		}
-		std::string grade = arguments.at(0);
+		const std::string& grade = arguments.at(0);
 		return [grade](const Hero &hero) -> bool {
 			return hero.starting_grade == grade;
 		};
@@ -200,7 +201,7 @@ namespace Filter {
 		if (arguments.size() != 1) {
 			throw std::invalid_argument("Input to Character should be 1 string");
 		}
-		std::string character = arguments.at(0);
+		const std::string& character = arguments.at(0);
 		return [character](const Hero &hero) -> bool {
 			return hero.character == character;
 		};
@@ -219,7 +220,7 @@ namespace Filter {
 		if (arguments.size() != 1) {
 			throw std::invalid_argument("Input to Race should be 1 string");
 		}
-		std::string race = arguments.at(0);
+		const std::string& race = arguments.at(0);
 		return [race](const Hero &hero) -> bool {
 			return std::find(hero.races.begin(), hero.races.end(), race) != hero.races.end();
 		};
@@ -229,7 +230,7 @@ namespace Filter {
 		if (arguments.size() != 1) {
 			throw std::invalid_argument("Input to Characteristic should be 1 string");
 		}
-		std::string characteristic = arguments.at(0);
+		const std::string& characteristic = arguments.at(0);
 		return [characteristic](const Hero &hero) -> bool {
 			return hero.characteristic == characteristic;
 		};
@@ -239,10 +240,9 @@ namespace Filter {
 		if (arguments.size() == 0) {
 			throw std::invalid_argument("Input to Good should be at least 1 string");
 		}
-		std::vector<std::string> input_tiers = arguments;
+		const std::vector<std::string>& input_tiers = arguments;
 		return [input_tiers](const Hero &hero) -> bool {
-			std::vector<int> tiers{ hero.pvp_tier1, hero.pve_tier1, hero.pvp_tier2, hero.pve_tier2 };
-			return std::any_of(tiers.begin(), tiers.end(), [input_tiers](int tier) {
+			return std::any_of(hero.tiers.begin(), hero.tiers.end(), [input_tiers](int tier) {
 				return std::find(input_tiers.begin(), input_tiers.end(), std::to_string(tier)) != input_tiers.end();
 			});
 		};
@@ -252,7 +252,7 @@ namespace Filter {
 		if (arguments.size() != 1) {
 			throw std::invalid_argument("Input to AvailableFromDraw should be 1 string");
 		}
-		std::string draw = arguments.at(0);
+		const std::string& draw = arguments.at(0);
 		return [draw](const Hero &hero) -> bool {
 			std::vector<std::string> acquisition = hero.acquisition;
 			return std::find(acquisition.begin(), acquisition.end(), draw) != acquisition.end();

@@ -6,12 +6,10 @@
  */
 
 #include <functional>
-#include <queue>
 #include <string>
 #include <vector>
 
 #include "Filter.h"
-#include "Hero.h"
 #include "Project.h"
 
 namespace Menu {
@@ -54,7 +52,7 @@ namespace Menu {
    * @see GetIntInput
    * @throw std::invalid_argument if options is empty
    */
-  size_t AskForInput(std::string prompt, std::vector<std::string> options, bool min_is_zero = 0);
+  size_t AskForInput(const std::string &prompt, const std::vector<std::string> &options, bool min_is_zero = false);
 
   /**
    * @brief Accepts a yes or no input.
@@ -62,12 +60,12 @@ namespace Menu {
    * @return a boolean true or false
    * @throw std::runtime_error if user input isn't yes/y/no/n
    */
-  bool YesOrNoInput(std::string question);
+  bool YesOrNoInput(const std::string &question);
 
   /** 
    * @brief Reads a user input. 
    * @param prompt The prompt to be displayed
    * @return a string taken from input 
    */
-  std::string GetFreeInput(std::string prompt);
+  std::string GetFreeInput(const std::string &prompt);
 };

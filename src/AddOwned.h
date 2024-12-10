@@ -6,6 +6,8 @@
 
 #pragma once
 #include "Hero.h"
+#include "Heroes.h"
+#include <vector>
 
 namespace AddOwned {
     /**
@@ -24,5 +26,5 @@ namespace AddOwned {
      * @param list The list of heroes to update.
      * @todo print upgrades
      */
-    void UpdateHeroes(std::vector<Hero> list);
+    void UpdateHeroes(std::vector<std::array<Hero, Heroes::COUNT>::iterator> list);
 }

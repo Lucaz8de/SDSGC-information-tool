@@ -1,19 +1,15 @@
 #include <functional>
 #include <iostream>
-#include <queue>
 #include <string>
 #include <vector>
 
-#include "Hero.h"
 #include "Menu.h"
-#include "Utilities.h"
-#include "Project.h"
 
 namespace Menu {
 	void TopLevelMenu() {
-		std::vector<std::string> function_names{};
-		for(MenuFunction function: menu_functions) {
-			function_names.push_back(function.name);
+		std::vector<std::string> function_names(menu_functions.size());
+		for(size_t i{ 0 }; i < menu_functions.size(); i++) {
+			function_names[i] = menu_functions[i].name;
 		}
 		
 		size_t int_input = AskForInput("You can choose from the following capabilities.", function_names);
@@ -48,7 +44,7 @@ namespace Menu {
 		return int_input;
 	}
 
-	size_t AskForInput(std::string prompt, std::vector<std::string> options, bool min_is_zero) {
+	size_t AskForInput(const std::string &prompt, const std::vector<std::string> &options, bool min_is_zero) {
 		if (options.empty()) {
 			throw std::invalid_argument("Options for AskForInput cannot be empty");
 		}
@@ -61,14 +57,14 @@ namespace Menu {
 
 		// print the list numbered correctly 
 		size_t option_number{ min };
-		for (std::string option : options) {
+		for (const std::string& option : options) {
 			std::cout << option_number++ << ". " << option << std::endl;
 		} 
 		
 		return static_cast<size_t>(GetIntInput(static_cast<int>(min), static_cast<int>(max)));
 	}
 
-	bool YesOrNoInput(std::string question) {
+	bool YesOrNoInput(const std::string& question) {
 		std::string input;
 
 		std::cout << question << " Enter yes/no." << std::endl;
@@ -82,7 +78,7 @@ namespace Menu {
 		}
 	}
 
-	std::string GetFreeInput(std::string prompt) {
+	std::string GetFreeInput(const std::string& prompt) {
 		std::string input;
 
 		std::cout << prompt << ": ";

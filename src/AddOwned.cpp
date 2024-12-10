@@ -5,6 +5,7 @@
 
 #include "AddOwned.h"
 #include "Hero.h"
+#include "Heroes.h"
 #include "Menu.h"
 #include "Utilities.h"
 
@@ -16,7 +17,7 @@ namespace AddOwned {
 		std::ofstream ofile{ DATA_DIR + "/owned.csv" };
 
 		std::string line;
-		for(auto &hero: Hero::heroes) {
+		for(auto &hero: Heroes::list) {
 			std::getline(ifile, line);
 			// add empty lines in the places heroes.csv has empty lines
 			if(Utilities::EmptyCSV(line)) {
@@ -28,7 +29,7 @@ namespace AddOwned {
 			if(!hero.owned) {
 				continue;
 			}
-			std::vector<std::string> vec_data{hero.upgrades};
+			std::vector<std::string> vec_data{hero.upgrades.begin(), hero.upgrades.end()};
 			vec_data.insert(vec_data.begin(), hero.hero); // insert hero name at start of vec_data
 			std::string csv_data = Utilities::MakeCSV(vec_data);
 			ofile << csv_data << "\n";
@@ -39,10 +40,9 @@ namespace AddOwned {
 		// hero data needs initialised if not already owned
 		if (!hero.owned) {
 			hero.owned = true;
-			hero.upgrades = std::vector<std::string>(5, "");
 		}
 
-		size_t input;
+		size_t input{};
 
 		// ask for and set all data
 		std::vector<std::string> grades{ "R", "SR", "SSR", "UR", "LR" };
@@ -70,11 +70,12 @@ namespace AddOwned {
 		hero.upgrades[Hero::ULTIMATE] = ultimates[input-1];
 	}
 
-	void UpdateHeroes(std::vector<Hero> list) {
-		for(auto& hero: list) {
+	void UpdateHeroes(const std::vector<std::array<Hero, Heroes::COUNT>::iterator> &list) {
+		for(const auto &it: list) {
+			auto& hero = *it;
 			std::cout << hero.hero << ":" << std::endl;
 
-			bool update; 
+			bool update{}; 
 			// ask whether to update, with slightly varying wording
 			if (hero.owned) {
 				// TODO: print upgrades

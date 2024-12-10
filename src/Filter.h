@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "Hero.h"
+#include "Heroes.h"
 #include "Menu.h"
 
 namespace Filter {
@@ -19,11 +20,11 @@ namespace Filter {
      * @brief An interactive menu to filter heroes, including combining as many conditions
      * as you want. Also prints the conditions selected in the order, left-to-right, 
      * that they are evaluated. (This function is called by the main menu function Filter.) 
-     * @return the filtered list
+     * @return a vector of iterators, pointing to the elements of the original vector. 
      */
-    std::vector<Hero> Filter();
+    std::vector<std::array<Hero, Heroes::COUNT>::iterator> Filter();
 
-    typedef std::function<bool(const Hero &)> Condition;
+    using Condition = std::function<bool (const Hero &)>;
 
     /**
      * @brief ConditionFunction lets me easily name and call conditions at runtime.

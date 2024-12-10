@@ -6,8 +6,6 @@
 
 #pragma once
 
-enum menu_functions { FILTER, ADDOWNED };
-
 /**
  * This top-level menu option allows you to filter heroes by a selection of conditions.
  * This includes the option to select as many conditions as you want.
